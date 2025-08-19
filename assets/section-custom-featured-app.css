@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.app_section{
+      font-family: 'Inter', sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+ }
+
+ .featured_apps_section{
+    padding: 70px 0;
+    max-width: 1160px;
+    margin: 0 auto;
+    color: #131735;
+}
+
+    .featured_apps_section-badge {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 1px #ccc;
+    margin-bottom: 8px;
+    border: 1px solid #0000001A;
+    font-family: Urbanist;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    }
+
+    .featured_apps_section-title {
+    height: 77px;
+    font-size: 64px !important;
+    font-weight: 700 !important;
+    margin: 0;
+    font-family: Urbanist;
+    line-height: 100%;
+    text-align: center;
+    }
+
+    .featured_apps_section-subtext {
+max-width: 700px;
+    margin: 16px auto 60px;
+    color: #13173599;
+    font-family: Urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+    text-align: center;
+    }
+
+    .cards-container {
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .card {
+    background: #fff;
+    border-radius: 24px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 1px 3px #0000000d;
+    width: 360px !important;
+    box-sizing: border-box;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .custom_badge {
+      position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #e6f6f3;
+    color: #2D3538;
+    padding: 9px 16px;
+    border: 1px solid #FFFFFF1A;
+    border-radius: 50px;
+    font-family: Urbanist;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    }
+
+    .card img {
+          width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+    font-family: Urbanist;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: black;
+    }
+
+    .card p {
+      margin: 0 0 36px;
+    font-family: Urbanist;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #00000099;
+    }
+
+    .card .btn {
+    width: fit-content;
+    height: 38px;
+    border-radius: 50px;
+    padding: 5px 16px;
+    text-decoration: none;
+    color: #fff;
+    background: #eaa128;
+    border: 1px solid #FFFFFF1A;
+    margin-top: auto;
+}
+
+    .see-all-button {
+      margin-top: 60px;
+    }
+
+    .see-all-button a {
+      color: #fff;
+    padding: 6px 6px 6px 24px;
+    border-radius: 60px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    background: #0CD7BA;
+    font-family: Urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    }
+
+    .see-all-button a::after {
+      content: "\2192";
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-content: center;
+    background: #FFFFFF14;
+    border-radius: 50%;
+    }
+
+    @media (max-width: 600px){
+        .featured_apps_section{
+            padding: 40px 20px;
+        }
+        .featured_apps_section-badge{
+            font-size: 10px;
+            border: 0.5px solid;
+        }
+        .featured_apps_section-title{
+        font-size: 28px !important;
+        height: max-content;
+    }
+        .featured_apps_section-subtext{
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+        .cards-container{
+            gap: 12px;
+        }
+        .card{
+            padding: 12px;
+            width: 100% !important;
+            height: auto;
+            margin: auto;
+        }
+        .card h3{
+            font-size: 12px;
+        }
+        .card p{
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .card img{
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+}
+.custom_badge {
+    top: 8px;
+    right: 12px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+    .see-all-button{
+            margin-top: 20px;
+
+        }
+    .see-all-button a {
+        padding: 0 0 0 14px;
+        font-size: 14px;
+        gap: 12px;
+    }
+    .see-all-button a:after {
+    width: 32px;
+    height: 32px;
+}
+        .card .btn {
+            font-size: smaller;
+    padding: 8px 12px;
+}
+
+    }
+
+
+    @media (min-width: 601px) and (max-width: 768px){
+              .featured_apps_section{
+            padding: 20px 76px;
+        }
+        .featured_apps_section-badge{
+            font-size: 16px;
+        }
+        .featured_apps_section-title{
+        font-size: 48px !important;
+        height: max-content;
+    }
+        .featured_apps_section-subtext{
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .cards-container{
+            gap: 12px;
+        }
+        .card{
+            width: 100% !important;
+            height: auto;
+            margin: auto;
+        }
+        .card h3{
+            font-size: 16px;
+        }
+        .card p{
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .card img{
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+}
+.custom_badge {
+    top: 8px;
+    right: 12px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+    .see-all-button{
+            margin-top: 20px;
+    }
+    .see-all-button a {
+        padding: 6px 6px 6px 14px;
+        font-size: 20px;
+        gap: 12px;
+    }
+    .see-all-button a:after {
+    width: 32px;
+    height: 32px;
+}
+        .card .btn {
+            font-size: smaller;
+    padding: 8px 12px;
+}
+    }
+
+
+    @media (min-width: 769px) and (max-width: 1023px){
+              .featured_apps_section{
+            padding: 36px 88px;
+        }
+        .featured_apps_section-badge{
+            font-size: 16px;
+        }
+        .featured_apps_section-title{
+        font-size: 48px !important;
+        height: max-content;
+    }
+        .featured_apps_section-subtext{
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .cards-container{
+            gap: 12px;
+        }
+        .card{
+            width: 100% !important;
+            height: auto;
+            margin: auto;
+        }
+        .card h3{
+            font-size: 16px;
+        }
+        .card p{
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .card img{
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+}
+.custom_badge {
+    top: 8px;
+    right: 12px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+    .see-all-button{
+            margin-top: 20px;
+    }
+    .see-all-button a {
+        padding: 6px 6px 6px 14px;
+        font-size: 20px;
+        gap: 12px;
+    }
+    .see-all-button a:after {
+    width: 32px;
+    height: 32px;
+}
+        .card .btn {
+            font-size: smaller;
+    padding: 8px 12px;
+}
+    }
+
+@media (min-width: 1024px) and (max-width: 1175px){
+    .card {
+        width: 30% !important;
+        height: auto;
+    }
+}
+
+    /* @media (min-width: 1024px) and (max-width: 1375px){
+              .featured_apps_section{
+            padding: 42px 94px;
+        }
+        .featured_apps_section-badge{
+            font-size: 14px;
+        }
+        .featured_apps_section-title{
+        font-size: 54px !important;
+        height: max-content;
+    }
+        .featured_apps_section-subtext{
+            margin-bottom: 24px;
+            font-size: 18px !important;
+        }
+        .cards-container{
+            gap: 0px;
+            flex-wrap: nowrap;
+        }
+           .card {
+        width: 30% !important;
+        height: auto;
+    }
+        .card h3{
+            font-size: 16px;
+        }
+        .card p{
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .card img{
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+}
+.custom_badge {
+    top: 8px;
+    right: 12px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+    .see-all-button{
+            margin-top: 20px;
+    }
+    .see-all-button a {
+        padding: 6px 6px 6px 14px;
+        font-size: 20px;
+        gap: 12px;
+    }
+    .see-all-button a:after {
+    width: 32px;
+    height: 32px;
+}
+            .card .btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    } */

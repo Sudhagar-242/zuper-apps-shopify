@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="{{ 'custom-hero-section.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<div class="container">
+  <div class="secondry_container">
+    <h1 class="heading">
+      {{ section.settings.heading_text }}
+      <div class="logo-box">
+        <span class="logo-text">ZuperApps</span>
+        <span class="corner corner-tl">
+          {{ 'icon-custom-star.svg' | inline_asset_content }}
+        </span>
+        <span class="corner corner-tr">
+          {{ 'icon-custom-star.svg' | inline_asset_content }}
+        </span>
+        <span class="corner corner-bl">
+          {{ 'icon-custom-star.svg' | inline_asset_content }}
+        </span>
+        <span class="corner corner-br">
+          {{ 'icon-custom-star.svg' | inline_asset_content }}
+        </span>
+      </div>
+    </h1>
+
+    <p class="heading_text">
+      {{ section.settings.paragraph }}
+    </p>
+
+    {% comment %}
+      <div class="subscribe-box">
+        <input class="input-box" type="email" placeholder="{{ section.settings.input }}" />
+        <a class="button-class_hero" href="{{ section.settings.RoutesOfButton }}">{{ section.settings.button }}</a>
+      </div>
+    {% endcomment %}
+
+    {% form 'customer', class: 'newsletter-form' %}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div
+        class="animate_subscribe_box{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+          style="--animation-order: {{ 1 }};"
+        {% endif %}
+      >
+        <div class="subscribe-box">
+          <input
+            id="NewsletterForm--{{ section.id }}"
+            type="email"
+            name="contact[email]"
+            class="input-box"
+            value="{{ form.email }}"
+            aria-required="true"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            {% if form.errors %}
+              autofocus
+              aria-invalid="true"
+              aria-describedby="Newsletter-error--{{ section.id }}"
+            {% elsif form.posted_successfully? %}
+              aria-describedby="Newsletter-success--{{ section.id }}"
+            {% endif %}
+            placeholder="{{section.settings.input}}"
+            required
+          >
+
+          <button
+            type="submit"
+            class="button-class_hero"
+            name="commit"
+            id="Subscribe"
+            aria-label="{{ 'newsletter.button_label' | t }}"
+          >
+            {{ section.settings.button }}
+          </button>
+        </div>
+        {%- if form.errors -%}
+          <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
+            <span class="svg-wrapper">
+              {{- 'icon-error.svg' | inline_asset_content -}}
+            </span>
+            {{- form.errors.translated_fields.email | capitalize }}
+            {{ form.errors.messages.email -}}
+          </small>
+        {%- endif -%}
+      </div>
+      {%- if form.posted_successfully? -%}
+        <h3
+          class="newsletter-form__message newsletter-form__message--success form__message"
+          id="Newsletter-success--{{ section.id }}"
+          tabindex="-1"
+          autofocus
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-success.svg' | inline_asset_content -}}
+          </span>
+          {{- 'newsletter.success' | t }}
+        </h3>
+      {%- endif -%}
+    {% endform %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Run Your Shopify Store with"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Name of Company",
+      "default": "Zuper Apps"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "Paragraph Text",
+      "default": "High-performing Shopify modules and apps to supercharge your e-commerce business. Trusted by 4.9-star rated merchants worldwide."
+    },
+    {
+      "type": "text",
+      "id": "input",
+      "label": "Input Placeholder",
+      "default": "Subscribe to notify"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button Label",
+      "default": "Sign Up"
+    },
+    {
+      "type": "select",
+      "id": "RoutesOfButton",
+      "label": "Button Link",
+      "options": [
+        {
+          "value": "/account/login",
+          "label": "Log in"
+        },
+        {
+          "value": "/account/register",
+          "label": "Sign Up"
+        }
+      ],
+      "default": "/account/register"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Hero Section"
+    }
+  ]
+}
+{% endschema %}

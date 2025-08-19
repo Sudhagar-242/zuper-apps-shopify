@@ -1,0 +1,101 @@
+<div class="w-full bg-green-700 grid grid--{{ section.settings.column_size }}-col-tablet-down grid--{{ section.settings.column_size }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}">
+  {% for block in section.blocks %}
+    <div class="card grid__item">
+      <span class="badge">{{ block.settings.tag }}</span>
+      {% if block.settings.icon %}
+        {{ block.settings.icon | image_url: width: block.settings.width, height: block.settings.height | image_tag }}
+      {% else %}
+        <div>No Image</div>
+      {% endif %}
+      <h3>{{ block.settings.title }}</h3>
+      <p>{{ block.settings.description }}</p>
+      <a class="btn" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "custom_multi_column",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "Text",
+      "label": "Type Here",
+      "default": "Type Here"
+    },
+    {
+      "type": "range",
+      "id": "column_size",
+      "label": "Title",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    }
+  ],
+  "blocks": [
+    {
+      "type": "app_card",
+      "name": "App Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "App Icon"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "label": "Title",
+          "min": 0,
+          "max": 1000,
+          "step": 50,
+          "default": 250
+        },
+        {
+          "type": "range",
+          "id": "height",
+          "label": "Title",
+          "min": 0,
+          "max": 1000,
+          "step": 50,
+          "default": 100
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag (Free or Paid)"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Add Apps"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom multi column"
+    }
+  ]
+}
+{% endschema %}
