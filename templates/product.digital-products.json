@@ -198,12 +198,104 @@
         "digi_products_app_features_btn": "hsjhbf",
         "digi_products_app_features_url": "shopify://pages/contact"
       }
+    },
+    "custom_digital_products_horizontal_infinite_R3NMFX": {
+      "type": "custom-digital-products-horizontal-infinite",
+      "blocks": {
+        "logo_FdMH4L": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-1.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_bqAxR9": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-2.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_WYxHXW": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-3.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_kQBikg": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-4.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_bxFRUV": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-5.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_jRfrDj": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-1.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_TUawG4": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-2.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_eYT4aN": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-3.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_739NFd": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-4.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_FgPQNn": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-5.svg",
+            "logo_alt_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_FdMH4L",
+        "logo_bqAxR9",
+        "logo_WYxHXW",
+        "logo_kQBikg",
+        "logo_bxFRUV",
+        "logo_jRfrDj",
+        "logo_TUawG4",
+        "logo_eYT4aN",
+        "logo_739NFd",
+        "logo_FgPQNn"
+      ],
+      "name": "Brand Logo Slider",
+      "settings": {
+        "heading": "hello"
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "custom_digital_product_hero_xiMiPi",
-    "custom_digital_products_app_features_tzdJfm"
+    "custom_digital_products_app_features_tzdJfm",
+    "custom_digital_products_horizontal_infinite_R3NMFX"
   ]
 }
