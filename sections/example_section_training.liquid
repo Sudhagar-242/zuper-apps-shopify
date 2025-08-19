@@ -1,0 +1,45 @@
+<div id="options-menu">
+  <button class="option-btn" data-target="products">Products</button>
+  <button class="option-btn" data-target="faq">FAQ</button>
+  <button class="option-btn" data-target="about">About</button>
+  <button class="option-btn" data-target="contact">Contact</button>
+</div>
+
+<div id="content-area">
+  <div class="option-content" id="products" style="display:none;">
+    <!-- You can put your Products content or include a snippet -->
+    <h2>Products</h2>
+    <p>Here are our products...</p>
+  </div>
+  <div class="option-content" id="faq" style="display:none;">
+    <h2>FAQ</h2>
+    <p>Frequently Asked Questions...</p>
+  </div>
+  <div class="option-content" id="about" style="display:none;">
+    <h2>About</h2>
+    <p>About our company...</p>
+  </div>
+  <div class="option-content" id="contact" style="display:none;">
+    <h2>Contact</h2>
+    <p>Contact us at...</p>
+  </div>
+</div>
+
+
+<script>
+  document.querySelectorAll('.option-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.getAttribute('data-target');
+      console.log(target);
+
+      // Hide all contents
+      document.querySelectorAll('.option-content').forEach(content => {
+        content.style.display = 'none';
+      });
+
+      // Show selected content
+      const selected = document.getElementById(target);
+      if (selected) selected.style.display = 'block';
+    });
+  });
+</script>
