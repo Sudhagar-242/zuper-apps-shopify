@@ -3,11 +3,17 @@
     display: flex;
     width: 100%;
   }
+  .hero-right-side{
+    width: 50%;
+  }
+  .hero-left-side{
+    width: 50%;
+  }
 {% endstyle %}
 
 <div class="hero-section">
   {% comment %} Left Side {% endcomment %}
-  <div>
+  <div class="hero-right-side">
     <p class="">
       &lt;<span
         >/<span class=" tagline"><span>ONE CLICK COD FORM WITH UPSELLS</span></span></span
@@ -17,7 +23,7 @@
   </div>
   {% comment %} Right Side {% endcomment %}
    <!-- sections/custom-slideshow.liquid -->
-<section class="custom-slideshow">
+<section class="custom-slideshow hero-left-side">
   <div class="slideshow-container">
     {% for block in section.blocks %}
       <div class="slide" style="display: {% if forloop.first %}block{% else %}none{% endif %};">
