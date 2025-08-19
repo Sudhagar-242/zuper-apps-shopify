@@ -46,11 +46,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "example_section_training_ghWLGc": {
+      "type": "example_section_training",
+      "name": "example_liquid_section",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "custom_info_box_zFDrt7",
-    "form"
+    "form",
+    "example_section_training_ghWLGc"
   ]
 }
