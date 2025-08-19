@@ -114,6 +114,19 @@
     },
     "custom_digital_product_hero_xiMiPi": {
       "type": "custom-digital-product-hero",
+      "blocks": {
+        "slide_gCYnay": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/green-t-shirt.jpg",
+            "alt_text": "",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_gCYnay"
+      ],
       "name": "digital_products_hero",
       "settings": {
         "digital-products-hero-tittle": ""
