@@ -74,9 +74,9 @@
         "constrain_to_viewport": false,
         "media_fit": "cover",
         "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
         "media_position": "right",
         "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
@@ -101,21 +101,29 @@
         "heading_size": "h2",
         "products_to_show": 5,
         "columns_desktop": 5,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 44
+      }
+    },
+    "custom_digital_product_hero_xiMiPi": {
+      "type": "custom-digital-product-hero",
+      "name": "digital_products_hero",
+      "settings": {
+        "digital-products-hero-tittle": ""
       }
     }
   },
   "order": [
     "main",
     "quick-order-list",
-    "related-products"
+    "related-products",
+    "custom_digital_product_hero_xiMiPi"
   ]
 }
