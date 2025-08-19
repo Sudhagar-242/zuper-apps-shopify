@@ -1,40 +1,40 @@
 {% style %}
-  .hero-section{
-    display: flex;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 60px;
-    gap: 20px;
-    background: #085552;
+    .hero-section{
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px;
+      gap: 20px;
+      background: #085552;
+    }
+    .hero-right-side{
+      width: 50%;
+      padding: 80px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-left-side{
+      width: 50%;
+      overflow: hidden;
+    }
+
+  .btn-primary {
+      width: 100% !important;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background-color: #00a9a2;
+      border-color: #00a9a2;
+      box-shadow: none;
+      border: 2px solid transparent;
+      padding: .85rem 1.875rem;
+      line-height: 1.4;
+      border-radius: 0;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
-  .hero-right-side{
-    width: 50%;
-    padding: 80px 26px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .hero-left-side{
-    width: 50%;
-    overflow: hidden;
-  }
-  
-.btn-primary {
-    width: 100% !important;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background-color: #00a9a2;
-    border-color: #00a9a2;
-    box-shadow: none;
-    border: 2px solid transparent;
-    padding: .85rem 1.875rem;
-    line-height: 1.4;
-    border-radius: 0;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
 {% endstyle %}
 
 <div class="hero-section">
@@ -49,37 +49,36 @@
     <a href="#" class="btn-primary">Install Now!</a>
   </div>
   {% comment %} Right Side {% endcomment %}
-   <!-- sections/custom-slideshow.liquid -->
-<section class="custom-slideshow hero-left-side">
-  <div class="slideshow-container">
-    {% for block in section.blocks %}
-      <div class="slide" style="display: {% if forloop.first %}block{% else %}none{% endif %};">
-        {% if block.settings.image != blank %}
-          <img src="{{ block.settings.image | image_url: width: 1200 }}" alt="{{ block.settings.alt_text | escape }}" />
-        {% endif %}
-        {% if block.settings.caption != blank %}
-          <div class="caption">{{ block.settings.caption }}</div>
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
-</section>
+  <!-- sections/custom-slideshow.liquid -->
+  <section class="custom-slideshow hero-left-side">
+    <div class="slideshow-container">
+      {% for block in section.blocks %}
+        <div class="slide" style="display: {% if forloop.first %}block{% else %}none{% endif %};">
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | image_url: width: 1200 }}" alt="{{ block.settings.alt_text | escape }}">
+          {% endif %}
+          {% if block.settings.caption != blank %}
+            <div class="caption">{{ block.settings.caption }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
 </div>
-
 
 {% schema %}
 {
-    "name": "digital_products_hero",
-    "tag": "section",
-    "class": "Digital-products-hero",
-    "settings": [
-        {
-            "type": "richtext",
-            "id": "digital-products-hero-tittle",
-            "label": "digital products hero tittle"
-        }
-    ],
-    "blocks": [
+  "name": "digital_products_hero",
+  "tag": "section",
+  "class": "Digital-products-hero",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "digital-products-hero-tittle",
+      "label": "digital products hero tittle"
+    }
+  ],
+  "blocks": [
     {
       "type": "slide",
       "name": "Slide",
@@ -104,7 +103,7 @@
   ],
   "presets": [
     {
-        "name": "digital_products_hero"
+      "name": "digital_products_hero"
     }
   ]
 }
