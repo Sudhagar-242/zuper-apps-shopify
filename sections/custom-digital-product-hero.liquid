@@ -9,7 +9,21 @@
     <h1 class="mb-3 font-weight-bold text-white">Releasit COD Form &amp; Upsells</h1>
   </div>
   {% comment %} Right Side {% endcomment %}
-  <div></div>
+   <!-- sections/custom-slideshow.liquid -->
+<section class="custom-slideshow">
+  <div class="slideshow-container">
+    {% for block in section.blocks %}
+      <div class="slide" style="display: {% if forloop.first %}block{% else %}none{% endif %};">
+        {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image | image_url: width: 1200 }}" alt="{{ block.settings.alt_text | escape }}" />
+        {% endif %}
+        {% if block.settings.caption != blank %}
+          <div class="caption">{{ block.settings.caption }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
 </div>
 
 
@@ -24,6 +38,29 @@
             "id": "digital-products-hero-tittle",
             "label": "digital products hero tittle"
         }
-    ]
+    ],
+    "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Image Alt Text"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption Text"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
