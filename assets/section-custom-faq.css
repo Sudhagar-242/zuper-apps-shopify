@@ -68,7 +68,7 @@ display: inline-block;
 
 
 /* Each FAQ Card for open */
-.faq-list .faq-section details[open] {
+details.faq-accordian[open] {
   border-radius: 24px;
     text-align: left;
     position: relative;
@@ -76,7 +76,7 @@ display: inline-block;
     padding: 26px 44px;
 }
 
-.faq-list details summary {
+.faq-accordian-summary {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,7 +89,7 @@ display: inline-block;
 }
 
 /* Question Row opened*/
-.faq-list .faq-section details[open] summary {
+.faq-accordian[open] .faq-accordian-summary {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,7 +105,7 @@ display: inline-block;
   display: none;
 }
 
-.faq-list summary h3 {
+.faq-list .faq-accordian-summary h3 {
       margin: 0 !important;
     font-family: Inter Tight;
     font-weight: 400 !important;
@@ -115,7 +115,7 @@ display: inline-block;
 }
 
 /* Plus Icon */
-.faq-list summary svg {
+.faq-list .faq-accordian-summary svg {
   width: 24px;
   height: 24px;
 }
