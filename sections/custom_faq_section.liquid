@@ -23,9 +23,9 @@
         {% if section.settings.open_first_collapsible_row and forloop.first %}
           open
         {% endif %}
-        class="custom_details_class styled"
+        class="custom_details_class faq-accordian styled"
       >
-        <summary id="Summary-{{ block.id }}-{{ section.id }}">
+        <summary id="Summary-{{ block.id }}-{{ section.id }}" class="faq-accordian-summary">
           {% render 'icon-accordion', icon: block.settings.icon %}
           <h3 class="">
             {{ block.settings.heading | default: block.settings.page.title | escape }}
@@ -42,7 +42,7 @@
           </div>
         </summary>
         <div
-          class="content_container content"
+          class="content_container faq-accordian-content content"
           id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
           role="region"
           aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
