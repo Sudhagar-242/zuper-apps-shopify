@@ -1,0 +1,122 @@
+
+{% stylesheet %}
+/* Optional: Add your custom styles here for layout and design */
+.digi-pro-features-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.digi-pro-features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.digi-pro-feature-block {
+  background: #f9ffff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 340px;
+  box-sizing: border-box;
+}
+
+.digi-pro-feature-block img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.digi-pro-features-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #12b9b6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 16px;
+}
+{% endstylesheet %}
+
+
+<section class="digi-pro-features-section">
+  {% if section.settings.digi_products_app_features_head != blank %}
+    <h2>{{ section.settings.digi_products_app_features_head }}</h2>
+  {% endif %}
+  <div class="digi-pro-features-container">
+    {% for block in section.blocks %}
+      <div class="digi-pro-feature-block">
+        {% if block.settings.digi_products_app_features_block_image != blank %}
+          <img src="{{ block.settings.digi_products_app_features_block_image | img_url: 'medium' }}" alt="{{ block.settings.digi_products_app_features_block_head }}">
+        {% endif %}
+        {% if block.settings.digi_products_app_features_block_head != blank %}
+          <h3>{{ block.settings.digi_products_app_features_block_head }}</h3>
+        {% endif %}
+        {% if block.settings.digi_products_app_features_block_para != blank %}
+          <p>{{ block.settings.digi_products_app_features_block_para }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  {% if section.settings.digi_products_app_features_btn != blank and section.settings.digi_products_app_features_url != blank %}
+    <a href="{{ section.settings.digi_products_app_features_url }}" class="digi-pro-features-btn">
+      {{ section.settings.digi_products_app_features_btn }}
+    </a>
+  {% endif %}
+</section>
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Digi_Pro_App_Features",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "digi_products_app_features_head",
+      "label": "Heading_Text"
+    },
+    {
+      "type": "text",
+      "id": "digi_products_app_features_btn",
+      "label": "Heading_Text"
+    },
+    {
+      "type": "url",
+      "id": "digi_products_app_features_url",
+      "label": "Heading_Text"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "feature_block",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "digi_products_app_features_block_head",
+          "label": "Block Head"
+        },
+        {
+          "type": "textarea",
+          "id": "digi_products_app_features_block_para",
+          "label": "Block Para"
+        },
+        {
+          "type": "image_picker",
+          "id": "digi_products_app_features_block_image",
+          "label": "Block Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
