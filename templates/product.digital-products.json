@@ -67,6 +67,7 @@
         "collapsible-row-2",
         "share"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "",
@@ -83,19 +84,9 @@
         "padding_bottom": 36
       }
     },
-    "quick-order-list": {
-      "type": "quick-order-list",
-      "settings": {
-        "variants_per_page": 50,
-        "show_image": true,
-        "show_sku": true,
-        "color_scheme": "scheme-2",
-        "padding_top": 36,
-        "padding_bottom": 16
-      }
-    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "Other industry favorites",
         "heading_size": "h2",
@@ -122,10 +113,19 @@
             "alt_text": "",
             "caption": ""
           }
+        },
+        "slide_WHRm3c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/custom-logo-2.svg",
+            "alt_text": "",
+            "caption": ""
+          }
         }
       },
       "block_order": [
-        "slide_gCYnay"
+        "slide_gCYnay",
+        "slide_WHRm3c"
       ],
       "name": "digital_products_hero",
       "settings": {
@@ -135,7 +135,6 @@
   },
   "order": [
     "main",
-    "quick-order-list",
     "related-products",
     "custom_digital_product_hero_xiMiPi"
   ]
