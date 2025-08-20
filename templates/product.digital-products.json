@@ -143,6 +143,30 @@
             "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
           }
         },
+        "feature_c4T6ey": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_chknG8": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_6YTN4K": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
         "feature_RAzCTH": {
           "type": "feature",
           "settings": {
@@ -178,6 +202,9 @@
       },
       "block_order": [
         "feature_3Yy6yU",
+        "feature_c4T6ey",
+        "feature_chknG8",
+        "feature_6YTN4K",
         "feature_RAzCTH",
         "feature_N8zfWD",
         "feature_KCmAWA",
