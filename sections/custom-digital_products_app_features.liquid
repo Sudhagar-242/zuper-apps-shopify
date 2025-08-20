@@ -137,11 +137,10 @@
 </section>
 
 
-
-{% javascript %}
+<script>
 
   function toggleFeatures(button) {
-    const section = document.getElementById(".digi_pro_features")
+    const section = document.getElementById("digi_pro_features")
     const showAll = button.getAttribute('data-show-all') === 'true';
     const medias = section.querySelectorAll('.feature-container');
     
@@ -165,7 +164,7 @@
       }
     });
   });
-{% endjavascript %}
+</script>
 
 
 {% schema %}
