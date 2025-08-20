@@ -72,7 +72,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const section = document.querySelector('#features');
     if(!section) return;
-    const medias = section.querySelectorAll('.media');
+    const medias = section.querySelectorAll('.feature_item');
     medias.forEach((media, index) => {
       if (index >= 4) {
         media.style.display = 'none';
