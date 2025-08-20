@@ -86,6 +86,7 @@
 
   <section id="digi_pro_features" class="digi-pro-features">
   {% for block in section.blocks %}
+    <div class="feature-container">
       <div class="feature_item">
         <div class="feature-icon" style="flex: 0 0 auto;">
           {% if block.settings.feature_icon != blank %}
@@ -97,6 +98,7 @@
           <p>{{ block.settings.feature_description }}</p>
         </div>
       </div>
+    </div>
   {% endfor %}
 
 </section>
