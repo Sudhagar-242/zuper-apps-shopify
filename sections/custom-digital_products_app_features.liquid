@@ -87,7 +87,7 @@
   <section id="digi_pro_features" class="digi-pro-features">
   {% for block in section.blocks %}
     <div class="feature-container">
-      <div class="feature_item">
+      <div class="feature-item">
         <div class="feature-icon" style="flex: 0 0 auto;">
           {% if block.settings.feature_icon != blank %}
             <img src="{{ block.settings.feature_icon | image_url }}" alt="{{ block.settings.feature_heading | escape }}" class="d-inline-block highlights-icon">
