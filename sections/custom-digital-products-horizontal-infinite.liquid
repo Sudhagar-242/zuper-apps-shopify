@@ -58,6 +58,20 @@
     /* Add padding to the right to create a gap between the last and first card. */
     padding-right: 20px;
   }
+    .brand-logo-wrapper {
+    /* ... */
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 10s linear infinite;
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 {% endstylesheet %}
 
 <section class="brand-slider-section">
