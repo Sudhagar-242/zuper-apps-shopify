@@ -5,205 +5,39 @@
   text-align: center;
   padding: 40px 0;
   max-width: 1200px;
+  margin: auto;
 }
-
-.digi-pro-features-container {
+.digi-pro-features-section-heading{
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+}
+.digi-pro-features{
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 32px;
 }
-
-.digi-feature-block {
-  display: flex;
-  align-items: center;
-  background: #eafffa;
-  border-radius: 8px;
-  padding: 20px 32px;
-  margin-bottom: 28px;
-}
-
-.digi-feature-image-box {
-  flex-shrink: 0;
-  background: #eafffa;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 130px;
-  height: 130px;
-  margin-right: 28px;
-}
-
-.digi-feature-image-box img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-}
-
-.digi-feature-content h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-}
-
-.digi-feature-content p {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.features-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px 80px; /* vertical and horizontal spacing */
-  padding: 20px 0;
-}
-
-.feature-item {
-  display: flex;
-  align-items: flex-start;
-  width: 45%; /* two items per row */
-  gap: 20px;
-}
-
-.feature-icon-box {
-  background-color: #d6f9f9; /* light aqua background */
-  width: 130px;
-  height: 130px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  flex-shrink: 0;
-}
-
-.feature-icon-box img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-}
-
-.feature-text {
-  flex: 1;
-}
-
-.feature-text h3 {
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-  color: #3a3a3a; /* dark gray text */
-}
-
-.feature-text p {
-  font-size: 1rem;
-  color: #222222; /* darker paragraph text */
-  margin: 0;
-}
-
-#features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px 80px; /* vertical and horizontal spacing */
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 1rem;
-}
-
-#features .media {
-  display: flex;
-  align-items: flex-start;
-  width: 45%; /* two columns */
-  gap: 20px;
-  box-sizing: border-box;
-}
-
-#features .media-img {
-  background-color: #d6f9f9; /* light aqua */
-  border-radius: 20px;
-  width: 130px;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  flex-shrink: 0;
-}
-
-#features .media-img img.highlights-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-}
-
-#features .media-content h3 {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #3a3a3a;
-  margin: 0 0 8px 0;
-}
-
-#features .media-content p {
-  margin: 0;
-  color: #222222;
-  font-size: 1rem;
-}
-
-.moreless-button {
-  cursor: pointer;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 6px;
-  background-color: #12b9b6;
-  color: white;
-  border: none;
-  text-decoration: none;
-  margin-top: 1rem;
-  display: inline-block;
-}
-
-.moreless-button:hover {
-  background-color: #0e8e89;
-}
-
 
 {% endstylesheet %}
 
 
 <section class="digi-pro-features-section">
   {% if section.settings.digi_products_app_features_head != blank %}
-    <h2>{{ section.settings.digi_products_app_features_head }}</h2>
+    <h2 class="digi-pro-features-section-heading">{{ section.settings.digi_products_app_features_head }}</h2>
   {% endif %}
-  <div class="digi-pro-features-container">
-    {% comment %} {% for block in section.blocks %}
-      <div class="digi-feature-block">
-  <div class="digi-feature-image-box">
-    {% if block.settings.digi_products_app_features_block_image != blank %}
-      <img src="{{ block.settings.digi_products_app_features_block_image | image_url: width: 80 }}" alt="{{ block.settings.digi_products_app_features_block_head }}">
-    {% endif %}
-  </div>
-  <div class="digi-feature-content">
-    <h3>{{ block.settings.digi_products_app_features_block_head }}</h3>
-    <p>{{ block.settings.digi_products_app_features_block_para }}</p>
-  </div>
-</div>
 
-    {% endfor %} {% endcomment %}
-  <section id="features" class="row pt-md-4 pt-3 text-16">
+  <section id="features" class="digi-pro-features">
   {% for block in section.blocks %}
     {% if forloop.index <= 4 or section.settings.show_all_features %}
-      <div class="media mb-lg-5 mb-4 col-md-6">
-        <div class="media-img mr-lg-4 mr-3" style="flex: 0 0 auto;">
+      <div class="">
+        <div class="" style="flex: 0 0 auto;">
           {% if block.settings.feature_icon != blank %}
             <img src="{{ block.settings.feature_icon | image_url }}" alt="{{ block.settings.feature_heading | escape }}" class="d-inline-block highlights-icon">
           {% endif %}
         </div>
         <div class="media-content">
-          <h3 class="text-gray-medium">{{ block.settings.feature_heading }}</h3>
-          <p class="mb-0">{{ block.settings.feature_description }}</p>
+          <h3 class="">{{ block.settings.feature_heading }}</h3>
+          <p class="">{{ block.settings.feature_description }}</p>
         </div>
       </div>
     {% endif %}
@@ -216,7 +50,6 @@
   {% endif %}
 </section>
 
-  </div>
   {% if section.settings.digi_products_app_features_btn != blank and section.settings.digi_products_app_features_url != blank %}
     <a href="{{ section.settings.digi_products_app_features_url }}" class="digi-pro-features-btn">
       {{ section.settings.digi_products_app_features_btn }}
