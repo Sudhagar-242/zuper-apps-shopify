@@ -53,6 +53,123 @@
   margin: 0;
 }
 
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 80px; /* vertical and horizontal spacing */
+  padding: 20px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  width: 45%; /* two items per row */
+  gap: 20px;
+}
+
+.feature-icon-box {
+  background-color: #d6f9f9; /* light aqua background */
+  width: 130px;
+  height: 130px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  flex-shrink: 0;
+}
+
+.feature-icon-box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #3a3a3a; /* dark gray text */
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: #222222; /* darker paragraph text */
+  margin: 0;
+}
+
+#features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 80px; /* vertical and horizontal spacing */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+#features .media {
+  display: flex;
+  align-items: flex-start;
+  width: 45%; /* two columns */
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+#features .media-img {
+  background-color: #d6f9f9; /* light aqua */
+  border-radius: 20px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  flex-shrink: 0;
+}
+
+#features .media-img img.highlights-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+#features .media-content h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #3a3a3a;
+  margin: 0 0 8px 0;
+}
+
+#features .media-content p {
+  margin: 0;
+  color: #222222;
+  font-size: 1rem;
+}
+
+.moreless-button {
+  cursor: pointer;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: #12b9b6;
+  color: white;
+  border: none;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.moreless-button:hover {
+  background-color: #0e8e89;
+}
+
+
 {% endstylesheet %}
 
 
@@ -61,7 +178,7 @@
     <h2>{{ section.settings.digi_products_app_features_head }}</h2>
   {% endif %}
   <div class="digi-pro-features-container">
-    {% for block in section.blocks %}
+    {% comment %} {% for block in section.blocks %}
       <div class="digi-feature-block">
   <div class="digi-feature-image-box">
     {% if block.settings.digi_products_app_features_block_image != blank %}
@@ -74,7 +191,31 @@
   </div>
 </div>
 
-    {% endfor %}
+    {% endfor %} {% endcomment %}
+  <section id="features" class="row pt-md-4 pt-3 text-16">
+  {% for block in section.blocks %}
+    {% if forloop.index <= 4 or section.settings.show_all_features %}
+      <div class="media mb-lg-5 mb-4 col-md-6">
+        <div class="media-img mr-lg-4 mr-3" style="flex: 0 0 auto;">
+          {% if block.settings.feature_icon != blank %}
+            <img src="{{ block.settings.feature_icon | image_url }}" alt="{{ block.settings.feature_heading | escape }}" class="d-inline-block highlights-icon">
+          {% endif %}
+        </div>
+        <div class="media-content">
+          <h3 class="text-gray-medium">{{ block.settings.feature_heading }}</h3>
+          <p class="mb-0">{{ block.settings.feature_description }}</p>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  {% if section.blocks.size > 4 %}
+    <div class="d-flex justify-content-center text-center w-100">
+      <a href="javascript:void(0);" class="moreless-button btn btn-primary btn-sm" onclick="toggleFeatures(this)">{{ section.settings.button_text }}</a>
+    </div>
+  {% endif %}
+</section>
+
   </div>
   {% if section.settings.digi_products_app_features_btn != blank and section.settings.digi_products_app_features_url != blank %}
     <a href="{{ section.settings.digi_products_app_features_url }}" class="digi-pro-features-btn">
@@ -85,7 +226,33 @@
 
 
 
+<script>
+  function toggleFeatures(button) {
+    const section = button.closest('#features');
+    const showAll = button.getAttribute('data-show-all') === 'true';
+    const medias = section.querySelectorAll('.media');
+    
+    medias.forEach((media, index) => {
+      if (index >= 4) {
+        media.style.display = showAll ? 'none' : 'flex';
+      }
+    });
 
+    button.textContent = showAll ? '{{ section.settings.button_text }}' : '{{ section.settings.button_text_alternate }}';
+    button.setAttribute('data-show-all', !showAll);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('#features');
+    if(!section) return;
+    const medias = section.querySelectorAll('.media');
+    medias.forEach((media, index) => {
+      if (index >= 4) {
+        media.style.display = 'none';
+      }
+    });
+  });
+</script>
 
 
 {% schema %}
@@ -107,27 +274,39 @@
       "type": "url",
       "id": "digi_products_app_features_url",
       "label": "Heading_Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Show More Button Text",
+      "default": "View More Features"
+    },
+    {
+      "type": "text",
+      "id": "button_text_alternate",
+      "label": "Show Less Button Text",
+      "default": "View Less Features"
     }
   ],
   "blocks": [
     {
-        "type": "feature_block",
-      "name": "Feature Block",
+      "type": "feature",
+      "name": "Feature",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "feature_icon",
+          "label": "Feature Icon"
+        },
+        {
           "type": "text",
-          "id": "digi_products_app_features_block_head",
-          "label": "Block Head"
+          "id": "feature_heading",
+          "label": "Feature Heading"
         },
         {
           "type": "textarea",
-          "id": "digi_products_app_features_block_para",
-          "label": "Block Para"
-        },
-        {
-          "type": "image_picker",
-          "id": "digi_products_app_features_block_image",
-          "label": "Block Image"
+          "id": "feature_description",
+          "label": "Feature Description"
         }
       ]
     }
