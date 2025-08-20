@@ -135,68 +135,43 @@
     "custom_digital_products_app_features_tzdJfm": {
       "type": "custom-digital_products_app_features",
       "blocks": {
-        "feature_block_cVYxAa": {
-          "type": "feature_block",
+        "feature_3Yy6yU": {
+          "type": "feature",
           "settings": {
-            "digi_products_app_features_block_head": "iuhuitijnbjtnt",
-            "digi_products_app_features_block_para": "lkmkkgnv4tnkj n oitgm4i kjjtglln4t kmt rtbmbm llktmgok4m kmhh lk",
-            "digi_products_app_features_block_image": "shopify://shop_images/custom-logo-3.svg"
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
           }
         },
-        "feature_block_tCKi4C": {
-          "type": "feature_block",
+        "feature_RAzCTH": {
+          "type": "feature",
           "settings": {
-            "digi_products_app_features_block_head": "iuhuitijnbjtnt",
-            "digi_products_app_features_block_para": "lkmkkgnv4tnkj n oitgm4i kjjtglln4t kmt rtbmbm llktmgok4m kmhh lk",
-            "digi_products_app_features_block_image": "shopify://shop_images/custom-logo-3.svg"
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
           }
         },
-        "feature_block_QQX7UR": {
-          "type": "feature_block",
+        "feature_N8zfWD": {
+          "type": "feature",
           "settings": {
-            "digi_products_app_features_block_head": "iuhuitijnbjtnt",
-            "digi_products_app_features_block_para": "lkmkkgnv4tnkj n oitgm4i kjjtglln4t kmt rtbmbm llktmgok4m kmhh lk",
-            "digi_products_app_features_block_image": "shopify://shop_images/custom-logo-3.svg"
-          }
-        },
-        "feature_block_YBrLge": {
-          "type": "feature_block",
-          "settings": {
-            "digi_products_app_features_block_head": "iuhuitijnbjtnt",
-            "digi_products_app_features_block_para": "lkmkkgnv4tnkj n oitgm4i kjjtglln4t kmt rtbmbm llktmgok4m kmhh lk",
-            "digi_products_app_features_block_image": "shopify://shop_images/custom-logo-3.svg"
-          }
-        },
-        "feature_block_g9LtrT": {
-          "type": "feature_block",
-          "settings": {
-            "digi_products_app_features_block_head": "iuhuitijnbjtnt",
-            "digi_products_app_features_block_para": "lkmkkgnv4tnkj n oitgm4i kjjtglln4t kmt rtbmbm llktmgok4m kmhh lk",
-            "digi_products_app_features_block_image": "shopify://shop_images/custom-logo-3.svg"
-          }
-        },
-        "feature_block_d6RACB": {
-          "type": "feature_block",
-          "settings": {
-            "digi_products_app_features_block_head": "iuhuitijnbjtnt",
-            "digi_products_app_features_block_para": "lkmkkgnv4tnkj n oitgm4i kjjtglln4t kmt rtbmbm llktmgok4m kmhh lk",
-            "digi_products_app_features_block_image": "shopify://shop_images/custom-logo-3.svg"
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
           }
         }
       },
       "block_order": [
-        "feature_block_cVYxAa",
-        "feature_block_tCKi4C",
-        "feature_block_QQX7UR",
-        "feature_block_YBrLge",
-        "feature_block_g9LtrT",
-        "feature_block_d6RACB"
+        "feature_3Yy6yU",
+        "feature_RAzCTH",
+        "feature_N8zfWD"
       ],
       "name": "Digi_Pro_App_Features",
       "settings": {
         "digi_products_app_features_head": "hello world",
         "digi_products_app_features_btn": "hsjhbf",
-        "digi_products_app_features_url": "shopify://pages/contact"
+        "digi_products_app_features_url": "shopify://pages/contact",
+        "button_text": "View More Features",
+        "button_text_alternate": "View Less Features"
       }
     },
     "custom_digital_products_horizontal_infinite_R3NMFX": {
