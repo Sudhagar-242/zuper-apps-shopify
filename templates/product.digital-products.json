@@ -158,12 +158,30 @@
             "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
             "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
           }
+        },
+        "feature_KCmAWA": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_CxThfV": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
         }
       },
       "block_order": [
         "feature_3Yy6yU",
         "feature_RAzCTH",
-        "feature_N8zfWD"
+        "feature_N8zfWD",
+        "feature_KCmAWA",
+        "feature_CxThfV"
       ],
       "name": "Digi_Pro_App_Features",
       "settings": {
