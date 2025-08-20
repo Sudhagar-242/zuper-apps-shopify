@@ -142,7 +142,7 @@
   function toggleFeatures(button) {
     const section = document.getElementById("digi_pro_features")
     const showAll = button.getAttribute('data-show-all') === 'true';
-    const medias = section.querySelectorAll('.feature-item');
+    const medias = section.querySelectorAll('.feature-container');
     console.log("showAll")
     
     medias.forEach((media, index) => {
