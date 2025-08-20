@@ -44,6 +44,20 @@
     transform: translateX(-50%);
   }
 }
+.brand-logo-box {
+    /* ... */
+    > * {
+      flex: 0 0 100%;
+    }
+  }
+
+  /* Group the cards for better structure. */
+.brand-logo-wrapper {
+    display: flex;
+    gap: 20px;
+    /* Add padding to the right to create a gap between the last and first card. */
+    padding-right: 20px;
+  }
 {% endstylesheet %}
 
 <section class="brand-slider-section">
