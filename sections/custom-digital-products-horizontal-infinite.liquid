@@ -46,7 +46,7 @@
     transform: translateX(-50%);
   }
 }
-.brand-logo-box {
+.brand-slider-container {
     /* ... */
     > * {
       flex: 0 0 100%;
@@ -54,13 +54,13 @@
   }
 
   /* Group the cards for better structure. */
-.brand-logo-wrapper {
+.brand-slider {
     display: flex;
     gap: 20px;
     /* Add padding to the right to create a gap between the last and first card. */
     padding-right: 20px;
   }
-    .brand-logo-wrapper {
+    .brand-slider-container {
     /* ... */
     will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
     animation: scrolling 10s linear infinite;
