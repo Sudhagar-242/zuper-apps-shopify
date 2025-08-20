@@ -28,7 +28,6 @@
 
   <section id="features" class="digi-pro-features">
   {% for block in section.blocks %}
-    {% if forloop.index <= 4 or section.settings.show_all_features %}
       <div class="">
         <div class="" style="flex: 0 0 auto;">
           {% if block.settings.feature_icon != blank %}
@@ -40,20 +39,15 @@
           <p class="">{{ block.settings.feature_description }}</p>
         </div>
       </div>
-    {% endif %}
   {% endfor %}
 
-  {% if section.blocks.size > 4 %}
-    <div class="d-flex justify-content-center text-center w-100">
-      <a href="javascript:void(0);" class="moreless-button btn btn-primary btn-sm" onclick="toggleFeatures(this)">{{ section.settings.button_text }}</a>
-    </div>
-  {% endif %}
 </section>
 
-  {% if section.settings.digi_products_app_features_btn != blank and section.settings.digi_products_app_features_url != blank %}
-    <a href="{{ section.settings.digi_products_app_features_url }}" class="digi-pro-features-btn">
-      {{ section.settings.digi_products_app_features_btn }}
-    </a>
+  
+  {% if section.blocks.size > 4 %}
+    <div class="d-flex justify-content-center text-center w-100">
+      <a href="javascript:void(0);" class="moreless-button" onclick="toggleFeatures(this)">{{ section.settings.button_text }}</a>
+    </div>
   {% endif %}
 </section>
 
