@@ -138,7 +138,7 @@
         >/<span class=" tagline"><span>ONE CLICK COD FORM WITH UPSELLS</span></span></span
       >&gt;
     </p>
-    <h1 class="digital-product-hero-tittle">Releasit COD Form &amp; Upsells</h1>
+    <h1 class="digital-product-hero-tittle">{{ product.tittle }}</h1>
     <a href="#" class="btn-primary">Install Now!</a>
   </div>
   {% comment %} Right Side {% endcomment %}
@@ -147,7 +147,7 @@
     Simple Image Slider Section
   {% endcomment %}
 
-  <section class="custom-slider">
+  {% comment %} <section class="custom-slider">
     <div class="slides-wrapper">
       {% for block in section.blocks %}
         <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
@@ -160,7 +160,21 @@
 
     <button id="prev" class="slide-nav">&#10094;</button>
     <button id="next" class="slide-nav">&#10095;</button>
+  </section> {% endcomment %}
+
+    <section class="custom-slider">
+    <div class="slides-wrapper">
+      {% for image in product.images %}
+        <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
+            <img src="{{ image.src | img_url: '600x400' }}" alt="{{ image.alt | escape }}">
+        </div>
+      {% endfor %}
+    </div>
+
+    <button id="prev" class="slide-nav">&#10094;</button>
+    <button id="next" class="slide-nav">&#10095;</button>
   </section>
+
 </div>
 
 <script>
