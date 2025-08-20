@@ -124,6 +124,10 @@
       box-shadow: 0px 0px 40px 0px #00000014 !important;
   }
 
+  header-drawer .header .list-menu{
+      padding: 20px;
+  }
+
   header-drawer .list-social__item {
       border: 1px solid #0000001A;
       padding: 0px;
