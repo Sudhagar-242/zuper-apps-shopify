@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="{{ 'custom-hero-section.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<div class="container">
-  <div class="secondry_container">
+  <div class="hero-section-secondry_container">
     <h1 class="heading">
       {{ section.settings.heading_text }}
       <div class="logo-box">
@@ -98,11 +97,12 @@
       {%- endif -%}
     {% endform %}
   </div>
-</div>
 
 {% schema %}
 {
   "name": "Custom Hero Section",
+  "tag": "section",
+  "class": "hero-section-style",
   "settings": [
     {
       "type": "text",
