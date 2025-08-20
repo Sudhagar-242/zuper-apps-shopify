@@ -28,7 +28,7 @@
 
   <section id="features" class="digi-pro-features">
   {% for block in section.blocks %}
-      <div class="">
+      <div class="media">
         <div class="" style="flex: 0 0 auto;">
           {% if block.settings.feature_icon != blank %}
             <img src="{{ block.settings.feature_icon | image_url }}" alt="{{ block.settings.feature_heading | escape }}" class="d-inline-block highlights-icon">
@@ -55,7 +55,7 @@
 
 <script>
   function toggleFeatures(button) {
-    const section = button.closest('#features');
+    const section = document.getElementById("features")
     const showAll = button.getAttribute('data-show-all') === 'true';
     const medias = section.querySelectorAll('.media');
     
