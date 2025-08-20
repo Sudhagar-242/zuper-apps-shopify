@@ -18,6 +18,64 @@
   flex-wrap: wrap;
 }
 
+
+.feature-container { 
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(68, 68, 68);
+  text-align: left;
+  background-color: rgb(248, 248, 248);
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 4rem; /* vertical and horizontal gaps */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+.feature-icon {
+  background-color: #d6f9f9; /* light aqua*/
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  max-height: 100px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.feature-text h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: rgb(13, 75, 73);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.feature-text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(68, 68, 68);
+}
 {% endstylesheet %}
 
 
@@ -29,14 +87,14 @@
   <section id="digi_pro_features" class="digi-pro-features">
   {% for block in section.blocks %}
       <div class="feature_item">
-        <div class="" style="flex: 0 0 auto;">
+        <div class="feature-icon" style="flex: 0 0 auto;">
           {% if block.settings.feature_icon != blank %}
             <img src="{{ block.settings.feature_icon | image_url }}" alt="{{ block.settings.feature_heading | escape }}" class="d-inline-block highlights-icon">
           {% endif %}
         </div>
-        <div class="feature_item-content">
-          <h3 class="">{{ block.settings.feature_heading }}</h3>
-          <p class="">{{ block.settings.feature_description }}</p>
+        <div class="feature-text">
+          <h3>{{ block.settings.feature_heading }}</h3>
+          <p>{{ block.settings.feature_description }}</p>
         </div>
       </div>
   {% endfor %}
