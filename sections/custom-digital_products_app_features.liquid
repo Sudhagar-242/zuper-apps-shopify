@@ -143,10 +143,12 @@
     const section = document.getElementById("digi_pro_features")
     const showAll = button.getAttribute('data-show-all') === 'true';
     const medias = section.querySelectorAll('.feature-item');
+    console.log("showAll")
     
     medias.forEach((media, index) => {
       if (index >= 4) {
         media.style.display = showAll ? 'none' : 'flex';
+        console.log("flex")
       }
     });
 
