@@ -288,7 +288,7 @@
         "logo_FgPQNn": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify://shop_images/custom-logo-5.svg",
+            "logo_image": "shopify://shop_images/shopify.png",
             "logo_alt_text": ""
           }
         }
