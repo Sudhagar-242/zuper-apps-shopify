@@ -333,7 +333,7 @@ border: 1px solid #0000001A
 
 
 
-@media (min-width: 769px) and (max-width: 1023px){
+/* @media (min-width: 769px) and (max-width: 1023px){
     .faq-section{
       padding: 32px 76px;
     }
@@ -385,7 +385,7 @@ border: 1px solid #0000001A
     padding: 8px 16px;
     font-size: 16px;
 }
-}
+} */
 
 
 
