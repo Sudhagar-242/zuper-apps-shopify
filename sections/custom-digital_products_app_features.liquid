@@ -57,7 +57,7 @@
   function toggleFeatures(button) {
     const section = document.getElementById("features")
     const showAll = button.getAttribute('data-show-all') === 'true';
-    const medias = document.querySelectorAll('.feature_item');
+    const medias = section.querySelectorAll('.feature_item');
     
     medias.forEach((media, index) => {
       if (index >= 4) {
