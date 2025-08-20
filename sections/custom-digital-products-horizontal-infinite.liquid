@@ -82,9 +82,24 @@
   {% endif %}
 
   <div class="brand-slider-container">
-    <div class="brand-slider">
+    {% comment %} coursal {% endcomment %}
+    <div class="brand-slider"> 
+    {% comment %} group {% endcomment %}
       {% for block in section.blocks %}
-        <div class="brand-logo-box">
+        <div class="brand-logo-box"> 
+          <div class="brand-logo-wrapper">
+            {% if block.settings.logo_image != blank %}
+              <img src="{{ block.settings.logo_image | image_url: width: 140 }}" alt="{{ block.settings.logo_alt_text | escape }}" class="logo-wrap">
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% comment %} Duplicate logos for seamless infinite scroll {% endcomment %}
+    <div class="brand-slider"> 
+    {% comment %} group {% endcomment %}
+      {% for block in section.blocks %}
+        <div class="brand-logo-box"> 
           <div class="brand-logo-wrapper">
             {% if block.settings.logo_image != blank %}
               <img src="{{ block.settings.logo_image | image_url: width: 140 }}" alt="{{ block.settings.logo_alt_text | escape }}" class="logo-wrap">
