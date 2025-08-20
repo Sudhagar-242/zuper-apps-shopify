@@ -1,136 +1,133 @@
 {% style %}
-
-.Digital-products-hero{
-  background: #085552;
-}
-        .hero-section{
-          display: flex;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 60px 20px;
-          gap: 20px;
-        }
-        .hero-right-side{
-          width: 50%;
-          padding: 80px 20px;
-          padding-left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        .hero-left-side{
-          width: 50%;
-          overflow: hidden;
-          margin: auto;
-        }
-        .hero-left-side .slide img{
-            width: 100%;
-        }
-  .digital-product-hero-badge {
+          .Digital-products-hero{
+            background: #085552;
+          }
+          .hero-section{
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            gap: 20px;
+          }
+          .hero-right-side{
+            width: 50%;
+            padding: 80px 20px;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .hero-left-side{
+            width: 50%;
+            overflow: hidden;
+            margin: auto;
+          }
+          .hero-left-side .slide img{
+              width: 100%;
+          }
+    .digital-product-hero-badge {
+      box-sizing: border-box;
+      color: rgb(0, 169, 162);
+      display: inline;
+      font-family: source-code-pro, monospace;
+      font-size: 20px;
+      font-weight: 400;
+      height: auto;
+      line-height: 30px;
+      text-align: left;
+      text-rendering: optimizelegibility;
+      text-size-adjust: 100%;
+      width: auto;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .digital-product-hero-tittle {
     box-sizing: border-box;
-    color: rgb(0, 169, 162);
-    display: inline;
-    font-family: source-code-pro, monospace;
-    font-size: 20px;
-    font-weight: 400;
-    height: auto;
-    line-height: 30px;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: "sofia-pro", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0 0 16px 0;
     text-align: left;
-    text-rendering: optimizelegibility;
-    text-size-adjust: 100%;
-    width: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    unicode-bidi: isolate;
+  }
+
+        .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55.6px;
+    padding: 13.6px 30px;
+    background-color: rgb(0, 169, 162);
+    color: rgb(255, 255, 255);
+    font-family: "sofia-pro", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.2px;
+    text-align: center;
+    text-decoration: none;
+    border: 1.6px solid rgb(0, 169, 162);
+    border-radius: 0px;
+    box-sizing: border-box;
+    box-shadow: none;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    transition: color 0.15s ease-in-out,
+                background-color 0.15s ease-in-out,
+                border-color 0.15s ease-in-out,
+                box-shadow 0.15s ease-in-out;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-  .digital-product-hero-tittle {
-  box-sizing: border-box;
-  color: rgb(255, 255, 255);
-  display: block;
-  font-family: "sofia-pro", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48px;
-  margin: 0 0 16px 0;
-  text-align: left;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  unicode-bidi: isolate;
-}
-
-      .btn-primary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 55.6px;
-  padding: 13.6px 30px; 
-  background-color: rgb(0, 169, 162);
-  color: rgb(255, 255, 255);
-  font-family: "sofia-pro", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 25.2px;
-  text-align: center;
-  text-decoration: none;
-  border: 1.6px solid rgb(0, 169, 162);
-  border-radius: 0px;
-  box-sizing: border-box;
-  box-shadow: none;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: middle;
-  margin-bottom: 10px;
-  transition: color 0.15s ease-in-out,
-              background-color 0.15s ease-in-out,
-              border-color 0.15s ease-in-out,
-              box-shadow 0.15s ease-in-out;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-  .custom-slider {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-   .custom-slider .slides-wrapper {
-    position: relative;
-    height: 100%;
-  }
-   .custom-slider .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: none;
-  }
-   .custom-slider .slide img {
-    width: 100%;
-    display: block;
-  }
-   .custom-slider .slide-nav {
-    position: absolute;
-    top: 50%;
-    background: rgba(255,255,255,0.7);
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    cursor: pointer;
-    user-select: none;
-    transform: translateY(-50%);
-  }
-   .custom-slider #prev {
-    left: 10px;
-  }
-   .custom-slider #next {
-    right: 10px;
-  }
-
-
+    .custom-slider {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+     .custom-slider .slides-wrapper {
+      position: relative;
+      height: 100%;
+    }
+     .custom-slider .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+     .custom-slider .slide img {
+      width: 100%;
+      display: block;
+    }
+     .custom-slider .slide-nav {
+      position: absolute;
+      top: 50%;
+      background: rgba(255,255,255,0.7);
+      border: none;
+      border-radius: 50%;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      user-select: none;
+      transform: translateY(-50%);
+    }
+     .custom-slider #prev {
+      left: 10px;
+    }
+     .custom-slider #next {
+      right: 10px;
+    }
 {% endstyle %}
 
 <div class="hero-section">
@@ -146,37 +143,37 @@
   </div>
   {% comment %} Right Side {% endcomment %}
   <!-- sections/custom-slideshow.liquid -->
-{% comment %}
-  Simple Image Slider Section
-{% endcomment %}
+  {% comment %}
+    Simple Image Slider Section
+  {% endcomment %}
 
-<section class="custom-slider">
-  <div class="slides-wrapper">
-    {% for block in section.blocks %}
-      <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
-        {% if block.settings.image != blank %}
-          <img src="{{ block.settings.image | img_url: '600x400' }}" alt="{{ block.settings.alt_text | escape }}" />
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
+  <section class="custom-slider">
+    <div class="slides-wrapper">
+      {% for block in section.blocks %}
+        <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | img_url: '600x400' }}" alt="{{ block.settings.alt_text | escape }}">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
 
-  <button id="prev" class="slide-nav">&#10094;</button>
-  <button id="next" class="slide-nav">&#10095;</button>
-</section>
+    <button id="prev" class="slide-nav">&#10094;</button>
+    <button id="next" class="slide-nav">&#10095;</button>
+  </section>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     let currentSlide = 0;
     const slides = document.querySelectorAll('.custom-slider .slide');
     const totalSlides = slides.length;
 
     const showSlide = (index) => {
       slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
+        slide.style.display = i === index ? 'block' : 'none';
       });
-    }
+    };
 
     document.getElementById('prev').addEventListener('click', () => {
       currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
