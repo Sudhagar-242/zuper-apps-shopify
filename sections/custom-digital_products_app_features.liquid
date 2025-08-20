@@ -78,6 +78,13 @@
   color: rgb(68, 68, 68);
 }
 
+.moreless-btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .moreless-button {
   display: inline-block;
   background-color: #00a9a2;
@@ -125,15 +132,12 @@
       </div>
     </div>
   {% endfor %}
-
-</section>
-
-  
   {% if section.blocks.size > 4 %}
-    <div class="d-flex justify-content-center text-center w-100">
+    <div class="moreless-btn-container">
       <a href="javascript:void(0);" class="moreless-button" onclick="toggleFeatures(this)" data-show-all="false">{{ section.settings.button_text }}</a>
     </div>
   {% endif %}
+</section>
 </section>
 
 
