@@ -166,7 +166,7 @@
     <div class="slides-wrapper">
       {% for image in product.images %}
         <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
-            <img src="{{ image.src | img_url: '600x400' }}" alt="{{ image.alt | escape }}">
+            <img src="{{ image.src | img_url }}" alt="{{ image.alt | escape }}">
         </div>
       {% endfor %}
     </div>
