@@ -2,65 +2,64 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
-
-    @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
       }
+
+      @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+      }
+
+    .custom_multi_column .multicolumn{
+      background: {{ section.settings.section_background }};
     }
 
-  .custom_multi_column .multicolumn{
-    background: {{ section.settings.section_background }};
+      .custom_multi_column .multicolumn-card {
+      display: flex;
+      flex-direction: column;
+      background: {{ section.settings.card_background }} !important;
+    }
+    .custom_multi_column .multicolumn-card:hover {
+      {% if section.settings.card_hover_background %}
+        background: {{ section.settings.card_hover_background }} !important;
+      {% endif %}
+    }
+     .custom_multi_column .multicolumn .title {
+      width: 100%;
+      text-align: center;
+      color: {{ section.settings.section_heading_font_color }};
+      font-family: {{ section.settings.section_heading_font.family }},{{ section.settings.card_heading_font.fallback_families }};
+    }
+     .custom_multi_column .media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+     .custom_multi_column .multicolumn-card__info {
+      margin-top: auto;
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+    }
+     .custom_multi_column .multicolumn-card__info .rte {
+      color: #444;
+      font-family: {{ section.settings.card_paragraph_font.family }},{{ section.settings.card_paragraph_font.fallback_families }};
+      color: {{ section.settings.card_paragraph_font_color }};
+    }
+
+     .custom_multi_column .button--primary {
+    color: {{ section.settings.section_button_font_color }};
+    background-color: {{ section.settings.button_back_ground }};
   }
 
-    .custom_multi_column .multicolumn-card {
-    display: flex;
-    flex-direction: column;
-    background: {{ section.settings.card_background }} !important;
+     .custom_multi_column .button--primary:hover {
+      color: {{section.settings.section_button_hover_font_color}};
+    background-color: {{ section.settings.button_hover_back_ground }};
   }
-  .custom_multi_column .multicolumn-card:hover {
-    {% if section.settings.card_hover_background %}
-      background: {{ section.settings.card_hover_background }} !important;
-    {% endif %}
-  }
-   .custom_multi_column .multicolumn .title {
-    width: 100%;
-    text-align: center;
-    color: {{ section.settings.section_heading_font_color }};
-    font-family: {{ section.settings.section_heading_font.family }},{{ section.settings.card_heading_font.fallback_families }};
-  }
-   .custom_multi_column .media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-   .custom_multi_column .multicolumn-card__info {
-    margin-top: auto;
-    text-align: center;
-    font-size: 16px;
-    line-height: 24px;
-  }
-   .custom_multi_column .multicolumn-card__info .rte {
-    color: #444;
-    font-family: {{ section.settings.card_paragraph_font.family }},{{ section.settings.card_paragraph_font.fallback_families }};
-    color: {{ section.settings.card_paragraph_font_color }};
-  }
-
-   .custom_multi_column .button--primary {
-  color: {{ section.settings.section_button_font_color }};
-  background-color: {{ section.settings.button_back_ground }};
-}
-
-   .custom_multi_column .button--primary:hover {
-    color: {{section.settings.section_button_hover_font_color}};
-  background-color: {{ section.settings.button_hover_back_ground }};
-}
-
 {%- endstyle -%}
 
 {%- liquid
@@ -255,7 +254,6 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-
     // === Section Settings ===
     {
       "type": "inline_richtext",
@@ -552,11 +550,7 @@
   "presets": [
     {
       "name": "Custom Multi Column",
-      "blocks": [
-        { "type": "column" },
-        { "type": "column" },
-        { "type": "column" }
-      ]
+      "blocks": [{ "type": "column" }, { "type": "column" }, { "type": "column" }]
     }
   ]
 }
