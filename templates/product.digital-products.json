@@ -319,7 +319,7 @@
         "column_nkdQ7U": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/custom-logo-1.svg",
+            "image": "shopify://shop_images/logo_pagefly.svg",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -329,6 +329,7 @@
         "column_jHTdUA": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/gempages-logos-idRv9J-_eK.svg",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -338,6 +339,7 @@
         "column_KYt8Px": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Zipify_logo.webp",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -351,8 +353,8 @@
         "column_KYt8Px"
       ],
       "custom_css": [
-        ".gradient{}",
-        " .multicolumn-card {display: flex; flex-direction: column;}",
+        ".gradient {}",
+        ".multicolumn-card {display: flex; flex-direction: column;}",
         ".multicolumn .title {width: 100%; text-align: center;}",
         ".media {display: flex; justify-content: center; padding: 0 !important;}",
         ".multicolumn-card__info {margin-top: auto;}",
