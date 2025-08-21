@@ -139,7 +139,7 @@
       >&gt;
     </p>
     <h1 class="digital-product-hero-tittle">{{ product.title }}</h1>
-    <a href="#" class="btn-primary">Install Now!</a>
+    <a href="{{ section.settings.digital-products-hero-btn-link }}" class="btn-primary">{{section.settings.digital-products-hero-btn-tittle}}</a>
   </div>
   {% comment %} Right Side {% endcomment %}
   <!-- sections/custom-slideshow.liquid -->
@@ -213,6 +213,14 @@
       "type": "richtext",
       "id": "digital-products-hero-tittle",
       "label": "digital products hero tittle"
+    },{
+      "type": "text",
+      "id": "digital-products-hero-btn-tittle",
+      "label": "digital products Button Text"
+    },{
+      "type": "url",
+      "id": "digital-products-hero-btn-link",
+      "label": "digital products Button Link"
     }
   ],
   "blocks": [
