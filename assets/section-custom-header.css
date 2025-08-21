@@ -70,7 +70,7 @@
       will-change: transform;
   }
 
-  .list-menu {
+  .header .list-menu {
       height: 74px;
       display: flex;
       justify-content: space-evenly;
@@ -78,29 +78,29 @@
       align-items: center;
       background: white;
       color: black;
-      border-radius: 24px;
+      border-radius: 154px;
   }
 
-  .btn-container {
+  .header .btn-container {
       display: flex;
       gap: 12px;
   }
 
-  .log_in_button {
+  .header .log_in_button {
       border: 1px solid #0000001A;
       background: transparent;
       color: black;
 
   }
 
-  .sign_up_button {
+  .header .sign_up_button {
       width: max-content;
       border: 1px solid #FFFFFF1A;
       color: white;
       background: #0CD7BA;
   }
 
-  .for_log_sign {
+  .header .for_log_sign {
       padding: 13.5px 24px;
       font-weight: 500;
       font-size: 18px;
