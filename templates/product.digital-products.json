@@ -355,7 +355,7 @@
         ".multicolumn .title {width: 100%; text-align: center;}",
         ".media {display: inline-block;}",
         ".multicolumn-card {display: grid;}",
-        ".media>*:not(.zoom):not(.deferred-media__poster-button).multicolumn-card__info {position: relative;}"
+        ".media>*:not(.zoom):not(.deferred-media__poster-button), .media model-viewer{position: relative;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
