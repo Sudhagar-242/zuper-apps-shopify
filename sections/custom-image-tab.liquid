@@ -1,0 +1,65 @@
+{% schema %}
+  {
+  "name": "Custom Image Tab",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Image Tab",
+      "type": "image_tab",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Background Image",
+          "info": "This will be the image exist in top section"
+        },
+        {
+          "type": "header",
+          "content": "Title In Top Section"
+        },
+        {
+          "type": "text",
+          "id": "heading_text",
+          "label": "Heading Text",
+          "default": "Header",
+          "info": "This will be exist in top section"
+        },
+        {
+          "type": "header",
+          "content": "Description In Top Section"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Welcome to My Shop"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Explore All Products"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Tab"
+    }
+  ]
+}  
+{% endschema %}
