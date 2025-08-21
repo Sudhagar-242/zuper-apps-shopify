@@ -288,10 +288,10 @@
       <div class="tabss-wrapper">
         {% for block in section.settings.blocks %}
           <div class="tabs active" data-category="agriculture">
-          <img
+          {% comment %} <img
             src="{{ block.rounded_image | image_url }}"
             alt="{{ block.heading_text }}"
-          />
+          /> {% endcomment %}
           <h3>{{ block.heading_text }}</h3>
         </div>
         {% endfor %}
