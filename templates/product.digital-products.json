@@ -441,10 +441,10 @@
         "image_tab_yxaCbz": {
           "type": "image_tab",
           "settings": {
-            "background_image": "shopify://shop_images/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
-            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text": "Header",
-            "description": "Welcome to My Shop",
+            "background_image": "shopify://shop_images/automotive.webp",
+            "rounded_image": "shopify://shop_images/automotive.webp",
+            "heading_text": "Automotive",
+            "description": "Expert automotive tools and diagnostics to keep your vehicle running at peak performance. Our solutions help mechanics and enthusiasts work smarter and faster.",
             "button_label": "Explore All Products",
             "button_link": ""
           }
@@ -452,10 +452,10 @@
         "image_tab_TjF7Ub": {
           "type": "image_tab",
           "settings": {
-            "background_image": "shopify://shop_images/shellfish-pasta-pizza-and-italian-food.jpg",
-            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text": "Header",
-            "description": "Welcome to My Shop",
+            "background_image": "shopify://shop_images/transport.webp",
+            "rounded_image": "shopify://shop_images/transport.webp",
+            "heading_text": "Transport",
+            "description": "Reliable and efficient transport services ensuring your goods arrive safely and on time. Our logistics solutions are tailored for modern supply chains.",
             "button_label": "Explore All Products",
             "button_link": ""
           }
@@ -463,10 +463,10 @@
         "image_tab_9H6NBe": {
           "type": "image_tab",
           "settings": {
-            "background_image": "shopify://shop_images/breakfast-from-above.jpg",
-            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text": "Header",
-            "description": "Welcome to My Shop",
+            "background_image": "shopify://shop_images/automotive_1.webp",
+            "rounded_image": "shopify://shop_images/automotive_1.webp",
+            "heading_text": "Construction",
+            "description": "Innovative construction solutions, tools, and machinery for modern infrastructure projects. Safety, efficiency, and durability in every solution.",
             "button_label": "Explore All Products",
             "button_link": ""
           }
