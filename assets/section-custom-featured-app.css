@@ -146,7 +146,7 @@ max-width: 700px;
     text-align: center;
     }
 
-    .see-all-button a::after {
+    .see-all-button a::after, .demo-link::after {
       content: "\2192";
     width: 44px;
     height: 44px;
@@ -162,7 +162,6 @@ max-width: 700px;
   display: inline-block;
   color: #00a9a2;
   text-decoration: none;
-  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.5;
   color: #444;
@@ -178,7 +177,6 @@ max-width: 700px;
 /* Text inside link */
 .demo-text {
   font-weight: 700;
-  font-size: 1rem;
 }
 
     @media (max-width: 600px){
