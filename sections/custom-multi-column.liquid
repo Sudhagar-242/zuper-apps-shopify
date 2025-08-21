@@ -62,6 +62,9 @@
       color: {{section.settings.section_button_hover_font_color}};
     background-color: {{ section.settings.button_hover_back_ground }};
   }
+  .underlined-link{
+    margin: auto;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -85,7 +88,7 @@
           {{ section.settings.title }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
-          <a href="{{ section.settings.button_link }}" class="link button--primary underlined-link large-up-hide">
+          <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
             {{- section.settings.button_label | escape -}}
           </a>
         {%- endif -%}
