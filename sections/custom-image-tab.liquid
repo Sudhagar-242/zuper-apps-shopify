@@ -348,6 +348,7 @@
         tabss.forEach((t) => t.classList.remove("active"));
         tab.classList.add("active");
 
+        console.log(tab)
         // const category = tab.getAttribute("data-category");
         // const data = categories[category];
 
@@ -375,7 +376,7 @@
             closestTab = tab;
           }
         });
-
+        console.log(closestTab)
         return closestTab;
       }
 
