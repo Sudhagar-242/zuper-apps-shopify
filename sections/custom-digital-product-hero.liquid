@@ -172,7 +172,7 @@
     </p>
     <h1 class="digital-product-hero-tittle">{{ product.title }}</h1>
     <p class="digital-product-hero-description">
-       {{ product.description }}
+       {{ product.description | capitalize }}
     </p>
     <a href="{{ section.settings.digital-products-hero-btn-link }}" class="digi-products-btn-primary icon-btn">
       {{- section.settings['digital-products-hero-btn-tittle'] -}}
