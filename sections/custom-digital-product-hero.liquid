@@ -139,7 +139,9 @@
       >&gt;
     </p>
     <h1 class="digital-product-hero-tittle">{{ product.title }}</h1>
-    <a href="{{ section.settings.digital-products-hero-btn-link }}" class="btn-primary">{{section.settings.digital-products-hero-btn-tittle}}</a>
+    <a href="{{ section.settings.digital-products-hero-btn-link }}" class="btn-primary">
+      {{- section.settings['digital-products-hero-btn-tittle'] -}}
+    </a>
   </div>
   {% comment %} Right Side {% endcomment %}
   <!-- sections/custom-slideshow.liquid -->
@@ -147,26 +149,28 @@
     Simple Image Slider Section
   {% endcomment %}
 
-  {% comment %} <section class="custom-slider">
-    <div class="slides-wrapper">
-      {% for block in section.blocks %}
-        <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
-          {% if block.settings.image != blank %}
-            <img src="{{ block.settings.image | img_url: '600x400' }}" alt="{{ block.settings.alt_text | escape }}">
-          {% endif %}
-        </div>
-      {% endfor %}
-    </div>
-
-    <button id="prev" class="slide-nav">&#10094;</button>
-    <button id="next" class="slide-nav">&#10095;</button>
-  </section> {% endcomment %}
-
+  {% comment %}
     <section class="custom-slider">
+      <div class="slides-wrapper">
+        {% for block in section.blocks %}
+          <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | img_url: '600x400' }}" alt="{{ block.settings.alt_text | escape }}">
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+
+      <button id="prev" class="slide-nav">&#10094;</button>
+      <button id="next" class="slide-nav">&#10095;</button>
+    </section>
+  {% endcomment %}
+
+  <section class="custom-slider">
     <div class="slides-wrapper">
       {% for image in product.images %}
         <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
-            <img src="{{ image.src | img_url }}" alt="{{ image.alt | escape }}">
+          <img src="{{ image.src | img_url }}" alt="{{ image.alt | escape }}">
         </div>
       {% endfor %}
     </div>
@@ -174,7 +178,6 @@
     <button id="prev" class="slide-nav">&#10094;</button>
     <button id="next" class="slide-nav">&#10095;</button>
   </section>
-
 </div>
 
 <script>
@@ -213,12 +216,14 @@
       "type": "richtext",
       "id": "digital-products-hero-tittle",
       "label": "digital products hero tittle"
-    },{
+    },
+    {
       "type": "text",
       "id": "digital-products-hero-btn-tittle",
       "label": "digital products Button Text",
       "default": "Install Now"
-    },{
+    },
+    {
       "type": "url",
       "id": "digital-products-hero-btn-link",
       "label": "digital products Button Link"
@@ -277,7 +282,7 @@
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
         }
       ]
-    },
+    }
   ],
   "presets": [
     {
