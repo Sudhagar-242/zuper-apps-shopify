@@ -267,7 +267,7 @@
     id="topSection"
     class="top-section"
     style="
-                background-image: url('https://cdn.shopify.com/s/files/1/0927/8583/6398/files/agriculture-healthy-food.png?v=1752959180');
+                      background-image: url('https://cdn.shopify.com/s/files/1/0927/8583/6398/files/agriculture-healthy-food.png?v=1752959180');
     "
   >
     <h1 id="topTitle">Agriculture</h1>
@@ -293,7 +293,11 @@
           <a id="hidden_block_button" href="{{ block.settings.button_link }}">
             {{ block.settings.button_label }}
           </a>
-          <img id="hidden_block_background_image" src="{{ block.settings.background_image | image_url }}" alt="{{ block.settings.heading_text }}" />
+          <img
+            id="hidden_block_background_image"
+            src="{{ block.settings.background_image | image_url }}"
+            alt="{{ block.settings.heading_text }}"
+          >
         </p>
       </div>
     {% endfor %}
@@ -315,88 +319,99 @@
 </div>
 
 {% javascript %}
-      const tabss = document.querySelectorAll(".tabs");
-      const wrapper = document.querySelector(".tabss-wrapper");
-      const topSection = document.getElementById("topSection");
-      const topTitle = document.getElementById("topTitle");
-      const topDescription = document.getElementById("topDescription");
-      const sliderNav = document.querySelector(".slider-nav");
+  const tabss = document.querySelectorAll('.tabs');
+  const wrapper = document.querySelector('.tabss-wrapper');
+  const topSection = document.getElementById('topSection');
+  const topTitle = document.getElementById('topTitle');
+  const topDescription = document.getElementById('topDescription');
+  const sliderNav = document.querySelector('.slider-nav');
 
-      // Function to show/hide arrows based on desktop & tab count
-      function updateArrows() {
-        if (window.innerWidth >= 990) {
-          // Desktop
-          if (tabss.length <= 3) {
-            sliderNav.style.display = "none"; // Hide arrows
-          } else {
-            sliderNav.style.display = "flex"; // Show arrows
-          }
-        } else {
-          // Mobile: always show arrows
-          sliderNav.style.display = "flex";
-        }
+  // Function to show/hide arrows based on desktop & tab count
+  function updateArrows() {
+    if (window.innerWidth >= 990) {
+      // Desktop
+      if (tabss.length <= 3) {
+        sliderNav.style.display = 'none'; // Hide arrows
+      } else {
+        sliderNav.style.display = 'flex'; // Show arrows
       }
+    } else {
+      // Mobile: always show arrows
+      sliderNav.style.display = 'flex';
+    }
+  }
 
-      // Run on load
-      updateArrows();
+  // Run on load
+  updateArrows();
 
-      // Update on resize
-      window.addEventListener("resize", updateArrows);
+  // Update on resize
+  window.addEventListener('resize', updateArrows);
 
-      // Function to update active tab + top section
-      function setActiveTab(tab) {
-        tabss.forEach((t) => t.classList.remove("active"));
-        tab.classList.add("active");
+  // Function to update active tab + top section
+  function setActiveTab(tab) {
+    tabss.forEach((t) => t.classList.remove('active'));
+    tab.classList.add('active');
+    const hiddenData = {
+      title: tab.querySelector('#hidden_block_title')?.textContent.trim(),
+      description: tab.querySelector('#hidden_block_description')?.textContent.trim(),
+      button: {
+        text: tab.querySelector('#hidden_block_button')?.textContent.trim(),
+        url: tab.querySelector('#hidden_block_button')?.getAttribute('href'),
+      },
+      backgroundImage: tab.querySelector('#hidden_block_background_image')?.getAttribute('src'),
+    };
 
-        console.log(tab)
-        // const category = tab.getAttribute("data-category");
-        // const data = categories[category];
+    console.log(hiddenData);
 
-        // topSection.style.backgroundImage = `url('${data.image}')`;
-        // topTitle.textContent = data.title;
-        // topDescription.textContent = data.description;
+    console.log(tab);
+    // const category = tab.getAttribute("data-category");
+    // const data = categories[category];
+
+    // topSection.style.backgroundImage = `url('${data.image}')`;
+    // topTitle.textContent = data.title;
+    // topDescription.textContent = data.description;
+  }
+
+  // Click on tabs manually
+  tabss.forEach((tab) => {
+    tab.addEventListener('click', () => setActiveTab(tab));
+  });
+
+  // Helper to get the tab currently in view (for slider)
+  function getVisibleTab() {
+    let closestTab = null;
+    let minDistance = Infinity;
+    const wrapperCenter = wrapper.scrollLeft + wrapper.offsetWidth / 2;
+
+    tabss.forEach((tab) => {
+      const tabCenter = tab.offsetLeft + tab.offsetWidth / 2;
+      const distance = Math.abs(wrapperCenter - tabCenter);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestTab = tab;
       }
+    });
+    console.log(closestTab);
+    return closestTab;
+  }
 
-      // Click on tabs manually
-      tabss.forEach((tab) => {
-        tab.addEventListener("click", () => setActiveTab(tab));
-      });
+  // Arrow scroll (works for both desktop & mobile)
+  const slideAmount = 320; // adjust according to card width + gap
+  document.getElementById('slidePrev').addEventListener('click', () => {
+    wrapper.scrollBy({ left: -slideAmount, behavior: 'smooth' });
+    setTimeout(() => {
+      const tab = getVisibleTab();
+      if (tab) setActiveTab(tab);
+    }, 300);
+  });
 
-      // Helper to get the tab currently in view (for slider)
-      function getVisibleTab() {
-        let closestTab = null;
-        let minDistance = Infinity;
-        const wrapperCenter = wrapper.scrollLeft + wrapper.offsetWidth / 2;
-
-        tabss.forEach((tab) => {
-          const tabCenter = tab.offsetLeft + tab.offsetWidth / 2;
-          const distance = Math.abs(wrapperCenter - tabCenter);
-          if (distance < minDistance) {
-            minDistance = distance;
-            closestTab = tab;
-          }
-        });
-        console.log(closestTab)
-        return closestTab;
-      }
-
-      // Arrow scroll (works for both desktop & mobile)
-      const slideAmount = 320; // adjust according to card width + gap
-      document.getElementById("slidePrev").addEventListener("click", () => {
-        wrapper.scrollBy({ left: -slideAmount, behavior: "smooth" });
-        setTimeout(() => {
-          const tab = getVisibleTab();
-          if (tab) setActiveTab(tab);
-        }, 300);
-      });
-
-      document.getElementById("slideNext").addEventListener("click", () => {
-        wrapper.scrollBy({ left: slideAmount, behavior: "smooth" });
-        setTimeout(() => {
-          const tab = getVisibleTab();
-          if (tab) setActiveTab(tab);
-        }, 300);
-      });
+  document.getElementById('slideNext').addEventListener('click', () => {
+    wrapper.scrollBy({ left: slideAmount, behavior: 'smooth' });
+    setTimeout(() => {
+      const tab = getVisibleTab();
+      if (tab) setActiveTab(tab);
+    }, 300);
+  });
 {% endjavascript %}
 
 {% schema %}
