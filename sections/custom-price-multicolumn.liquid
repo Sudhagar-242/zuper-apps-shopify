@@ -1,0 +1,408 @@
+{% schema %}
+{
+  "name": "Custom Multi Column",
+  "class": "section custom_multi_column",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    // === Section Settings ===
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "t:sections.multicolumn.settings.title.default",
+      "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "t:sections.all.heading_size.options__1.label" },
+        { "value": "h1", "label": "t:sections.all.heading_size.options__2.label" },
+        { "value": "h0", "label": "t:sections.all.heading_size.options__3.label" },
+        { "value": "hxl", "label": "t:sections.all.heading_size.options__4.label" },
+        { "value": "hxxl", "label": "t:sections.all.heading_size.options__5.label" }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "font_picker",
+      "id": "section_heading_font",
+      "label": "Section Heading Font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "color",
+      "id": "section_heading_font_color",
+      "label": "Section Heading Font Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section Background"
+    },
+
+    // === Column Behavior ===
+    {
+      "type": "checkbox",
+      "id": "is_column_clickable",
+      "label": "Clickable Column",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "is_column_clickable_link",
+      "label": "Clickable Column Link"
+    },
+
+    // === Image Options ===
+    {
+      "type": "header",
+      "content": "t:sections.multicolumn.settings.header_image.content"
+    },
+    {
+      "type": "select",
+      "id": "image_width",
+      "options": [
+        { "value": "third", "label": "t:sections.multicolumn.settings.image_width.options__1.label" },
+        { "value": "half", "label": "t:sections.multicolumn.settings.image_width.options__2.label" },
+        { "value": "full", "label": "t:sections.multicolumn.settings.image_width.options__3.label" }
+      ],
+      "default": "full",
+      "label": "t:sections.multicolumn.settings.image_width.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        { "value": "adapt", "label": "t:sections.multicolumn.settings.image_ratio.options__1.label" },
+        { "value": "portrait", "label": "t:sections.multicolumn.settings.image_ratio.options__2.label" },
+        { "value": "square", "label": "t:sections.multicolumn.settings.image_ratio.options__3.label" },
+        { "value": "circle", "label": "t:sections.multicolumn.settings.image_ratio.options__4.label" }
+      ],
+      "default": "adapt",
+      "label": "t:sections.multicolumn.settings.image_ratio.label"
+    },
+
+    // === Button Settings ===
+    {
+      "type": "header",
+      "content": "t:sections.multicolumn.settings.header_button.content"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:sections.multicolumn.settings.button_label.default",
+      "label": "t:sections.multicolumn.settings.button_label.label",
+      "info": "t:sections.multicolumn.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.multicolumn.settings.button_link.label"
+    },
+    {
+      "type": "font_picker",
+      "id": "section_button_font",
+      "label": "Section Button Font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "color",
+      "id": "section_button_font_color",
+      "label": "Section Button Font Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "section_button_hover_font_color",
+      "label": "Section Button Hover Font Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "button_back_ground",
+      "label": "Button Background"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_back_ground",
+      "label": "Button Hover Background"
+    },
+
+    // === Layout Settings ===
+    {
+      "type": "header",
+      "content": "t:sections.multicolumn.settings.header_layout.content"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.multicolumn.settings.columns_desktop.label"
+    },
+    {
+      "type": "select",
+      "id": "column_alignment",
+      "options": [
+        { "value": "left", "label": "t:sections.multicolumn.settings.column_alignment.options__1.label" },
+        { "value": "center", "label": "t:sections.multicolumn.settings.column_alignment.options__2.label" }
+      ],
+      "default": "left",
+      "label": "t:sections.multicolumn.settings.column_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "background_style",
+      "options": [
+        { "value": "none", "label": "t:sections.multicolumn.settings.background_style.options__1.label" },
+        { "value": "primary", "label": "t:sections.multicolumn.settings.background_style.options__2.label" }
+      ],
+      "default": "primary",
+      "label": "t:sections.multicolumn.settings.background_style.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+
+    // === Mobile Settings ===
+    {
+      "type": "header",
+      "content": "t:sections.multicolumn.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        { "value": "1", "label": "t:sections.multicolumn.settings.columns_mobile.options__1.label" },
+        { "value": "2", "label": "t:sections.multicolumn.settings.columns_mobile.options__2.label" }
+      ],
+      "default": "1",
+      "label": "t:sections.multicolumn.settings.columns_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "t:sections.multicolumn.settings.swipe_on_mobile.label"
+    },
+
+    // === Padding ===
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+
+    // === Card Settings ===
+    {
+      "type": "header",
+      "content": "Card Styling"
+    },
+    {
+      "type": "font_picker",
+      "id": "card_heading_font",
+      "label": "Card Heading Font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "color",
+      "id": "card_heading_font_color",
+      "label": "Card Heading Font Color",
+      "default": "#000"
+    },
+    {
+      "type": "font_picker",
+      "id": "card_paragraph_font",
+      "label": "Card Paragraph Font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "color",
+      "id": "card_paragraph_font_color",
+      "label": "Card Paragraph Font Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_background",
+      "label": "Card Hover Background"
+    }
+  ],
+
+  "blocks": [
+    {
+      "name": "Price column",
+      "type": "price_column",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Price column"
+        },
+        {
+          "type": "font_picker",
+          "id": "block_section_font",
+          "label": "block_section_font",
+          "default": "helvetica_n4"
+        },
+        {
+          "type": "color",
+          "id": "block_section_background",
+          "label": "block_section_background",
+          "default": "#fff"
+        },
+        {
+          "type": "header",
+          "content": "Price Heading"
+        },
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header ",
+          "default": "Header",
+          "info": "its an text for Header"
+        },
+        {
+          "type": "font_picker",
+          "id": "header_font",
+          "label": "Header Font",
+          "default": "helvetica_n4"
+        },
+        {
+          "type": "color",
+          "id": "header_font_color",
+          "label": "Header Font Color"
+        },
+        {
+          "type": "header",
+          "content": "Price Description"
+        },
+        {
+          "type": "textarea",
+          "id": "price_description",
+          "label": "Price Description",
+          "default": "Welcome to my Shop"
+        },
+        {
+          "type": "font_picker",
+          "id": "description_font",
+          "label": "Description Font",
+          "default": "helvetica_n4"
+        },
+        {
+          "type": "color",
+          "id": "description_font_color",
+          "label": "Description Font Color"
+        },
+        {
+          "type": "header",
+          "content": "Price Plan"
+        },
+        {
+          "type": "text",
+          "id": "price_plan",
+          "label": "price_plan",
+          "default": "0.00"
+        },
+        {
+          "type": "font_picker",
+          "id": "plan_font",
+          "label": "Plan Font",
+          "default": "helvetica_n4"
+        },
+        {
+          "type": "color",
+          "id": "plan_font_color",
+          "label": "Plan Font Color"
+        },
+        {
+          "type": "header",
+          "content": "Price Features"
+        },
+        {
+          "type": "textarea",
+          "id": "price_plan_features",
+          "label": "Price Plan Features"
+        },
+        {
+          "type": "font_picker",
+          "id": "plan_features_font",
+          "label": "Plan Features Font",
+          "default": "helvetica_n4"
+        },
+        {
+          "type": "color",
+          "id": "plan_features_font_color",
+          "label": "Plan Features Font Color"
+        },
+        {
+          "type": "header",
+          "content": "Price Button"
+        },
+        {
+          "type": "text",
+          "id": "price_button",
+          "label": "Price Button",
+          "default": "Get Started"
+        },
+        {
+          "type": "url",
+          "id": "price_button_link",
+          "label": "Price Button Link"
+        },
+        {
+          "type": "font_picker",
+          "id": "price_button_font",
+          "label": "Price Button Font",
+          "default": "helvetica_n4"
+        },
+        {
+          "type": "color",
+          "id": "price_button_font_color",
+          "label": "Price Button Font Color"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Custom Multi Column",
+      "blocks": [{ "type": "price_column" }, { "type": "price_column" }, { "type": "price_column" }]
+    }
+  ]
+}
+{% endschema %}
