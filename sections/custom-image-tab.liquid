@@ -314,6 +314,90 @@
   </div>
 </div>
 
+{% javascript %}
+      const tabss = document.querySelectorAll(".tabs");
+      const wrapper = document.querySelector(".tabss-wrapper");
+      const topSection = document.getElementById("topSection");
+      const topTitle = document.getElementById("topTitle");
+      const topDescription = document.getElementById("topDescription");
+      const sliderNav = document.querySelector(".slider-nav");
+
+      // Function to show/hide arrows based on desktop & tab count
+      function updateArrows() {
+        if (window.innerWidth >= 990) {
+          // Desktop
+          if (tabss.length <= 3) {
+            sliderNav.style.display = "none"; // Hide arrows
+          } else {
+            sliderNav.style.display = "flex"; // Show arrows
+          }
+        } else {
+          // Mobile: always show arrows
+          sliderNav.style.display = "flex";
+        }
+      }
+
+      // Run on load
+      updateArrows();
+
+      // Update on resize
+      window.addEventListener("resize", updateArrows);
+
+      // Function to update active tab + top section
+      function setActiveTab(tab) {
+        tabss.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        // const category = tab.getAttribute("data-category");
+        // const data = categories[category];
+
+        // topSection.style.backgroundImage = `url('${data.image}')`;
+        // topTitle.textContent = data.title;
+        // topDescription.textContent = data.description;
+      }
+
+      // Click on tabs manually
+      tabss.forEach((tab) => {
+        tab.addEventListener("click", () => setActiveTab(tab));
+      });
+
+      // Helper to get the tab currently in view (for slider)
+      function getVisibleTab() {
+        let closestTab = null;
+        let minDistance = Infinity;
+        const wrapperCenter = wrapper.scrollLeft + wrapper.offsetWidth / 2;
+
+        tabss.forEach((tab) => {
+          const tabCenter = tab.offsetLeft + tab.offsetWidth / 2;
+          const distance = Math.abs(wrapperCenter - tabCenter);
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestTab = tab;
+          }
+        });
+
+        return closestTab;
+      }
+
+      // Arrow scroll (works for both desktop & mobile)
+      const slideAmount = 320; // adjust according to card width + gap
+      document.getElementById("slidePrev").addEventListener("click", () => {
+        wrapper.scrollBy({ left: -slideAmount, behavior: "smooth" });
+        setTimeout(() => {
+          const tab = getVisibleTab();
+          if (tab) setActiveTab(tab);
+        }, 300);
+      });
+
+      document.getElementById("slideNext").addEventListener("click", () => {
+        wrapper.scrollBy({ left: slideAmount, behavior: "smooth" });
+        setTimeout(() => {
+          const tab = getVisibleTab();
+          if (tab) setActiveTab(tab);
+        }, 300);
+      });
+{% endjavascript %}
+
 {% schema %}
 {
   "name": "Custom Image Tab",
