@@ -350,13 +350,7 @@
         "column_jHTdUA",
         "column_KYt8Px"
       ],
-      "custom_css": [
-        ".multicolumn {display: flex; flex-direction: column;}",
-        ".multicolumn .title {width: 100%; text-align: center;}",
-        ".media {display: inline-block; padding: 0 !important;}",
-        ".multicolumn-card {display: grid;}",
-        ".media > *:not(.zoom):not(.deferred-media__poster-button) {position: relative;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Multicolumn",
