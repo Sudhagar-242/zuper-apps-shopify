@@ -131,7 +131,7 @@
       "settings": {
         "digital-products-hero-tittle": "",
         "digital-products-hero-btn-tittle": "Install Now",
-        "digital-products-hero-btn-link": "https://shopify.com"
+        "digital-products-hero-btn-link": "{{ product.metafields.custom.install_now.value }}"
       }
     },
     "custom_digital_products_app_features_tzdJfm": {
