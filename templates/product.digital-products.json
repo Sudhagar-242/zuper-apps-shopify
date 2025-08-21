@@ -430,10 +430,10 @@
         "image_tab_BCEGJp": {
           "type": "image_tab",
           "settings": {
-            "background_image": "shopify://shop_images/sliced-pumpkin-pie.jpg",
-            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text": "Header",
-            "description": "Welcome to My Shop",
+            "background_image": "shopify://shop_images/agriculture-healthy-food.webp",
+            "rounded_image": "shopify://shop_images/agriculture-healthy-food_1.webp",
+            "heading_text": "Agriculture",
+            "description": "Our advanced agricultural solutions are designed to optimize performance in the field — whether it's through smart engineering, rugged design, or cutting-edge machinery integration. From seeding to storage, we deliver reliability where it matters most.",
             "button_label": "Explore All Products",
             "button_link": ""
           }
