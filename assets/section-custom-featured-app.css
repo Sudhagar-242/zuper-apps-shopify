@@ -109,6 +109,10 @@ max-width: 700px;
     color: #00000099;
     }
 
+    .btn-container{
+        margin-top: auto;
+    }
+
     .card .btn {
     width: fit-content;
     height: 38px;
@@ -118,7 +122,6 @@ max-width: 700px;
     color: #fff;
     background: #eaa128;
     border: 1px solid #FFFFFF1A;
-    margin-top: auto;
 }
 
     .see-all-button {
