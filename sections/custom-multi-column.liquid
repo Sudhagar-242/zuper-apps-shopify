@@ -204,7 +204,7 @@
       </ul>
 
 
-      {%- unless show_mobile_slider  -%}
+      {%- if show_mobile_slider == false -%}
         <div class="slider-buttons">
           <button
             type="button"
@@ -229,7 +229,7 @@
             <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
           </button>
         </div>
-      {%- endunless -%}
+      {%- endif -%}
 
       {%- if show_mobile_slider  -%}
         <div class="slider-buttons large-up-hide">
