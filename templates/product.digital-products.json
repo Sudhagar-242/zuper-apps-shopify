@@ -313,68 +313,10 @@
         "heading": "hello"
       }
     },
-    "multicolumn_JH4dDx": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_nkdQ7U": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/logo_pagefly.svg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_jHTdUA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gempages-logos-idRv9J-_eK.svg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_KYt8Px": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Zipify_logo.webp",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_nkdQ7U",
-        "column_jHTdUA",
-        "column_KYt8Px"
-      ],
-      "disabled": true,
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Button label",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "custom_multi_column_H8nkUW": {
+    "custom_multi_column_R3recC": {
       "type": "custom-multi-column",
       "blocks": {
-        "column_7UmXDU": {
+        "column_YfNVHh": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/logo_pagefly.svg",
@@ -384,7 +326,7 @@
             "link": ""
           }
         },
-        "column_CyfzJc": {
+        "column_KmwMye": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gempages-logos-idRv9J-_eK.svg",
@@ -394,7 +336,7 @@
             "link": ""
           }
         },
-        "column_UeVhY8": {
+        "column_JNx8Ny": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Zipify_logo.webp",
@@ -406,11 +348,11 @@
         }
       },
       "block_order": [
-        "column_7UmXDU",
-        "column_CyfzJc",
-        "column_UeVhY8"
+        "column_YfNVHh",
+        "column_KmwMye",
+        "column_JNx8Ny"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Custom Multi Column",
       "settings": {
         "title": "Multicolumn",
         "heading_size": "h1",
@@ -427,18 +369,18 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "section_background": "#ffffff",
-        "card_background": "rgba(0,0,0,0)",
+        "card_background": "",
         "card_hover_background": "#ffffff",
-        "button_back_ground": "#ffffff",
-        "section_heading_font": "inter_n7",
-        "section_heading_font_color": "#000000",
-        "section_button_font": "helvetica_n4",
-        "section_button_font_color": "#000000",
-        "section_button_hover_font_color": "#000000",
-        "card_heading_font": "urbanist_n4",
-        "card_heading_font_color": "#000000",
+        "button_back_ground": "",
+        "section_heading_font": "helvetica_n4",
+        "section_heading_font_color": "#444444",
+        "section_button_font": "urbanist_n4",
+        "section_button_font_color": "#000",
+        "section_button_hover_font_color": "#000",
+        "card_heading_font": "urbanist_n6",
+        "card_heading_font_color": "#000",
         "card_paragraph_font": "urbanist_n4",
-        "card_paragraph_font_color": "#431414"
+        "card_paragraph_font_color": "#444444"
       }
     }
   },
@@ -448,7 +390,6 @@
     "custom_digital_product_hero_xiMiPi",
     "custom_digital_products_app_features_tzdJfm",
     "custom_digital_products_horizontal_infinite_R3NMFX",
-    "multicolumn_JH4dDx",
-    "custom_multi_column_H8nkUW"
+    "custom_multi_column_R3recC"
   ]
 }
