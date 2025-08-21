@@ -286,15 +286,13 @@
 
       <!-- Slider Tabs -->
       <div class="tabss-wrapper">
-        {% for block in section.settings.blocks %}
-          <div class="tabs active" data-category="agriculture">
-          <img
-            src="{{ block.rounded_image | image_url }}"
-            alt="{{ block.heading_text }}"
-          />
-          <h3>{{ block.heading_text }}</h3>
-        </div>
-        {% endfor %}
+        {% for block in section.blocks %}
+  <div class="tabs active" data-category="agriculture">
+    <img src="{{ block.settings.rounded_image | image_url }}" alt="{{ block.settings.heading_text_text }}">
+    <h3>{{ block.settings.heading_text_text }}</h3>
+  </div>
+{% endfor %}
+
       </div>
 
       <!-- Mobile/Desktop Arrow Buttons -->
