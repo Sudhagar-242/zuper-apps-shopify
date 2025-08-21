@@ -286,35 +286,15 @@
 
       <!-- Slider Tabs -->
       <div class="tabss-wrapper">
-        <div class="tabs active" data-category="agriculture">
+        {% for block in blocks %}
+          <div class="tabs active" data-category="agriculture">
           <img
-            src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/agriculture-healthy-food_1.png?v=1752959363"
-            alt="Agriculture"
+            src="{{ block.rounded_image | image_url }}"
+            alt="{{ block.heading_text }}"
           />
-          <h3>Agriculture</h3>
+          <h3>{{ block.heading_text }}</h3>
         </div>
-        <div class="tabs" data-category="automotive">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/automotive.png?v=1754384058"
-            alt="Automotive"
-          />
-          <h3>Automotive</h3>
-        </div>
-        <div class="tabs" data-category="transport">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/transport.png?v=1754384058"
-            alt="Transport"
-          />
-          <h3>Transport</h3>
-        </div>
-        <!-- New Card Added -->
-        <div class="tabs" data-category="construction">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/automotive_1.png?v=1755681963"
-            alt="Construction"
-          />
-          <h3>Construction</h3>
-        </div>
+        {% endfor %}
       </div>
 
       <!-- Mobile/Desktop Arrow Buttons -->
@@ -371,8 +351,8 @@
         },
         {
           "type": "text",
-          "id": "heading_text",
-          "label": "Heading Text",
+          "id": "heading_text_text",
+          "label": "Heading_text Text",
           "default": "Header",
           "info": "This will be exist in top section"
         },
