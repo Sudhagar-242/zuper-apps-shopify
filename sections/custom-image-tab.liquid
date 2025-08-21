@@ -354,14 +354,13 @@
     tabss.forEach((t) => t.classList.remove('active'));
     tab.classList.add('active');
     const hiddenData = {
-      title: tab.querySelector('#hidden_block_title')?.textContent.trim(),
-      description: tab.querySelector('#hidden_block_description')?.textContent.trim(),
-      button: {
-        text: tab.querySelector('#hidden_block_button')?.textContent.trim(),
-        url: tab.querySelector('#hidden_block_button')?.getAttribute('href'),
-      },
-      backgroundImage: tab.querySelector('#hidden_block_background_image')?.getAttribute('src'),
-    };
+  title: tab.getAttribute('data-title'),
+  description: tab.getAttribute('data-description'),
+  buttonText: tab.getAttribute('data-button-text'),
+  buttonUrl: tab.getAttribute('data-button-url'),
+  backgroundImage: tab.getAttribute('data-background-image')
+};
+
 
     console.log(hiddenData);
 
