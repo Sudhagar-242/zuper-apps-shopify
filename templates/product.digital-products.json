@@ -456,12 +456,34 @@
             "button_label": "Explore All Products",
             "button_link": ""
           }
+        },
+        "image_tab_9H6NBe": {
+          "type": "image_tab",
+          "settings": {
+            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
+            "heading_text_text": "Header",
+            "description": "Welcome to My Shop",
+            "button_label": "Explore All Products",
+            "button_link": ""
+          }
+        },
+        "image_tab_xWGT3a": {
+          "type": "image_tab",
+          "settings": {
+            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
+            "heading_text_text": "Header",
+            "description": "Welcome to My Shop",
+            "button_label": "Explore All Products",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "image_tab_BCEGJp",
         "image_tab_yxaCbz",
-        "image_tab_TjF7Ub"
+        "image_tab_TjF7Ub",
+        "image_tab_9H6NBe",
+        "image_tab_xWGT3a"
       ],
       "name": "Custom Image Tab",
       "settings": {}
