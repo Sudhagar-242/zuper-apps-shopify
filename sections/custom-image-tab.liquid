@@ -324,7 +324,7 @@
   const topSection = document.getElementById('topSection');
   const topTitle = document.getElementById('topTitle');
   const topDescription = document.getElementById('topDescription');
-  const topButton = document.getElementById('btn-primary');
+  const topButton = document.getElementsByClassName('btn-explore');
 
   const sliderNav = document.querySelector('.slider-nav');
 
@@ -370,6 +370,8 @@
     topSection.style.backgroundImage = `url('${hiddenData.backgroundImage}')`;
     topTitle.textContent = hiddenData.title;
     topDescription.textContent = hiddenData.description;
+    topButton.textContent = hiddenData.button.text;
+    topButton.href = hiddenData.button.url;
   }
 
   // Click on tabs manually
