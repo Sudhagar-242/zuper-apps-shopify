@@ -21,11 +21,15 @@
   .multicolumn-card {
   display: flex;
   flex-direction: column;
-  background: {{ section.settings.card_background }};
+  {% if section.settings.card_background %}
+    background: {{ section.settings.card_background }} !important;
+  {% endif %}
 }
 .multicolumn-card:hover {
   box-shadow: 0 0 22px #0000001a;
-  background: {{ section.settings.card_hover_background }};
+  {% if section.settings.card_hover_background %}
+    background: {{ section.settings.card_hover_background }} !important;
+  {% endif %}
 }
 .multicolumn .title {
   width: 100%;
@@ -452,26 +456,22 @@
     {
       "type": "color",
       "id": "section_background",
-      "label": "Section Background",
-      "default": "#fff"
+      "label": "Section Background"
     },
     {
       "type": "color",
       "id": "card_background",
       "label": "Card Background",
-      "default": "#fff"
     },
     {
       "type": "color",
       "id": "card_hover_background",
       "label": "Card Hover Background",
-      "default": "#fff"
     },
     {
       "type": "color",
       "id": "button_back_ground",
       "label": "Button Back Ground",
-      "default": "#fff"
     },
     {
       "type": "font_picker",
