@@ -160,7 +160,7 @@
   .hero-section-style{
     height: max-content;
   }
-  .secondry_container{
+  .hero-section-secondry_container{
         padding: 30px 10px;
         gap: 24px;
     }
@@ -195,7 +195,7 @@
   .hero-section-style{
     height: max-content;
   }
-  .secondry_container{
+  .hero-section-secondry_container{
         padding: 20px 76px;
         gap: 24px;
     }
@@ -231,7 +231,7 @@
   .hero-section-style{
     height: max-content;
   }
-  .secondry_container{
+  .hero-section-secondry_container{
         padding: 36px 88px;
         gap: 26px;
     }
@@ -266,7 +266,7 @@
   .hero-section-style{
     height: max-content;
   }
-  .secondry_container{
+  .hero-section-secondry_container{
         padding: 42px 94px;
         gap: 32px;
     }
