@@ -356,9 +356,9 @@
         ".gradient {}",
         ".multicolumn-card {display: flex; flex-direction: column;}",
         ".multicolumn .title {width: 100%; text-align: center;}",
-        ".media {display: flex; justify-content: center; padding: 0 !important;}",
+        ".media {display: flex; justify-content: center; align-items: center; padding: 0 !important; min-height: 60px;}",
         ".multicolumn-card__info {margin-top: auto;}",
-        ".media > *:not(.zoom):not(.deferred-media__poster-button) {position: relative;}"
+        ".media > *:not(.zoom):not(.deferred-media__poster-button) {position: relative; max-width: 160px; max-height: 60px;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
