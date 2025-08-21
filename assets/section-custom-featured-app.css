@@ -197,6 +197,7 @@ max-width: 700px;
         }
         .cards-container{
             gap: 12px;
+            padding: 0;
         }
         .card{
             padding: 12px;
