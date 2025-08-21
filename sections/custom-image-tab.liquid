@@ -293,7 +293,7 @@
           <a id="hidden_block_button" href="{{ block.settings.button_link }}">
             {{ block.settings.button_label }}
           </a>
-          <img id="hidden_block_background_image" src="{{ block.settings.background_image }}" alt="{{ block.settings.heading_text }}" />
+          <img id="hidden_block_background_image" src="{{ block.settings.background_image | image_url }}" alt="{{ block.settings.heading_text }}" />
         </p>
       </div>
     {% endfor %}
