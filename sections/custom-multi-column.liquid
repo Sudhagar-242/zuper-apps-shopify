@@ -30,6 +30,8 @@
 .multicolumn .title {
   width: 100%;
   text-align: center;
+  color: {{ section.settings.section_heading_font_color }};
+  font-family: {{ section.settings.section_heading_font }};
 }
 .media {
   display: flex;
@@ -47,6 +49,8 @@
 }
 .multicolumn-card__info .rte {
   color: #444;
+  font-family: {{ section.settings.card_paragraph_font }};
+  color: {{ section.settings.card_paragraph_font_color }};
 }
 .media>*:not(.zoom):not(.deferred-media__poster-button) {
   position: relative;
