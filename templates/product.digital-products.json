@@ -345,12 +345,42 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_NLHN4n": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LAk8nB": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CwzKhx": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_YfNVHh",
         "column_KmwMye",
-        "column_JNx8Ny"
+        "column_JNx8Ny",
+        "column_NLHN4n",
+        "column_LAk8nB",
+        "column_CwzKhx"
       ],
       "custom_css": [
         ".media {min-height: 60px; padding: 0 !important;}",
@@ -382,7 +412,7 @@
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36,
         "card_heading_font": "urbanist_n6",
