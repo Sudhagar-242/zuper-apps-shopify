@@ -396,6 +396,7 @@
         "section_heading_font": "helvetica_n4",
         "section_heading_font_color": "#444444",
         "section_background": "#f7fcfc",
+        "is_scrolable": true,
         "is_column_clickable": false,
         "is_column_clickable_link": "",
         "image_width": "full",
@@ -422,6 +423,48 @@
         "card_background": "#f7fcfc",
         "card_hover_background": "#ffffff"
       }
+    },
+    "custom_image_tab_7MxKgz": {
+      "type": "custom-image-tab",
+      "blocks": {
+        "image_tab_BCEGJp": {
+          "type": "image_tab",
+          "settings": {
+            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
+            "heading_text_text": "Header",
+            "description": "Welcome to My Shop",
+            "button_label": "Explore All Products",
+            "button_link": ""
+          }
+        },
+        "image_tab_yxaCbz": {
+          "type": "image_tab",
+          "settings": {
+            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
+            "heading_text_text": "Header",
+            "description": "Welcome to My Shop",
+            "button_label": "Explore All Products",
+            "button_link": ""
+          }
+        },
+        "image_tab_TjF7Ub": {
+          "type": "image_tab",
+          "settings": {
+            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
+            "heading_text_text": "Header",
+            "description": "Welcome to My Shop",
+            "button_label": "Explore All Products",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_tab_BCEGJp",
+        "image_tab_yxaCbz",
+        "image_tab_TjF7Ub"
+      ],
+      "name": "Custom Image Tab",
+      "settings": {}
     }
   },
   "order": [
@@ -430,6 +473,7 @@
     "custom_digital_product_hero_xiMiPi",
     "custom_digital_products_app_features_tzdJfm",
     "custom_digital_products_horizontal_infinite_R3NMFX",
-    "custom_multi_column_R3recC"
+    "custom_multi_column_R3recC",
+    "custom_image_tab_7MxKgz"
   ]
 }
