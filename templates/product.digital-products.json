@@ -430,8 +430,9 @@
         "image_tab_BCEGJp": {
           "type": "image_tab",
           "settings": {
+            "background_image": "shopify://shop_images/sliced-pumpkin-pie.jpg",
             "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text_text": "Header",
+            "heading_text": "Header",
             "description": "Welcome to My Shop",
             "button_label": "Explore All Products",
             "button_link": ""
@@ -440,8 +441,9 @@
         "image_tab_yxaCbz": {
           "type": "image_tab",
           "settings": {
+            "background_image": "shopify://shop_images/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
             "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text_text": "Header",
+            "heading_text": "Header",
             "description": "Welcome to My Shop",
             "button_label": "Explore All Products",
             "button_link": ""
@@ -450,8 +452,9 @@
         "image_tab_TjF7Ub": {
           "type": "image_tab",
           "settings": {
+            "background_image": "shopify://shop_images/shellfish-pasta-pizza-and-italian-food.jpg",
             "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text_text": "Header",
+            "heading_text": "Header",
             "description": "Welcome to My Shop",
             "button_label": "Explore All Products",
             "button_link": ""
@@ -460,8 +463,9 @@
         "image_tab_9H6NBe": {
           "type": "image_tab",
           "settings": {
+            "background_image": "shopify://shop_images/breakfast-from-above.jpg",
             "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text_text": "Header",
+            "heading_text": "Header",
             "description": "Welcome to My Shop",
             "button_label": "Explore All Products",
             "button_link": ""
@@ -470,8 +474,9 @@
         "image_tab_xWGT3a": {
           "type": "image_tab",
           "settings": {
+            "background_image": "shopify://shop_images/potted-seeds_925x_a054f9be-c5aa-44fd-89cd-d4905024a338.jpg",
             "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text_text": "Header",
+            "heading_text": "Header",
             "description": "Welcome to My Shop",
             "button_label": "Explore All Products",
             "button_link": ""
