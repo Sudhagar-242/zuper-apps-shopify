@@ -139,6 +139,8 @@
         width: 100%;
         height: 100%;
         display: none;
+        justify-content: center;
+        align-items: center;
       }
        .custom-slider .slide img {
         width: 100%;
@@ -164,6 +166,12 @@
        .custom-slider #next {
         right: 10px;
       }
+      .slide-nav:focus,.slide-nav:active {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  color: inherit;
+}
 {% endstyle %}
 
 <div class="hero-section">
@@ -205,7 +213,7 @@
 
     const showSlide = (index) => {
       slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
+        slide.style.display = i === index ? 'flex' : 'none';
       });
     };
 
