@@ -203,7 +203,7 @@
         {%- endfor -%}
       </ul>
 
-      {%- if show_mobile_slider -%}
+      {%- if show_mobile_slider or section.settings.is_scrolable -%}
         <div class="slider-buttons large-up-hide">
           <button
             type="button"
@@ -292,6 +292,12 @@
       "type": "color",
       "id": "section_background",
       "label": "Section Background"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_scrolable",
+      "label": "Is Scrollable",
+      "default": true
     },
 
     // === Column Behavior ===
