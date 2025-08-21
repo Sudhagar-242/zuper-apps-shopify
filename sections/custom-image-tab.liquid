@@ -288,17 +288,22 @@
       <div class="tabs active">
         <img src="{{ block.settings.rounded_image | image_url }}" alt="{{ block.settings.heading_text }}">
         <h3>{{ block.settings.heading_text }}</h3>
-        <p hidden>
-          <span id="hidden_block_title"> {{ block.settings.heading_text }} </span>
-          <span id="hidden_block_description"> {{ block.settings.description }} </span>
-          <a id="hidden_block_button" href="{{ block.settings.button_link }}">
-            {{ block.settings.button_label }}
-          </a>
-          <img
-            id="hidden_block_background_image"
-            src="{{ block.settings.background_image | image_url }}" alt="{{ block.settings.heading_text }}"
-          >
-        </p>
+        <div
+  class="tabs"
+  data-category="agriculture"
+  data-title="{{ block.settings.heading_text | escape }}"
+  data-description="{{ block.settings.description | strip_newlines | escape }}"
+  data-button-text="{{ block.settings.button_label | escape }}"
+  data-button-url="{{ block.settings.button_link }}"
+  data-background-image="{{ block.settings.background_image | image_url }}"
+>
+  <img
+    src="{{ block.settings.rounded_image | image_url }}"
+    alt="{{ block.settings.heading_text | escape }}"
+  />
+  <h3>{{ block.settings.heading_text }}</h3>
+</div>
+
       </div>
     {% endfor %}
   </div>
