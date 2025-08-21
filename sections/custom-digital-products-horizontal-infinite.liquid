@@ -64,7 +64,6 @@
   }
 {% endstylesheet %}
 
-<section class="brand-slider-section">
   {% if section.settings.heading != blank %}
     <h2 class="brand-slider-heading">{{ section.settings.heading }}</h2>
   {% endif %}
@@ -97,11 +96,12 @@
       {% endfor %}
     </div> 
   </div>
-</section>
 
 {% schema %}
 {
   "name": "Brand Logo Slider",
+  "tag": "section",
+  "class": "brand-slider-section scroll-trigger animate--slide-in",
   "settings": [
     {
       "type": "text",
