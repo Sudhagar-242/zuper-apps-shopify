@@ -32,7 +32,7 @@
     width: 100%;
     text-align: center;
     color: {{ section.settings.section_heading_font_color }};
-    font-family: {{ section.settings.section_heading_font }};
+    font-family: {{ section.settings.section_heading_font.family }},{{ section.settings.card_heading_font.fallback_families }};
   }
    .custom_multi_column .media {
     display: flex;
@@ -47,7 +47,7 @@
   }
    .custom_multi_column .multicolumn-card__info .rte {
     color: #444;
-    font-family: {{ section.settings.card_paragraph_font }};
+    font-family: {{ section.settings.card_paragraph_font.family }},{{ section.settings.card_paragraph_font.fallback_families }};
     color: {{ section.settings.card_paragraph_font_color }};
   }
 {%- endstyle -%}
