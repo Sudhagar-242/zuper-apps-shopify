@@ -113,7 +113,12 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
+
+            {% if section.settings.is_column_clickable %}
+              <a href="{{ section.settings.is_column_clickable_link }}" class="multicolumn-card content-container">
+              {% else %}
+                <div  class="multicolumn-card content-container">
+            {% endif %}
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -179,7 +184,12 @@
                   </a>
                 {%- endif -%}
               </div>
-            </div>
+              {% if section.settings.is_column_clickable %}
+              </a>
+              {% else %}
+                </div>
+            {% endif %}
+            
           </li>
         {%- endfor -%}
       </ul>
@@ -273,7 +283,8 @@
     },{
         "type": "checkbox",
         "id": "is_column_clickable",
-        "label": "Clickable Column"
+        "label": "Clickable Column",
+        "default": false
     },{
         "type": "url",
         "id": "is_column_clickable_link",
