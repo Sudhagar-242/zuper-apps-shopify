@@ -165,8 +165,9 @@ max-width: 700px;
   font-weight: 400;
   line-height: 1.5;
   color: #444;
-  background-color: #f8f8f8;
-  text-align: center;
+  text-align: center;    
+  height: fit-content;
+    margin: auto 0;
 }
 
 .demo-link:hover {
