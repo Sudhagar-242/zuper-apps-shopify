@@ -50,6 +50,37 @@
     font-family: {{ section.settings.card_paragraph_font.family }},{{ section.settings.card_paragraph_font.fallback_families }};
     color: {{ section.settings.card_paragraph_font_color }};
   }
+
+   .custom_multi_column .btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 0.85rem 1.875rem;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+   .custom_multi_column .btn--primary {
+  color: #fff;
+  background-color: #00a9a2;
+  border-color: #00a9a2;
+  text-decoration: none;
+  padding: 8px 14px;
+  font-size: 0.99rem;
+}
+
+   .custom_multi_column .btn--primary:hover {
+  background-color: #00837d;
+  border-color: #007671;
+  color: #fff;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.1);
+}
+
 {%- endstyle -%}
 
 {%- liquid
