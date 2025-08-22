@@ -51,10 +51,10 @@
 </style>
 
 {% style %}
-.logos-slide {
-    display: inline-block;
-    animation: {{ section.settings.speed_of_moving }}s slide infinite linear;
-}
+  .logos-slide {
+      display: inline-block;
+      animation: {{ section.settings.speed_of_moving }}s slide infinite linear;
+  }
 {% endstyle %}
 
 <div class="logo-slider" data-v-4ef8651c="">
@@ -63,13 +63,19 @@
   </div>
   <div class="logos-slide" data-v-4ef8651c="">
     {% for block in section.settings.blocks %}
+
       {% if block.image %}
-          {% assign image = block.image %}
-        {% else %}
-          {% assign image = "https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501" %}
-        {% endif %}
+        {% assign image = block.image %}
+      {% else %}
+        {% assign image = 'https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501' %}
+      {% endif %}
+
       {% if block.is_clickable %}
-        {% if block.target %}{% assign target = '_blank' %}{% else %}{% assign target = '' %}{% endif %}
+        {% if block.target %}
+          {% assign target = '_blank' %}
+        {% else %}
+            {% assign target = '' %}
+          {% endif %}
         <a href="{{ block.link }}" target="{{ target }}">
           <img
             src="{{ image | image_url }}"
@@ -81,12 +87,12 @@
         </a>
       {% else %}
         <img
-            src="{{ image | image_url }}"
-            alt="no Image"
-            width=""
-            height=""
-            data-v-4ef8651c=""
-          >
+          src="{{ image | image_url }}"
+          alt="no Image"
+          width=""
+          height=""
+          data-v-4ef8651c=""
+        >
       {% endif %}
     {% endfor %}
   </div>
@@ -94,10 +100,10 @@
   <div class="logos-slide" data-v-4ef8651c="">
     {% for block in section.settings.blocks %}
       {% if block.image %}
-          {% assign image = block.image %}
-        {% else %}
-          {% assign image = "https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501" %}
-        {% endif %}
+        {% assign image = block.image %}
+      {% else %}
+        {% assign image = 'https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501' %}
+      {% endif %}
       {% if block.is_clickable %}
         {% if block.target %}{% assign target = '_blank' %}{% else %}{% assign target = '' %}{% endif %}
 
@@ -112,25 +118,21 @@
         </a>
       {% else %}
         <img
-            src="{{ image | image_url }}"
-            alt="no Image"
-            width=""
-            height=""
-            data-v-4ef8651c=""
-          >
+          src="{{ image | image_url }}"
+          alt="no Image"
+          width=""
+          height=""
+          data-v-4ef8651c=""
+        >
       {% endif %}
     {% endfor %}
   </div>
 </div>
 
-  {% javascript %}
-      var copy = document.querySelector('.logo-slider .logos-slide').cloneNode(true);
-      document.querySelector('.logo-slider .logo-slider').appendChild(copy);
-  {% endjavascript %}
-
-
-
-
+{% javascript %}
+  var copy = document.querySelector('.logo-slider .logos-slide').cloneNode(true);
+  document.querySelector('.logo-slider .logo-slider').appendChild(copy);
+{% endjavascript %}
 
 {% schema %}
 {
@@ -196,7 +198,7 @@
   "presets": [
     {
       "name": "Infinite Scroll Slider",
-      "blocks": [{"type": "image"},{"type": "image"},{"type": "image"}]
+      "blocks": [{ "type": "image" }, { "type": "image" }, { "type": "image" }]
     }
   ]
 }
