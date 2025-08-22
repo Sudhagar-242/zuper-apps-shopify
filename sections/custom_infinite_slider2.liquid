@@ -136,6 +136,11 @@
   </div>
 </div>
 
+{% javascript %}
+  var copy = document.querySelector('.logo-slider .logos-slide').cloneNode(true);
+  document.querySelector('.logo-slider .logo-slider').appendChild(copy);
+{% endjavascript %}
+
 {% schema %}
 {
   "name": "Infinite Scroll Slider",
