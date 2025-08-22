@@ -284,7 +284,6 @@
     {% for block in section.blocks %}
         <div
   class="tabs"
-  data-category="{{ block.settings.category_text}}"
   data-title="{{ block.settings.heading_text | escape }}"
   data-description="{{ block.settings.description | strip_newlines | escape }}"
   data-button-text="{{ block.settings.button_label | escape }}"
