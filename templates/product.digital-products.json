@@ -432,10 +432,12 @@
           "settings": {
             "background_image": "shopify://shop_images/agriculture-healthy-food.webp",
             "rounded_image": "shopify://shop_images/agriculture-healthy-food_1.webp",
+            "category_text": "Header",
             "heading_text": "Agriculture",
             "description": "Our advanced agricultural solutions are designed to optimize performance in the field — whether it's through smart engineering, rugged design, or cutting-edge machinery integration. From seeding to storage, we deliver reliability where it matters most.",
             "button_label": "Explore All Products",
-            "button_link": ""
+            "button_link": "",
+            "button_redirect": false
           }
         },
         "image_tab_yxaCbz": {
@@ -443,31 +445,40 @@
           "settings": {
             "background_image": "shopify://shop_images/automotive.webp",
             "rounded_image": "shopify://shop_images/automotive.webp",
+            "category_text": "Header",
             "heading_text": "Automotive",
             "description": "Expert automotive tools and diagnostics to keep your vehicle running at peak performance. Our solutions help mechanics and enthusiasts work smarter and faster.",
             "button_label": "Explore All Products",
-            "button_link": ""
+            "button_link": "",
+            "button_redirect": false
           }
         },
-        "image_tab_xWGT3a": {
+        "image_tab_TjF7Ub": {
           "type": "image_tab",
           "settings": {
-            "background_image": "shopify://shop_images/potted-seeds_925x_a054f9be-c5aa-44fd-89cd-d4905024a338.jpg",
-            "rounded_image": "shopify://shop_images/Zipify_logo.webp",
-            "heading_text": "Header",
-            "description": "Welcome to My Shop",
+            "background_image": "shopify://shop_images/transport.webp",
+            "rounded_image": "shopify://shop_images/transport.webp",
+            "category_text": "Header",
+            "heading_text": "Transport",
+            "description": "Reliable and efficient transport services ensuring your goods arrive safely and on time. Our logistics solutions are tailored for modern supply chains.",
             "button_label": "Explore All Products",
-            "button_link": ""
+            "button_link": "",
+            "button_redirect": false
           }
         }
       },
       "block_order": [
         "image_tab_BCEGJp",
         "image_tab_yxaCbz",
-        "image_tab_xWGT3a"
+        "image_tab_TjF7Ub"
       ],
       "name": "Custom Image Tab",
-      "settings": {}
+      "settings": {
+        "placeholder_background_image": "shopify://shop_images/agriculture-healthy-food.webp",
+        "placeholder_heading_text": "Header",
+        "placeholder_description": "Welcome to My Shop",
+        "placeholder_button_label": "Explore All Products"
+      }
     }
   },
   "order": [
