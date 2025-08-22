@@ -504,7 +504,7 @@
           "settings": {
             "review_rating_star": 5,
             "review": "Write Your Review",
-            "customer_name": "Babu"
+            "customer_name": "Customer Name"
           }
         },
         "review_card_iRHkbG": {
@@ -522,16 +522,26 @@
             "review": "Write Your Review",
             "customer_name": "Customer Name"
           }
+        },
+        "review_card_VL4Rk3": {
+          "type": "review_card",
+          "settings": {
+            "review_rating_star": 0,
+            "review": "Write Your Review",
+            "customer_name": "Customer Name"
+          }
         }
       },
       "block_order": [
         "review_card_Atnqjp",
         "review_card_iRHkbG",
-        "review_card_rwnfaW"
+        "review_card_rwnfaW",
+        "review_card_VL4Rk3"
       ],
       "name": "Review Corousal",
       "settings": {
-        "review_corousal_title": "Customer Reviews"
+        "review_corousal_title": "Customer Reviews",
+        "is_default_image": true
       }
     }
   },
