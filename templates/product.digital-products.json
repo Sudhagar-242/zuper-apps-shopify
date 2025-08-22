@@ -551,7 +551,7 @@
           "type": "price_column",
           "settings": {
             "block_section_font": "helvetica_n4",
-            "block_section_background": "#fff",
+            "block_section_background": "#ffffff",
             "header": "Header",
             "header_font": "helvetica_n4",
             "header_font_color": "",
@@ -574,7 +574,7 @@
           "type": "price_column",
           "settings": {
             "block_section_font": "helvetica_n4",
-            "block_section_background": "#fff",
+            "block_section_background": "#ffffff",
             "header": "Header",
             "header_font": "helvetica_n4",
             "header_font_color": "",
@@ -597,7 +597,7 @@
           "type": "price_column",
           "settings": {
             "block_section_font": "helvetica_n4",
-            "block_section_background": "#fff",
+            "block_section_background": "#ffffff",
             "header": "Header",
             "header_font": "helvetica_n4",
             "header_font_color": "",
@@ -627,7 +627,7 @@
         "title": "Price Plan",
         "heading_size": "h1",
         "section_heading_font": "helvetica_n4",
-        "section_heading_font_color": "#000",
+        "section_heading_font_color": "#000000",
         "section_background": "",
         "is_column_clickable": true,
         "is_column_clickable_link": "",
@@ -636,8 +636,8 @@
         "button_label": "Button label",
         "button_link": "",
         "section_button_font": "helvetica_n4",
-        "section_button_font_color": "#000",
-        "section_button_hover_font_color": "#000",
+        "section_button_font_color": "#000000",
+        "section_button_hover_font_color": "#000000",
         "button_back_ground": "",
         "button_hover_back_ground": "",
         "columns_desktop": 3,
@@ -649,11 +649,50 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "card_heading_font": "helvetica_n4",
-        "card_heading_font_color": "#000",
+        "card_heading_font_color": "#000000",
         "card_paragraph_font": "helvetica_n4",
-        "card_paragraph_font_color": "#000",
+        "card_paragraph_font_color": "#000000",
         "card_background": "",
         "card_hover_background": ""
+      }
+    },
+    "custom_infinite_slider2_WPDPj6": {
+      "type": "custom_infinite_slider2",
+      "blocks": {
+        "image_NDzBMw": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_Hk6Qh7": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_7KK8EW": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        }
+      },
+      "block_order": [
+        "image_NDzBMw",
+        "image_Hk6Qh7",
+        "image_7KK8EW"
+      ],
+      "name": "Infinite Scroll Slider",
+      "settings": {
+        "title": "Tools",
+        "speed_of_moving": 10
       }
     }
   },
@@ -666,6 +705,7 @@
     "custom_multi_column_R3recC",
     "custom_image_tab_7MxKgz",
     "custom_review_courasal_dQCEkR",
-    "custom_price_multicolumn_mRbRGL"
+    "custom_price_multicolumn_mRbRGL",
+    "custom_infinite_slider2_WPDPj6"
   ]
 }
