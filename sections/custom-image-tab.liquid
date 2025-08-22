@@ -286,7 +286,7 @@
     {% for block in section.blocks %}
         <div
   class="tabs"
-  data-category="agriculture"
+  data-category="{{ block.settings.category_text}}"
   data-title="{{ block.settings.heading_text | escape }}"
   data-description="{{ block.settings.description | strip_newlines | escape }}"
   data-button-text="{{ block.settings.button_label | escape }}"
@@ -297,7 +297,7 @@
     src="{{ block.settings.rounded_image | image_url }}"
     alt="{{ block.settings.heading_text | escape }}"
   />
-  <h3>{{ block.settings.category_text }}</h3>
+  <h3>{{ block.settings.category_text | escape}}</h3>
 </div>
     {% endfor %}
   </div>
