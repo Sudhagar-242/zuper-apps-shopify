@@ -468,7 +468,6 @@
         },
         "image_tab_WjhLhc": {
           "type": "image_tab",
-          "disabled": true,
           "settings": {
             "background_image": "shopify://shop_images/automotive_1.webp",
             "rounded_image": "shopify://shop_images/automotive_1.webp",
