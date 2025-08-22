@@ -351,6 +351,8 @@
       backgroundImage: tab.getAttribute('data-background-image')
     };
 
+console.log(content)
+
     topSection.style.backgroundImage = `url('${content.backgroundImage}')`;
     topTitle.textContent = content.title;
     topDescription.textContent = content.description;
