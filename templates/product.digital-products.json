@@ -662,7 +662,7 @@
         "image_NDzBMw": {
           "type": "image",
           "settings": {
-            "is_clickable": false,
+            "is_clickable": true,
             "link": "",
             "target": false
           }
