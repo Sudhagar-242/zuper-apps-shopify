@@ -62,7 +62,7 @@
     <h2>{{ section.settings.title }}</h2>
   </div>
   <div class="logos-slide" data-v-4ef8651c="">
-    {% for block in section.settings.blocks %}
+    {% for block in section.blocks %}
       {% if block.settings.image %}
         {% assign image_selected = block.settings.image %}
       {% else %}
@@ -99,7 +99,7 @@
   </div>
 
   <div class="logos-slide" data-v-4ef8651c="">
-    {% for block in section.settings.blocks %}
+    {% for block in section.blocks %}
       {% if block.settings.image %}
         {% assign image_selected = block.settings.image %}
       {% else %}
