@@ -487,12 +487,51 @@
         "image_tab_TjF7Ub",
         "image_tab_WjhLhc"
       ],
+      "disabled": true,
       "name": "Custom Image Tab",
       "settings": {
         "placeholder_background_image": "shopify://shop_images/agriculture-healthy-food.webp",
         "placeholder_heading_text": "Header",
         "placeholder_description": "Welcome to My Shop",
         "placeholder_button_label": "Explore All Products"
+      }
+    },
+    "custom_review_courasal_dQCEkR": {
+      "type": "custom_review_courasal",
+      "blocks": {
+        "review_card_Atnqjp": {
+          "type": "review_card",
+          "settings": {
+            "review_rating_star": 5,
+            "review": "Write Your Review",
+            "customer_name": "Babu"
+          }
+        },
+        "review_card_iRHkbG": {
+          "type": "review_card",
+          "settings": {
+            "review_rating_star": 3,
+            "review": "Write Your Review",
+            "customer_name": "Customer Name"
+          }
+        },
+        "review_card_rwnfaW": {
+          "type": "review_card",
+          "settings": {
+            "review_rating_star": 5,
+            "review": "Write Your Review",
+            "customer_name": "Customer Name"
+          }
+        }
+      },
+      "block_order": [
+        "review_card_Atnqjp",
+        "review_card_iRHkbG",
+        "review_card_rwnfaW"
+      ],
+      "name": "Review Corousal",
+      "settings": {
+        "review_corousal_title": "Customer Reviews"
       }
     }
   },
@@ -503,6 +542,7 @@
     "custom_digital_products_app_features_tzdJfm",
     "custom_digital_products_horizontal_infinite_R3NMFX",
     "custom_multi_column_R3recC",
-    "custom_image_tab_7MxKgz"
+    "custom_image_tab_7MxKgz",
+    "custom_review_courasal_dQCEkR"
   ]
 }
