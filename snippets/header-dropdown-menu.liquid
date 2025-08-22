@@ -5,10 +5,6 @@
   {% render 'header-dropdown-menu' %}
 {% endcomment %}
 
-{% javascript %}
-  console.log(section.settings.menu.links);
-  
-{% endjavascript %}
 
 
 <nav class="header__inline-menu">
@@ -28,7 +24,7 @@
                   {% endif %}
                 >
                   <a href="">
-                  {{- link.title | escape -}}
+                  {{- link.title.link | escape -}}
                   </a>
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
