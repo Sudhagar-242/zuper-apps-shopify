@@ -395,6 +395,9 @@ function getCenteredTab() {
       console.log(`🟢 New closest tab selected (smallestDistance updated to ${smallestDistance})`);
     } else {
       console.log(closest.classList);
+      if (closest.classList.includes("active")) {
+        console.log(index);
+      }
       console.log(`🔴 Distance ${distance} not less than current smallestDistance ${smallestDistance}`);
     }
     console.groupEnd();
