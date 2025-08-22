@@ -432,7 +432,7 @@
           "settings": {
             "background_image": "shopify://shop_images/agriculture-healthy-food.webp",
             "rounded_image": "shopify://shop_images/agriculture-healthy-food_1.webp",
-            "category_text": "Header",
+            "category_text": "Agriculture",
             "heading_text": "Agriculture",
             "description": "Our advanced agricultural solutions are designed to optimize performance in the field — whether it's through smart engineering, rugged design, or cutting-edge machinery integration. From seeding to storage, we deliver reliability where it matters most.",
             "button_label": "Explore All Products",
@@ -445,7 +445,7 @@
           "settings": {
             "background_image": "shopify://shop_images/automotive.webp",
             "rounded_image": "shopify://shop_images/automotive.webp",
-            "category_text": "Header",
+            "category_text": "Automotive",
             "heading_text": "Automotive",
             "description": "Expert automotive tools and diagnostics to keep your vehicle running at peak performance. Our solutions help mechanics and enthusiasts work smarter and faster.",
             "button_label": "Explore All Products",
@@ -458,9 +458,22 @@
           "settings": {
             "background_image": "shopify://shop_images/transport.webp",
             "rounded_image": "shopify://shop_images/transport.webp",
-            "category_text": "Header",
+            "category_text": "Transport",
             "heading_text": "Transport",
             "description": "Reliable and efficient transport services ensuring your goods arrive safely and on time. Our logistics solutions are tailored for modern supply chains.",
+            "button_label": "Explore All Products",
+            "button_link": "",
+            "button_redirect": false
+          }
+        },
+        "image_tab_WjhLhc": {
+          "type": "image_tab",
+          "settings": {
+            "background_image": "shopify://shop_images/automotive_1.webp",
+            "rounded_image": "shopify://shop_images/automotive_1.webp",
+            "category_text": "Construction",
+            "heading_text": "Construction",
+            "description": "Innovative construction solutions, tools, and machinery for modern infrastructure projects. Safety, efficiency, and durability in every solution.",
             "button_label": "Explore All Products",
             "button_link": "",
             "button_redirect": false
@@ -470,7 +483,8 @@
       "block_order": [
         "image_tab_BCEGJp",
         "image_tab_yxaCbz",
-        "image_tab_TjF7Ub"
+        "image_tab_TjF7Ub",
+        "image_tab_WjhLhc"
       ],
       "name": "Custom Image Tab",
       "settings": {
