@@ -5,6 +5,12 @@
   {% render 'header-dropdown-menu' %}
 {% endcomment %}
 
+{% javascript %}
+  console.log(section.settings.menu.links);
+  
+{% endjavascript %}
+
+
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
@@ -21,7 +27,7 @@
                     class="header__active-menu-item"
                   {% endif %}
                 >
-                  <a href="#">
+                  <a href="">
                   {{- link.title | escape -}}
                   </a>
                 </span>
