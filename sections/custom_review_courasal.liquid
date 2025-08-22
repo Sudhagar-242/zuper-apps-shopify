@@ -1,0 +1,254 @@
+<style>
+        .customer-setion {
+          background-image: url("https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Rectangle_40243.png?v=1753244382");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: #00000033;
+          padding-bottom: 52px;
+        }
+        .customer-revi {
+          max-width: 1369px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        .customer-review {
+          display: flex;
+          align-items: center;
+          padding-top: 61px;
+          padding-bottom: 52px;
+        }
+        .slider-wrapper {
+          position: relative;
+          max-width: 100%;
+          margin: auto;
+        }
+        .quotation {
+          width: 38px;
+        }
+        .slider-container {
+          display: flex;
+          overflow-x: auto;
+          scroll-behavior: smooth;
+          gap: 14px;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE 10+ */
+        }
+
+        .slider-container::-webkit-scrollbar {
+          display: none; /* Chrome, Safari */
+        }
+
+        .review-card {
+          min-width: 381px;
+          max-width: 381px;
+          background-color: rgb(0 0 0 / 67%);
+          padding: 30px;
+          border-radius: 11px;
+          flex-shrink: 0;
+        }
+        .card-img {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+        }
+        .card-text p {
+          color: white;
+          font-size: 16px;
+          line-height: 143%;
+          padding-top: 24px;
+          padding-bottom: 42px;
+          font-weight: 400;
+          margin: 0;
+        }
+        .card-text h2 {
+          color: white;
+          font-size: 16px;
+          line-height: 143%;
+          margin: 0;
+          font-weight: 700;
+        }
+        .customer-review h2 {
+          color: #fff;
+          font-size: 42px;
+          font-weight: 700;
+          line-height: 140%;
+          margin: 0;
+        }
+        .icon-star {
+          display: flex;
+          align-items: center;
+        }
+        .slider-buttons {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          margin-left: auto;
+        }
+
+        .slider-buttons button {
+          border: 0.8px solid #ffffff;
+          color: white;
+          border-radius: 30px;
+          cursor: pointer;
+          font-size: 18px;
+          background: transparent;
+          width: 49px;
+          height: 49px;
+        display: flex;
+      align-items: center;
+      justify-content: center;
+  transition: 0.5s;
+        }
+    .slider-buttons button:hover {
+          transform: scale(1.1);
+  transition: 0.5s;
+        }
+        @media (max-width: 989px) {
+          .slider-buttons {
+            position: static;
+            justify-content: center;
+            flex-direction: row;
+          }
+
+          .slider-wrapper {
+            padding-bottom: 20px;
+          }
+  .customer-review h2 {
+      font-size: 30px;
+      line-height: 130%;
+  }
+        }
+</style>
+<div class="customer-setion">
+  <div class="customer-revi">
+    <div class="customer-review">
+      <h2>Customer Reviews</h2>
+      <div class="slider-buttons">
+        <button onclick="slide('left')" aria-label="Previous Review">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_9.svg?v=1753248176"
+          >
+        </button>
+        <button onclick="slide('right')" aria-label="Next Review">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_10.svg?v=1753248176"
+          >
+        </button>
+      </div>
+    </div>
+    <div class="slider-wrapper">
+      <div class="slider-container reviewSlider">
+        <div class="review-card">
+          <div class="card-img">
+            <img
+              alt="icon"
+              class="quotation"
+              src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/1f49151004c207fcd82c8bfdbdffddf1.svg?v=1753246419"
+            >
+            <div class="icon-star">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Star_5.svg?v=1753246420"
+                alt="star"
+              >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Star_5.svg?v=1753246420"
+                alt="star"
+              >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Star_5.svg?v=1753246420"
+                alt="star"
+              >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Star_5.svg?v=1753246420"
+                alt="star"
+              >
+            </div>
+          </div>
+          <div class="card-text">
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+              a galley of type and scrambled it to make a type
+            </p>
+            <h2>Customer Name</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function slide(direction) {
+    const container = document.querySelector('.reviewSlider');
+    const card = container.querySelector('.review-card');
+    const scrollAmount = card.offsetWidth + 14; // includes gap
+
+    if (direction === 'left') {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Review Corousal",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Review Corousal Title"
+    },
+    {
+      "type": "text",
+      "id": "review_corousal_title",
+      "label": "Review Corousal Title"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Review Card",
+      "type": "review_card",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Review Rate"
+        },
+        {
+          "type": "number",
+          "id": "review_rating_star",
+          "label": "Review Rating Star",
+          "default": 0,
+          "info": "Count of the Stars"
+        },
+        {
+          "type": "header",
+          "content": "Review"
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review",
+          "default": "Write Your Review",
+          "info": "This will be the Review written by Customer"
+        },
+        {
+          "type": "header",
+          "content": " Customer"
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer Name",
+          "default": "Customer Name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Corousal",
+      "blocks": [{"type": "review_card"},{"type": "review_card"},{"type": "review_card"}]
+    }
+  ]
+}
+{% endschema %}
