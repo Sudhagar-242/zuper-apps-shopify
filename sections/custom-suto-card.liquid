@@ -95,10 +95,9 @@
     <div class="key-applications-left">
       <h2>{{ section.settings.title }}</h2>
 
-
 {% for block in section.blocks %}
   <div class="app-item">
-    {{ block.settings.content_icon }}
+    {{ block.settings.content_icon | asset_url | image_tag | image_url | asset_img_url }}
         <div class="app-text">
           <h3>{{ block.settings.title }}</h3>
           <p>{{ block.settings.description }}</p>
