@@ -682,17 +682,179 @@
             "link": "",
             "target": false
           }
+        },
+        "image_njL7Ck": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_haMaha": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_fLcdqH": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_AmbRTh": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_BeUREM": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_9dfXcp": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_7XBNMi": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_App9T8": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_G4LPgg": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_fQaEFR": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_L648ij": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_89fq3b": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_wGVKqn": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_RLQyDY": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_YpmkTy": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_qmFVin": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_QKHJ66": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_MUgM8d": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
         }
       },
       "block_order": [
         "image_NDzBMw",
         "image_Hk6Qh7",
-        "image_7KK8EW"
+        "image_7KK8EW",
+        "image_njL7Ck",
+        "image_haMaha",
+        "image_fLcdqH",
+        "image_AmbRTh",
+        "image_BeUREM",
+        "image_9dfXcp",
+        "image_7XBNMi",
+        "image_App9T8",
+        "image_G4LPgg",
+        "image_fQaEFR",
+        "image_L648ij",
+        "image_89fq3b",
+        "image_wGVKqn",
+        "image_RLQyDY",
+        "image_YpmkTy",
+        "image_qmFVin",
+        "image_QKHJ66",
+        "image_MUgM8d"
       ],
       "name": "Infinite Scroll Slider",
       "settings": {
         "title": "Tools",
-        "speed_of_moving": 10
+        "speed_of_moving": 40
       }
     }
   },
