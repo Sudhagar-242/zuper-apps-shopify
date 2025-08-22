@@ -452,7 +452,48 @@ function getCenteredTab() {
 {% schema %}
 {
   "name": "Custom Image Tab",
-  "settings": [],
+  "settings": [
+    {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "placeholder_background_image",
+          "label": "Tab Background Image",
+          "info": "This will be the default image for top section"
+        },
+        {
+          "type": "header",
+          "content": "Title In Top Section"
+        },
+        {
+          "type": "text",
+          "id": "placeholder_heading_text",
+          "label": "Header Text",
+          "default": "Header",
+          "info": "This will be the default text for top section"
+        },
+        {
+          "type": "header",
+          "content": "Description In Top Section"
+        },
+        {
+          "type": "textarea",
+          "id": "placeholder_description",
+          "label": "Description",
+          "default": "Welcome to My Shop"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },{
+          "type": "text",
+          "id": "placeholder_button_label",
+          "label": "Button Label",
+          "default": "Explore All Products"
+        }
+  ],
   "blocks": [
     {
       "name": "Image Tab",
