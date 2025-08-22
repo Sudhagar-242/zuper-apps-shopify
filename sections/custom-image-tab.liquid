@@ -291,6 +291,7 @@
   data-description="{{ block.settings.description | strip_newlines | escape }}"
   data-button-text="{{ block.settings.button_label | escape }}"
   data-button-url="{{ block.settings.button_link }}"
+  data-button-redirect="{{ block.settings.button_redirect }}"
   data-background-image="{{ block.settings.background_image | image_url }}"
 >
   <img
@@ -348,6 +349,7 @@
       description: tab.getAttribute('data-description'),
       buttonText: tab.getAttribute('data-button-text'),
       buttonUrl: tab.getAttribute('data-button-url'),
+      buttonRedirect: tab.getAttribute('data-button-redirect'),
       backgroundImage: tab.getAttribute('data-background-image')
     };
 
