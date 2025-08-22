@@ -724,12 +724,25 @@
     },
     "custom_suto_card_Am3hdx": {
       "type": "custom-suto-card",
+      "blocks": {
+        "content_block_bqDJRr": {
+          "type": "content_block",
+          "settings": {
+            "content_icon": "shopify://shop_images/automotive_1.webp",
+            "title": "Title Text",
+            "description": "Description Goes Here."
+          }
+        }
+      },
+      "block_order": [
+        "content_block_bqDJRr"
+      ],
       "name": "Custom Auto Card",
       "settings": {
         "title": "Key Applications",
         "padding_top": 100,
         "padding_bottom": 74,
-        "background": "#fff"
+        "background": "#ffffff"
       }
     }
   },
