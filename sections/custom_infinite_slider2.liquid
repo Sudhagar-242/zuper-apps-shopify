@@ -105,8 +105,14 @@
       {% else %}
         {% assign image_selected = 'https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501' %}
       {% endif %}
+
+
       {% if block.is_clickable %}
-        {% if block.target %}{% assign target = '_blank' %}{% else %}{% assign target = '' %}{% endif %}
+        {% if block.target %}
+          {% assign target = '_blank' %}
+        {% else %}
+          {% assign target = '' %}
+      {% endif %}
 
         <a href="{{ block.link }}" target="{{ target }}">
           <img
