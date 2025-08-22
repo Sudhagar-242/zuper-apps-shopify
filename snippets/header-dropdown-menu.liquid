@@ -23,8 +23,8 @@
                     class="header__active-menu-item"
                   {% endif %}
                 >
-                  <a href="">
-                  {{- link.title.link | escape -}}
+                  <a href="{{ link.link }}">
+                  {{- link.title | escape -}}
                   </a>
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
