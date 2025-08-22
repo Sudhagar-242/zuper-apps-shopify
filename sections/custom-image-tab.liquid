@@ -71,7 +71,7 @@
   }
 
   /* Bottom tabss */
-  .tabss-wrapper {
+  .tabs-wrapper {
     display: flex;
     gap: 33px;
   }
@@ -150,14 +150,14 @@
   }
   /* Mobile .slider */
   @media screen and (max-width: 989px) {
-    .tabss-wrapper {
+    .tabs-wrapper {
       flex-wrap: nowrap;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       gap: 15px;
       padding: 20px 15px;
     }
-    .tabss-wrapper::-webkit-scrollbar {
+    .tabs-wrapper::-webkit-scrollbar {
       display: none;
     }
     .tabs {
@@ -192,7 +192,7 @@
     .top-section h1 {
       font-size: 38px;
     }
-    .tabss-wrapper {
+    .tabs-wrapper {
       justify-content: flex-start;
     }
     .top-section .description-box {
@@ -201,13 +201,13 @@
       padding: 20px;
       margin-bottom: 30px;
     }
-    .tabss-wrapper {
+    .tabs-wrapper {
       margin-top: auto;
     }
   }
   /* Desktop slider */
   @media screen and (min-width: 990px) {
-    .tabss-wrapper {
+    .tabs-wrapper {
       overflow-x: auto;
       scroll-snap-type: x mandatory;
 
@@ -284,7 +284,7 @@
   </div>
 
   <!-- Slider Tabs -->
-  <div class="tabss-wrapper">
+  <div class="tabs-wrapper">
     {% for block in section.blocks %}
         <div
   class="tabs"
@@ -322,7 +322,7 @@
 {% javascript %}
   // Selectors for tabs and UI elements
   const tabs = document.querySelectorAll('.tabs');
-  const wrapper = document.querySelector('.tabss-wrapper');
+  const wrapper = document.querySelector('.tabs-wrapper');
   const topSection = document.getElementById('topSection');
   const topTitle = document.getElementById('topTitle');
   const topDescription = document.getElementById('topDescription');
