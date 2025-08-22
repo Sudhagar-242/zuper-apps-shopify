@@ -541,7 +541,119 @@
       "name": "Review Corousal",
       "settings": {
         "review_corousal_title": "Customer Reviews",
-        "is_default_image": true
+        "is_default_image": false
+      }
+    },
+    "custom_price_multicolumn_mRbRGL": {
+      "type": "custom-price-multicolumn",
+      "blocks": {
+        "price_column_CibjgE": {
+          "type": "price_column",
+          "settings": {
+            "block_section_font": "helvetica_n4",
+            "block_section_background": "#fff",
+            "header": "Header",
+            "header_font": "helvetica_n4",
+            "header_font_color": "",
+            "price_description": "Welcome to my Shop",
+            "description_font": "helvetica_n4",
+            "description_font_color": "",
+            "price_plan": "0.00",
+            "plan_font": "helvetica_n4",
+            "plan_font_color": "",
+            "price_plan_features": "",
+            "plan_features_font": "helvetica_n4",
+            "plan_features_font_color": "",
+            "price_button": "Get Started",
+            "price_button_link": "",
+            "price_button_font": "helvetica_n4",
+            "price_button_font_color": ""
+          }
+        },
+        "price_column_HTnhNm": {
+          "type": "price_column",
+          "settings": {
+            "block_section_font": "helvetica_n4",
+            "block_section_background": "#fff",
+            "header": "Header",
+            "header_font": "helvetica_n4",
+            "header_font_color": "",
+            "price_description": "Welcome to my Shop",
+            "description_font": "helvetica_n4",
+            "description_font_color": "",
+            "price_plan": "0.00",
+            "plan_font": "helvetica_n4",
+            "plan_font_color": "",
+            "price_plan_features": "",
+            "plan_features_font": "helvetica_n4",
+            "plan_features_font_color": "",
+            "price_button": "Get Started",
+            "price_button_link": "",
+            "price_button_font": "helvetica_n4",
+            "price_button_font_color": ""
+          }
+        },
+        "price_column_dhzUzM": {
+          "type": "price_column",
+          "settings": {
+            "block_section_font": "helvetica_n4",
+            "block_section_background": "#fff",
+            "header": "Header",
+            "header_font": "helvetica_n4",
+            "header_font_color": "",
+            "price_description": "Welcome to my Shop",
+            "description_font": "helvetica_n4",
+            "description_font_color": "",
+            "price_plan": "0.00",
+            "plan_font": "helvetica_n4",
+            "plan_font_color": "",
+            "price_plan_features": "",
+            "plan_features_font": "helvetica_n4",
+            "plan_features_font_color": "",
+            "price_button": "Get Started",
+            "price_button_link": "",
+            "price_button_font": "helvetica_n4",
+            "price_button_font_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "price_column_CibjgE",
+        "price_column_HTnhNm",
+        "price_column_dhzUzM"
+      ],
+      "name": "Custom Price Column",
+      "settings": {
+        "title": "Price Plan",
+        "heading_size": "h1",
+        "section_heading_font": "helvetica_n4",
+        "section_heading_font_color": "#000",
+        "section_background": "",
+        "is_column_clickable": true,
+        "is_column_clickable_link": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "section_button_font": "helvetica_n4",
+        "section_button_font_color": "#000",
+        "section_button_hover_font_color": "#000",
+        "button_back_ground": "",
+        "button_hover_back_ground": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "card_heading_font": "helvetica_n4",
+        "card_heading_font_color": "#000",
+        "card_paragraph_font": "helvetica_n4",
+        "card_paragraph_font_color": "#000",
+        "card_background": "",
+        "card_hover_background": ""
       }
     }
   },
@@ -553,6 +665,7 @@
     "custom_digital_products_horizontal_infinite_R3NMFX",
     "custom_multi_column_R3recC",
     "custom_image_tab_7MxKgz",
-    "custom_review_courasal_dQCEkR"
+    "custom_review_courasal_dQCEkR",
+    "custom_price_multicolumn_mRbRGL"
   ]
 }
