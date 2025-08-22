@@ -1,6 +1,5 @@
 <style>
         .customer-setion {
-          background-image: url("https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Rectangle_40243.png?v=1753244382");
           background-repeat: no-repeat;
           background-size: cover;
           background-color: #00000033;
@@ -119,7 +118,16 @@
   }
         }
 </style>
-<div class="customer-setion">
+
+{% if section.settings.background_image %}
+    {% assign backgroundImage = section.settings.background_image | image_url  %}
+{% else %}
+    {% assign backgroundImage = "https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Rectangle_40243.png?v=1753244382" %}
+{% endif %}
+
+
+
+<div class="customer-setion" style="background-image: url({{backgroundImage}})">
   <div class="customer-revi">
     <div class="customer-review">
       <h2>{{ section.settings.review_corousal_title }}</h2>
@@ -197,6 +205,15 @@
       "type": "text",
       "id": "review_corousal_title",
       "label": "Review Corousal Title"
+    },{
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image",
+      "info": "Background of this Section",
     }
   ],
   "blocks": [
