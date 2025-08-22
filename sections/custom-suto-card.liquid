@@ -90,6 +90,14 @@
   }
 </style>
 
+
+{% style %}
+  .auto-card-section{
+    padding-top: {{ section.settings.padding_top }};
+    padding-bottom: {{ section.settings.padding_bottom }}
+  }
+{% endstyle %}
+
 <div class="key-section">
   <div class="key-applications">
     <div class="key-applications-left">
@@ -281,7 +289,9 @@
 
 {% schema %}
   {
-  "name": "Code In Shopify Section",
+  "name": "Custom Auto Card",
+  "tag": "section",
+  "class": "auto-card-section",
   "settings": [
     {
       "type": "header",
@@ -357,7 +367,7 @@
   ],
   "presets": [
     {
-      "name": "Code In Shopify Section"
+      "name": "Custom Auto Card"
     }
   ]
 }  
