@@ -358,7 +358,7 @@ console.log(content)
     topDescription.textContent = content.description;
     topButton.textContent = content.buttonText;
     topButton.href = content.buttonUrl;
-    topButton.target = content.buttonRedirect == true ? "_blank": '';
+    topButton.target = content.buttonRedirect === "true" ? "_blank": '';
   }
 
   // Determine which tab is closest to the center of the wrapper viewport
