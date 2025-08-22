@@ -122,7 +122,11 @@
 {% if section.settings.background_image %}
     {% assign backgroundImage = section.settings.background_image | image_url  %}
 {% else %}
-    {% assign backgroundImage = "https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Rectangle_40243.png?v=1753244382" %}
+    {% if section.settings.is_default_image %}
+        {% assign backgroundImage = "https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Rectangle_40243.png?v=1753244382" %}
+    {% else %}
+        {% assign backgroundImage = "" %}
+    {% endif %}
 {% endif %}
 
 
@@ -214,6 +218,12 @@
       "id": "background_image",
       "label": "Background Image",
       "info": "Background of this Section",
+    },
+    {
+        "type": "checkbox",
+        "id": "is_default_image",
+        "label": "Enables Default Image Background",
+        "default": true
     }
   ],
   "blocks": [
