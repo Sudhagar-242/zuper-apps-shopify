@@ -5,11 +5,6 @@
       position: relative;
   }
 
-  .logo-slider:hover .logos-slide {
-      animation-play-state: paused;
-  }
-
-
   .our-client {
   max-width: 1369px;
       margin: 0 auto;
@@ -61,6 +56,9 @@
       display: inline-block;
       animation: {{ section.settings.speed_of_moving }}s slide infinite linear;
   }
+  .logos-slide:hover {
+      animation-play-state: paused;
+  }
 {% endstyle %}
 
 <div class="logo-slider" data-v-4ef8651c="">
@@ -81,7 +79,6 @@
         {% else %}
           {% assign target = '' %}
         {% endif %}
-
 
         <a href="{{ block.settings.link }}" target="{{ target }}">
           <img
@@ -112,13 +109,12 @@
         {% assign image_selected = 'https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501' %}
       {% endif %}
 
-
       {% if block.settings.is_clickable %}
         {% if block.settings.target %}
-          {% assign target = "_blank" %}
+          {% assign target = '_blank' %}
         {% else %}
-          {% assign target = "" %}
-      {% endif %}
+          {% assign target = '' %}
+        {% endif %}
 
         <a href="{{ block.settings.link }}" target="{{ target }}">
           <img
