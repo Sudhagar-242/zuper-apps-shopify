@@ -268,16 +268,14 @@
   <div
     id="topSection"
     class="top-section"
-    style="
-                      background-image: url('https://cdn.shopify.com/s/files/1/0927/8583/6398/files/agriculture-healthy-food.png?v=1752959180');
-    "
+    style="background-image: url("{{ section.settings.placeholder_background_image }}");"
   >
-    <h1 id="topTitle">Dummy</h1>
+    <h1 id="topTitle">{{ section.settings.placeholder_heading_text }}</h1>
     <div class="description-box">
       <p id="topDescription">
-        Dummy
+        {{ section.settings.placeholder_description }}
       </p>
-      <a href="" class="btn-explore">Explore All Products</a>
+      <a href="" class="btn-explore">{{ section.settings.placeholder_button_label }}</a>
     </div>
   </div>
 
