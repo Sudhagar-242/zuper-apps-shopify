@@ -88,7 +88,7 @@
         </a>
       {% else %}
         <img
-          src="{{ image_selected | image_url }}"
+          src="{{ image_selected  }}"
           alt="no Image"
           width=""
           height=""
@@ -101,7 +101,7 @@
   <div class="logos-slide" data-v-4ef8651c="">
     {% for block in section.blocks %}
       {% if block.settings.image %}
-        {% assign image_selected = block.settings.image %}
+        {% assign image_selected = block.settings.image | image_url %}
       {% else %}
         {% assign image_selected = 'https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501' %}
       {% endif %}
@@ -109,14 +109,14 @@
 
       {% if block.settings.is_clickable %}
         {% if block.settings.target %}
-          {% assign target = '_blank' %}
+          {% assign target = "_blank" %}
         {% else %}
-          {% assign target = '' %}
+          {% assign target = "" %}
       {% endif %}
 
         <a href="{{ block.settings.link }}" target="{{ target }}">
           <img
-            src="{{ image_selected | image_url }}"
+            src="{{ image_selected }}"
             alt="no Image"
             width=""
             height=""
@@ -125,7 +125,7 @@
         </a>
       {% else %}
         <img
-          src="{{ image_selected | image_url }}"
+          src="{{ image_selected }}"
           alt="no Image"
           width=""
           height=""
