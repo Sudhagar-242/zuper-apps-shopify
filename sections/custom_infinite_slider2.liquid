@@ -63,7 +63,6 @@
   </div>
   <div class="logos-slide" data-v-4ef8651c="">
     {% for block in section.settings.blocks %}
-
       {% if block.image %}
         {% assign image = block.image %}
       {% else %}
@@ -74,8 +73,10 @@
         {% if block.target %}
           {% assign target = '_blank' %}
         {% else %}
-            {% assign target = '' %}
-          {% endif %}
+          {% assign target = '' %}
+        {% endif %}
+
+        
         <a href="{{ block.link }}" target="{{ target }}">
           <img
             src="{{ image | image_url }}"
