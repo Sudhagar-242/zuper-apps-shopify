@@ -436,8 +436,8 @@
             "heading_text": "Agriculture",
             "description": "Our advanced agricultural solutions are designed to optimize performance in the field — whether it's through smart engineering, rugged design, or cutting-edge machinery integration. From seeding to storage, we deliver reliability where it matters most.",
             "button_label": "Explore All Products",
-            "button_link": "",
-            "button_redirect": false
+            "button_link": "https://www.amwhiz.com",
+            "button_redirect": true
           }
         },
         "image_tab_yxaCbz": {
