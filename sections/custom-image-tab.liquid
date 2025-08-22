@@ -294,6 +294,7 @@
   <img
     src="{{ block.settings.rounded_image | image_url }}"
     alt="{{ block.settings.heading_text | escape }}"
+     width="auto" height="auto"
   />
   <h3>{{ block.settings.category_text | escape}}</h3>
 </div>
@@ -304,12 +305,12 @@
   <div class="slider-nav">
     <button id="slidePrev">
       <img
-        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645"
+        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645" width="auto" height="auto"
       >
     </button>
     <button id="slideNext">
       <img
-        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"
+        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"  width="auto" height="auto"
       >
     </button>
   </div>
@@ -350,8 +351,6 @@
       backgroundImage: tab.getAttribute('data-background-image')
     };
 
-console.log(content)
-
     topSection.style.backgroundImage = `url('${content.backgroundImage}')`;
     topTitle.textContent = content.title;
     topDescription.textContent = content.description;
@@ -368,12 +367,6 @@ function getCenteredTab() {
   const wrapperWidth = wrapper.offsetWidth;
   const halfWrapperWidth = wrapperWidth / 2;
   const wrapperCenter = wrapperScrollLeft + halfWrapperWidth;
-
-  console.group('Calculating centered tab');
-  console.log(`Wrapper scrollLeft: ${wrapperScrollLeft}`);
-  console.log(`Wrapper width: ${wrapperWidth}`);
-  console.log(`Half wrapper width: ${halfWrapperWidth}`);
-  console.log(`Calculated wrapper center position (scrollLeft + halfWidth): ${wrapperCenter}`);
   
   tabs.forEach((tab, index) => {
     const tabOffsetLeft = tab.offsetLeft;
@@ -382,33 +375,12 @@ function getCenteredTab() {
     const tabCenter = tabOffsetLeft + halfTabWidth;
     const distance = Math.abs(wrapperCenter - tabCenter);
 
-    console.group(`Tab ${index + 1} details`);
-    console.log(`Tab offsetLeft: ${tabOffsetLeft}`);
-    console.log(`Tab width: ${tabWidth}`);
-    console.log(`Half of tab width: ${halfTabWidth}`);
-    console.log(`Calculated tab center position (offsetLeft + halfWidth): ${tabCenter}`);
-    console.log(`Distance from wrapper center: |${wrapperCenter} - ${tabCenter}| = ${distance}`);
-
     if (distance < smallestDistance) {
       smallestDistance = distance;
       closest = tab;
-      console.log(`🟢 New closest tab selected (smallestDistance updated to ${smallestDistance})`);
-    } else {
-      console.log(closest.classList);
-      if (closest.classList["1"]) {
-        console.log(index);
-      }
-      console.log(`🔴 Distance ${distance} not less than current smallestDistance ${smallestDistance}`);
+     
     }
-    console.groupEnd();
   });
-
-  if (closest) {
-    console.log('Final closest tab element:', closest);
-  } else {
-    console.warn('No tabs found to select!');
-  }
-  console.groupEnd();
 
   return closest;
 }
