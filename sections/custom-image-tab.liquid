@@ -320,101 +320,97 @@
 </div>
 
 {% javascript %}
-  const tabss = document.querySelectorAll('.tabs');
+  // Selectors for tabs and UI elements
+  const tabs = document.querySelectorAll('.tabs');
   const wrapper = document.querySelector('.tabss-wrapper');
   const topSection = document.getElementById('topSection');
   const topTitle = document.getElementById('topTitle');
   const topDescription = document.getElementById('topDescription');
   const topButton = document.querySelector('.btn-explore');
-
   const sliderNav = document.querySelector('.slider-nav');
+  const slideAmount = 320; // Horizontal scroll step for arrows
 
-  // Function to show/hide arrows based on desktop & tab count
-  function updateArrows() {
-    if (window.innerWidth >= 990) {
-      // Desktop
-      if (tabss.length <= 3) {
-        sliderNav.style.display = 'none'; // Hide arrows
-      } else {
-        sliderNav.style.display = 'flex'; // Show arrows
-      }
+  // Show or hide navigation arrows based on screen width and tab count
+  function toggleArrowsVisibility() {
+    const isDesktop = window.innerWidth >= 990;
+    if (isDesktop) {
+      sliderNav.style.display = (tabs.length > 3) ? 'flex' : 'none';
     } else {
-      // Mobile: always show arrows
       sliderNav.style.display = 'flex';
     }
   }
 
-  // Run on load
-  updateArrows();
-
-  // Update on resize
-  window.addEventListener('resize', updateArrows);
-
-  // Function to update active tab + top section
-  function setActiveTab(tab) {
-    tabss.forEach((t) => t.classList.remove('active'));
+  // Activate a tab and update the top section with tab-specific content
+  function activateTab(tab) {
+    tabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
-    const hiddenData = {
-  title: tab.getAttribute('data-title'),
-  description: tab.getAttribute('data-description'),
-  buttonText: tab.getAttribute('data-button-text'),
-  buttonUrl: tab.getAttribute('data-button-url'),
-  backgroundImage: tab.getAttribute('data-background-image')
-};
 
+    const content = {
+      title: tab.getAttribute('data-title'),
+      description: tab.getAttribute('data-description'),
+      buttonText: tab.getAttribute('data-button-text'),
+      buttonUrl: tab.getAttribute('data-button-url'),
+      backgroundImage: tab.getAttribute('data-background-image')
+    };
 
-    console.log(hiddenData);
-
-    console.log(tab);
-
-    topSection.style.backgroundImage = `url('${hiddenData.backgroundImage}')`;
-    topTitle.textContent = hiddenData.title;
-    topDescription.textContent = hiddenData.description;
-    topButton.textContent = hiddenData.buttonText;
-    topButton.href = hiddenData.buttonUrl;
+    topSection.style.backgroundImage = `url('${content.backgroundImage}')`;
+    topTitle.textContent = content.title;
+    topDescription.textContent = content.description;
+    topButton.textContent = content.buttonText;
+    topButton.href = content.buttonUrl;
   }
 
-  // Click on tabs manually
-  tabss.forEach((tab) => {
-    tab.addEventListener('click', () => setActiveTab(tab));
-  });
-
-  // Helper to get the tab currently in view (for slider)
-  function getVisibleTab() {
-    let closestTab = null;
-    let minDistance = Infinity;
+  // Determine which tab is closest to the center of the wrapper viewport
+  function getCenteredTab() {
+    let closest = null;
+    let smallestDistance = Infinity;
     const wrapperCenter = wrapper.scrollLeft + wrapper.offsetWidth / 2;
 
-    tabss.forEach((tab) => {
+    tabs.forEach(tab => {
       const tabCenter = tab.offsetLeft + tab.offsetWidth / 2;
       const distance = Math.abs(wrapperCenter - tabCenter);
-      if (distance < minDistance) {
-        minDistance = distance;
-        closestTab = tab;
+      if (distance < smallestDistance) {
+        smallestDistance = distance;
+        closest = tab;
       }
     });
-    console.log(closestTab);
-    return closestTab;
+
+    return closest;
   }
 
-  // Arrow scroll (works for both desktop & mobile)
-  const slideAmount = 320; // adjust according to card width + gap
-  document.getElementById('slidePrev').addEventListener('click', () => {
-    wrapper.scrollBy({ left: -slideAmount, behavior: 'smooth' });
+  // Scroll wrapper left or right and update active tab accordingly
+  function scrollWrapper(amount) {
+    wrapper.scrollBy({ left: amount, behavior: 'smooth' });
     setTimeout(() => {
-      const tab = getVisibleTab();
-      if (tab) setActiveTab(tab);
+      const centeredTab = getCenteredTab();
+      if (centeredTab) activateTab(centeredTab);
     }, 300);
-  });
+  }
 
-  document.getElementById('slideNext').addEventListener('click', () => {
-    wrapper.scrollBy({ left: slideAmount, behavior: 'smooth' });
-    setTimeout(() => {
-      const tab = getVisibleTab();
-      if (tab) setActiveTab(tab);
-    }, 300);
-  });
+  // Initialize on page load
+  function init() {
+    toggleArrowsVisibility();
+
+    // Set initial active tab if none active
+    if (!document.querySelector('.tabs.active') && tabs.length > 0) {
+      activateTab(tabs[0]);
+    }
+
+    // Event listeners for tab clicks
+    tabs.forEach(tab => tab.addEventListener('click', () => activateTab(tab)));
+
+    // Arrow button click handlers
+    document.getElementById('slidePrev').addEventListener('click', () => scrollWrapper(-slideAmount));
+    document.getElementById('slideNext').addEventListener('click', () => scrollWrapper(slideAmount));
+
+    // Update arrows visibility on window resize
+    window.addEventListener('resize', toggleArrowsVisibility);
+  }
+
+  // Run initialization
+  init();
 {% endjavascript %}
+
 
 {% schema %}
 {
