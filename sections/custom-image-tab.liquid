@@ -282,22 +282,23 @@
   <!-- Slider Tabs -->
   <div class="tabs-wrapper">
     {% for block in section.blocks %}
-        <div
-  class="tabs"
-  data-title="{{ block.settings.heading_text | escape }}"
-  data-description="{{ block.settings.description | strip_newlines | escape }}"
-  data-button-text="{{ block.settings.button_label | escape }}"
-  data-button-url="{{ block.settings.button_link }}"
-  data-button-redirect="{{ block.settings.button_redirect }}"
-  data-background-image="{{ block.settings.background_image | image_url }}"
->
-  <img
-    src="{{ block.settings.rounded_image | image_url }}"
-    alt="{{ block.settings.heading_text | escape }}"
-     width="auto" height="auto"
-  />
-  <h3>{{ block.settings.category_text | escape}}</h3>
-</div>
+      <div
+        class="tabs"
+        data-title="{{ block.settings.heading_text | escape }}"
+        data-description="{{ block.settings.description | strip_newlines | escape }}"
+        data-button-text="{{ block.settings.button_label | escape }}"
+        data-button-url="{{ block.settings.button_link }}"
+        data-button-redirect="{{ block.settings.button_redirect }}"
+        data-background-image="{{ block.settings.background_image | image_url }}"
+      >
+        <img
+          src="{{ block.settings.rounded_image | image_url }}"
+          alt="{{ block.settings.heading_text | escape }}"
+          width="auto"
+          height="auto"
+        >
+        <h3>{{ block.settings.category_text | escape }}</h3>
+      </div>
     {% endfor %}
   </div>
 
@@ -305,12 +306,16 @@
   <div class="slider-nav">
     <button id="slidePrev">
       <img
-        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645" width="auto" height="auto"
+        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645"
+        width="auto"
+        height="auto"
       >
     </button>
     <button id="slideNext">
       <img
-        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"  width="auto" height="auto"
+        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"
+        width="auto"
+        height="auto"
       >
     </button>
   </div>
@@ -331,7 +336,7 @@
   function toggleArrowsVisibility() {
     const isDesktop = window.innerWidth >= 990;
     if (isDesktop) {
-      sliderNav.style.display = (tabs.length > 3) ? 'flex' : 'none';
+      sliderNav.style.display = tabs.length > 3 ? 'flex' : 'none';
     } else {
       sliderNav.style.display = 'flex';
     }
@@ -339,7 +344,7 @@
 
   // Activate a tab and update the top section with tab-specific content
   function activateTab(tab) {
-    tabs.forEach(t => t.classList.remove('active'));
+    tabs.forEach((t) => t.classList.remove('active'));
     tab.classList.add('active');
 
     const content = {
@@ -348,7 +353,7 @@
       buttonText: tab.getAttribute('data-button-text'),
       buttonUrl: tab.getAttribute('data-button-url'),
       buttonRedirect: tab.getAttribute('data-button-redirect'),
-      backgroundImage: tab.getAttribute('data-background-image')
+      backgroundImage: tab.getAttribute('data-background-image'),
     };
 
     topSection.style.backgroundImage = `url('${content.backgroundImage}')`;
@@ -356,35 +361,33 @@
     topDescription.textContent = content.description;
     topButton.textContent = content.buttonText;
     topButton.href = content.buttonUrl;
-    topButton.target = content.buttonRedirect == "true" ? "_blank": '';
+    topButton.target = content.buttonRedirect == 'true' ? '_blank' : '';
   }
 
   // Determine which tab is closest to the center of the wrapper viewport
-function getCenteredTab() {
-  let closest = null;
-  let smallestDistance = Infinity;
-  const wrapperScrollLeft = wrapper.scrollLeft;
-  const wrapperWidth = wrapper.offsetWidth;
-  const halfWrapperWidth = wrapperWidth / 2;
-  const wrapperCenter = wrapperScrollLeft + halfWrapperWidth;
-  
-  tabs.forEach((tab, index) => {
-    const tabOffsetLeft = tab.offsetLeft;
-    const tabWidth = tab.offsetWidth;
-    const halfTabWidth = tabWidth / 2;
-    const tabCenter = tabOffsetLeft + halfTabWidth;
-    const distance = Math.abs(wrapperCenter - tabCenter);
+  function getCenteredTab() {
+    let closest = null;
+    let smallestDistance = Infinity;
+    const wrapperScrollLeft = wrapper.scrollLeft;
+    const wrapperWidth = wrapper.offsetWidth;
+    const halfWrapperWidth = wrapperWidth / 2;
+    const wrapperCenter = wrapperScrollLeft + halfWrapperWidth;
 
-    if (distance < smallestDistance) {
-      smallestDistance = distance;
-      closest = tab;
-     
-    }
-  });
+    tabs.forEach((tab, index) => {
+      const tabOffsetLeft = tab.offsetLeft;
+      const tabWidth = tab.offsetWidth;
+      const halfTabWidth = tabWidth / 2;
+      const tabCenter = tabOffsetLeft + halfTabWidth;
+      const distance = Math.abs(wrapperCenter - tabCenter);
 
-  return closest;
-}
+      if (distance < smallestDistance) {
+        smallestDistance = distance;
+        closest = tab;
+      }
+    });
 
+    return closest;
+  }
 
   // Scroll wrapper left or right and update active tab accordingly
   function scrollWrapper(amount) {
@@ -405,7 +408,7 @@ function getCenteredTab() {
     }
 
     // Event listeners for tab clicks
-    tabs.forEach(tab => tab.addEventListener('click', () => activateTab(tab)));
+    tabs.forEach((tab) => tab.addEventListener('click', () => activateTab(tab)));
 
     // Arrow button click handlers
     document.getElementById('slidePrev').addEventListener('click', () => scrollWrapper(-slideAmount));
@@ -419,51 +422,51 @@ function getCenteredTab() {
   init();
 {% endjavascript %}
 
-
 {% schema %}
 {
   "name": "Custom Image Tab",
   "settings": [
     {
-          "type": "header",
-          "content": "Image"
-        },
-        {
-          "type": "image_picker",
-          "id": "placeholder_background_image",
-          "label": "Tab Background Image",
-          "info": "This will be the default image for top section"
-        },
-        {
-          "type": "header",
-          "content": "Title In Top Section"
-        },
-        {
-          "type": "text",
-          "id": "placeholder_heading_text",
-          "label": "Header Text",
-          "default": "Header",
-          "info": "This will be the default text for top section"
-        },
-        {
-          "type": "header",
-          "content": "Description In Top Section"
-        },
-        {
-          "type": "textarea",
-          "id": "placeholder_description",
-          "label": "Description",
-          "default": "Welcome to My Shop"
-        },
-        {
-          "type": "header",
-          "content": "Button"
-        },{
-          "type": "text",
-          "id": "placeholder_button_label",
-          "label": "Button Label",
-          "default": "Explore All Products"
-        }
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "placeholder_background_image",
+      "label": "Tab Background Image",
+      "info": "This will be the default image for top section"
+    },
+    {
+      "type": "header",
+      "content": "Title In Top Section"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_heading_text",
+      "label": "Header Text",
+      "default": "Header",
+      "info": "This will be the default text for top section"
+    },
+    {
+      "type": "header",
+      "content": "Description In Top Section"
+    },
+    {
+      "type": "textarea",
+      "id": "placeholder_description",
+      "label": "Description",
+      "default": "Welcome to My Shop"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_button_label",
+      "label": "Button Label",
+      "default": "Explore All Products"
+    }
   ],
   "blocks": [
     {
@@ -489,7 +492,8 @@ function getCenteredTab() {
         {
           "type": "header",
           "content": "Title In Top Section"
-        },{
+        },
+        {
           "type": "text",
           "id": "category_text",
           "label": "Category Text",
