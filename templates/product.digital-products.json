@@ -659,94 +659,6 @@
     "custom_infinite_slider2_WPDPj6": {
       "type": "custom_infinite_slider2",
       "blocks": {
-        "image_NDzBMw": {
-          "type": "image",
-          "settings": {
-            "is_clickable": true,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_Hk6Qh7": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_7KK8EW": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_njL7Ck": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_haMaha": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_fLcdqH": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_AmbRTh": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_BeUREM": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_9dfXcp": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_7XBNMi": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_App9T8": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
         "image_G4LPgg": {
           "type": "image",
           "settings": {
@@ -764,38 +676,6 @@
           }
         },
         "image_L648ij": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_89fq3b": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_wGVKqn": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_RLQyDY": {
-          "type": "image",
-          "settings": {
-            "is_clickable": false,
-            "link": "",
-            "target": false
-          }
-        },
-        "image_YpmkTy": {
           "type": "image",
           "settings": {
             "is_clickable": false,
@@ -829,24 +709,9 @@
         }
       },
       "block_order": [
-        "image_NDzBMw",
-        "image_Hk6Qh7",
-        "image_7KK8EW",
-        "image_njL7Ck",
-        "image_haMaha",
-        "image_fLcdqH",
-        "image_AmbRTh",
-        "image_BeUREM",
-        "image_9dfXcp",
-        "image_7XBNMi",
-        "image_App9T8",
         "image_G4LPgg",
         "image_fQaEFR",
         "image_L648ij",
-        "image_89fq3b",
-        "image_wGVKqn",
-        "image_RLQyDY",
-        "image_YpmkTy",
         "image_qmFVin",
         "image_QKHJ66",
         "image_MUgM8d"
@@ -854,7 +719,17 @@
       "name": "Infinite Scroll Slider",
       "settings": {
         "title": "Tools",
-        "speed_of_moving": 40
+        "speed_of_moving": 10
+      }
+    },
+    "custom_suto_card_Am3hdx": {
+      "type": "custom-suto-card",
+      "name": "Custom Auto Card",
+      "settings": {
+        "title": "Key Applications",
+        "padding_top": 100,
+        "padding_bottom": 74,
+        "background": "#fff"
       }
     }
   },
@@ -868,6 +743,7 @@
     "custom_image_tab_7MxKgz",
     "custom_review_courasal_dQCEkR",
     "custom_price_multicolumn_mRbRGL",
-    "custom_infinite_slider2_WPDPj6"
+    "custom_infinite_slider2_WPDPj6",
+    "custom_suto_card_Am3hdx"
   ]
 }
