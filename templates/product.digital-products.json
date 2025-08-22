@@ -449,28 +449,6 @@
             "button_link": ""
           }
         },
-        "image_tab_TjF7Ub": {
-          "type": "image_tab",
-          "settings": {
-            "background_image": "shopify://shop_images/transport.webp",
-            "rounded_image": "shopify://shop_images/transport.webp",
-            "heading_text": "Transport",
-            "description": "Reliable and efficient transport services ensuring your goods arrive safely and on time. Our logistics solutions are tailored for modern supply chains.",
-            "button_label": "Explore All Products",
-            "button_link": ""
-          }
-        },
-        "image_tab_9H6NBe": {
-          "type": "image_tab",
-          "settings": {
-            "background_image": "shopify://shop_images/automotive_1.webp",
-            "rounded_image": "shopify://shop_images/automotive_1.webp",
-            "heading_text": "Construction",
-            "description": "Innovative construction solutions, tools, and machinery for modern infrastructure projects. Safety, efficiency, and durability in every solution.",
-            "button_label": "Explore All Products",
-            "button_link": ""
-          }
-        },
         "image_tab_xWGT3a": {
           "type": "image_tab",
           "settings": {
@@ -486,8 +464,6 @@
       "block_order": [
         "image_tab_BCEGJp",
         "image_tab_yxaCbz",
-        "image_tab_TjF7Ub",
-        "image_tab_9H6NBe",
         "image_tab_xWGT3a"
       ],
       "name": "Custom Image Tab",
