@@ -1,0 +1,121 @@
+<style>
+  .logo-slider {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+  }
+
+  .logo-slider:hover .logos-slide {
+      animation-play-state: paused;
+  }
+
+
+  .our-client {
+  max-width: 1369px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  .logos-slide {
+  padding-bottom: 40px;
+  }
+  .our-client h2 {
+  color: #000;
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 52px;
+  }
+  .logos-slide img {
+      padding: 41px 45px;
+      margin: 0 15px;
+     box-shadow: 0px 18px 35.2px 0px #605A5A40;
+      background: white;
+  border-radius: 6px;
+  }
+
+
+  @keyframes slide {
+      from {
+          transform: translateX(0);
+      }
+
+      to {
+          transform: translateX(-100%);
+      }
+  }
+  @media screen and (max-width: 989px) {
+  .our-client h2 {
+  font-size: 30px;
+  }
+  }
+</style>
+
+{% style %}
+.logos-slide {
+    display: inline-block;
+    animation: {{ section.settings.speed_of_moving | append: s }} slide infinite linear;
+}
+{% endstyle %}
+
+<div class="logo-slider" data-v-4ef8651c="">
+  <div class="our-client">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+  <div class="logos-slide" data-v-4ef8651c="">
+    {% for block in section.settings.blocks %}
+      {% if block.is_clickable %}
+        {% if block.target %}{% assign target = '_blank' %}{% else %}{% assign target = '' %}{% endif %}
+
+        <a href="{{ block.link }}" target="{{ target }}">
+          <img
+            src="{{ block.image | image_url }}"
+            alt="{{ no Image }}"
+            width=""
+            height=""
+            data-v-4ef8651c=""
+          >
+        </a>
+      {% else %}
+        <img
+            src="{{ block.image | image_url }}"
+            alt="{{ no Image }}"
+            width=""
+            height=""
+            data-v-4ef8651c=""
+          >
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="logos-slide" data-v-4ef8651c="">
+    {% for block in section.settings.blocks %}
+      {% if block.is_clickable %}
+        {% if block.target %}{% assign target = '_blank' %}{% else %}{% assign target = '' %}{% endif %}
+
+        <a href="{{ block.link }}" target="{{ target }}">
+          <img
+            src="{{ block.image | image_url }}"
+            alt="{{ no Image }}"
+            width=""
+            height=""
+            data-v-4ef8651c=""
+          >
+        </a>
+      {% else %}
+        <img
+            src="{{ block.image | image_url }}"
+            alt="{{ no Image }}"
+            width=""
+            height=""
+            data-v-4ef8651c=""
+          >
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+  {% javascript %}
+      var copy = document.querySelector('.logos-slide').cloneNode(true);
+      document.querySelector('.logo-slider').appendChild(copy);
+  {% endjavascript %}
+
