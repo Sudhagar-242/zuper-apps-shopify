@@ -112,7 +112,7 @@
         {% if section.settings.icon %}
           {{
             section.settings.icon
-            | image_url: width: section.settings.width, height: section.settings.height
+            | image_url
             | image_tag
           }}
         {% else %}
