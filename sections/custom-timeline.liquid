@@ -173,10 +173,8 @@ padding-left: 10px;
 </script>
 
 {% javascript %}
-      const timelineData = JSON.parse(document.querySelector(".timeline-data").textContent);
+      const timelineData = JSON.parse(document.querySelector(`.${sectionId} .timeline-data`).textContent);
       let activeIndex = window.innerWidth <= 750 ? 0 : 2; // Mobile: start at 0, Desktop: start at 2
-
-      console.log(sectionId);
       
 
       function updateTimelineLineWidth() {
