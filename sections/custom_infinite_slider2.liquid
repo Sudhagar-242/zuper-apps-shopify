@@ -1,0 +1,214 @@
+<style>
+  .logo-slider {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+  }
+
+  .our-client {
+  max-width: 1369px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  .logos-slide {
+  padding-bottom: 40px;
+  }
+  .our-client h2 {
+  color: #000;
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 52px;
+  }
+  .logos-slide a{
+  text-decoration: none;
+  height: 100%;
+  display: inline-block;
+  }
+
+  .logos-slide img {
+      padding: 41px 45px;
+      margin: 0 15px;
+     box-shadow: 0px 18px 35.2px 0px #605A5A40;
+      background: white;
+  border-radius: 6px;
+  }
+
+
+  @keyframes slide {
+      from {
+          transform: translateX(0);
+      }
+
+      to {
+          transform: translateX(-100%);
+      }
+  }
+  @media screen and (max-width: 989px) {
+  .our-client h2 {
+  font-size: 30px;
+  }
+  }
+</style>
+
+{% style %}
+  .logos-slide {
+      display: inline-block;
+      animation: {{ section.settings.speed_of_moving }}s slide infinite linear;
+  }
+  .logos-slide:hover {
+      animation-play-state: paused;
+  }
+{% endstyle %}
+
+<div class="logo-slider" data-v-4ef8651c="">
+  <div class="our-client">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+  <div class="logos-slide" data-v-4ef8651c="">
+    {% for block in section.blocks %}
+      {% if block.settings.image %}
+        {% assign image_selected = block.settings.image | image_url %}
+      {% else %}
+        {% assign image_selected = 'https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501' %}
+      {% endif %}
+
+      {% if block.settings.is_clickable %}
+        {% if block.settings.target %}
+          {% assign target = '_blank' %}
+        {% else %}
+          {% assign target = '' %}
+        {% endif %}
+
+        <a href="{{ block.settings.link }}" target="{{ target }}">
+          <img
+            src="{{ image_selected }}"
+            alt="no Image"
+            width=""
+            height=""
+            data-v-4ef8651c=""
+          >
+        </a>
+      {% else %}
+        <img
+          src="{{ image_selected  }}"
+          alt="no Image"
+          width=""
+          height=""
+          data-v-4ef8651c=""
+        >
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="logos-slide" data-v-4ef8651c="">
+    {% for block in section.blocks %}
+      {% if block.settings.image %}
+        {% assign image_selected = block.settings.image | image_url %}
+      {% else %}
+        {% assign image_selected = 'https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Group_1597880879.svg?v=1754651501' %}
+      {% endif %}
+
+      {% if block.settings.is_clickable %}
+        {% if block.settings.target %}
+          {% assign target = '_blank' %}
+        {% else %}
+          {% assign target = '' %}
+        {% endif %}
+
+        <a href="{{ block.settings.link }}" target="{{ target }}">
+          <img
+            src="{{ image_selected }}"
+            alt="no Image"
+            width=""
+            height=""
+            data-v-4ef8651c=""
+          >
+        </a>
+      {% else %}
+        <img
+          src="{{ image_selected }}"
+          alt="no Image"
+          width=""
+          height=""
+          data-v-4ef8651c=""
+        >
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% javascript %}
+  var copy = document.querySelector('.logo-slider .logos-slide').cloneNode(true);
+  document.querySelector('.logo-slider .logo-slider').appendChild(copy);
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Infinite Scroll Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Infinite Scroll"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Tools",
+      "info": "Tittle of the Infinite Scroll"
+    },
+    {
+      "type": "number",
+      "id": "speed_of_moving",
+      "label": "Speed Of Moving",
+      "default": 10,
+      "info": "1=1ms => from the spawn time to hide time"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "header",
+          "content": "If Clickable"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_clickable",
+          "label": "Is Clickable Link?",
+          "default": false
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "target",
+          "label": "Open In new Tab",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Infinite Scroll Slider",
+      "blocks": [{ "type": "image" }, { "type": "image" }, { "type": "image" }]
+    }
+  ]
+}
+{% endschema %}

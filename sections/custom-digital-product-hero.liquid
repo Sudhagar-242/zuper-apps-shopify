@@ -1,0 +1,324 @@
+{% style %}
+  @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+            .Digital-products-hero{
+              background: #085552;
+              font-family: Urbanist;
+            }
+            .hero-section{
+              display: flex;
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 60px 20px;
+              gap: 20px;
+            }
+            .hero-right-side{
+              width: 50%;
+              padding: 80px 20px;
+              padding-left: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+            .hero-left-side{
+              width: 50%;
+              overflow: hidden;
+              margin: auto;
+            }
+            .hero-left-side .slide img{
+                width: 100%;
+            }
+      .digital-product-hero-badge {
+        box-sizing: border-box;
+        color: rgb(0, 169, 162);
+        display: inline;
+        font-family: source-code-pro, monospace;
+        font-size: 20px;
+        font-weight: 400;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+        text-rendering: optimizelegibility;
+        text-size-adjust: 100%;
+        width: auto;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .digital-product-hero-tittle {
+      box-sizing: border-box;
+      color: rgb(255, 255, 255);
+      display: block;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 48px;
+      margin: 0 0 16px 0;
+      text-align: left;
+      text-rendering: optimizeLegibility;
+      -webkit-text-size-adjust: 100%;
+      unicode-bidi: isolate;
+    }
+
+    .digital-product-hero-description{
+      color: white;
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: left;
+      display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    }
+
+
+    .digi-products-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #444;
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 12px;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #fff;
+    background-color: #00a9a2;
+    border-color: #00a9a2;
+    box-shadow: none;
+  }
+
+  .digi-products-btn-primary:hover {
+    background-color: #00837d;
+    border-color: #007671;
+    color: #fff;
+  }
+
+  .digi-products-btn-primary:hover {
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+
+  .digi-products-btn-primary.icon-btn::after {
+    content: "\2192";
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 32px;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .digi-products-btn-primary.icon-btn:hover::after {
+    transform: translateX(5px);
+  }
+
+
+      .custom-slider {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+       .custom-slider .slides-wrapper {
+        position: relative;
+        height: 100%;
+      }
+       .custom-slider .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+       .custom-slider .slide img {
+        width: 100%;
+        display: block;
+      }
+       .custom-slider .slide-nav {
+        position: absolute;
+        top: 50%;
+        border: none;
+        background: transparent;
+        font-size: 32px;
+        width: 10%;
+        height: 100%;
+        line-height: 40px;
+        cursor: pointer;
+        color: white;
+        user-select: none;
+        transform: translateY(-50%);
+      }
+       .custom-slider #prev {
+        left: 10px;
+      }
+       .custom-slider #next {
+        right: 10px;
+      }
+      .slide-nav:focus,.slide-nav:active {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  color: inherit;
+}
+{% endstyle %}
+
+<div class="hero-section">
+  {% comment %} Left Side {% endcomment %}
+  <div class="hero-right-side">
+    <p class="digital-product-hero-badge">
+      &lt;<span
+        >/<span class=" tagline"><span>ONE CLICK COD FORM WITH UPSELLS</span></span></span
+      >&gt;
+    </p>
+    <h1 class="digital-product-hero-tittle">{{ product.title }}</h1>
+    <p class="digital-product-hero-description">
+       {{- product.description | strip_html | capitalize -}}
+    </p>
+    <a href="{{ section.settings.digital-products-hero-btn-link }}" class="digi-products-btn-primary icon-btn">
+      {{- section.settings['digital-products-hero-btn-tittle'] -}}
+    </a>
+  </div>
+
+  <section class="custom-slider">
+    <div class="slides-wrapper">
+      {% for image in product.images %}
+        <div class="slide" style="{% if forloop.first %}display:block{% else %}display:none{% endif %}">
+          <img src="{{ image.src | img_url }}" alt="{{ image.alt | escape }}">
+        </div>
+      {% endfor %}
+    </div>
+
+    <button id="prev" class="slide-nav">&#10094;</button>
+    <button id="next" class="slide-nav">&#10095;</button>
+  </section>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.custom-slider .slide');
+    const totalSlides = slides.length;
+
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'flex' : 'none';
+      });
+    };
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    });
+
+    showSlide(currentSlide);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "digital_products_hero",
+  "tag": "section",
+  "class": "Digital-products-hero",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "digital-products-hero-tittle",
+      "label": "digital products hero tittle"
+    },
+    {
+      "type": "textarea",
+      "id": "digital-products-hero-description",
+      "label": "Products Description",
+      "default": "Products Description"
+    },
+    {
+      "type": "text",
+      "id": "digital-products-hero-btn-tittle",
+      "label": "digital products Button Text",
+      "default": "Install Now"
+    },
+    {
+      "type": "url",
+      "id": "digital-products-hero-btn-link",
+      "label": "digital products Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Image Alt Text"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption Text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.main-product.blocks.text.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "t:sections.main-product.blocks.text.settings.text.default",
+          "label": "t:sections.main-product.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "uppercase",
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__3.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "digital_products_hero"
+    }
+  ]
+}
+{% endschema %}

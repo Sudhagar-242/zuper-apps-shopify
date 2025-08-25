@@ -1,0 +1,826 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product features",
+            "icon": "star",
+            "content": "",
+            "page": "product-features"
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials and care",
+            "icon": "leaf",
+            "content": "",
+            "page": "materials-and-care"
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Merchandising tips",
+            "icon": "check_mark",
+            "content": "",
+            "page": "merchandising-tips"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "collapsible-row-1",
+        "collapsible-row-0",
+        "collapsible-row-2",
+        "share"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
+        "media_position": "right",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "Other industry favorites",
+        "heading_size": "h2",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    },
+    "custom_digital_product_hero_xiMiPi": {
+      "type": "custom-digital-product-hero",
+      "blocks": {
+        "slide_gCYnay": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/green-t-shirt.jpg",
+            "alt_text": "",
+            "caption": ""
+          }
+        },
+        "slide_WHRm3c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/custom-logo-2.svg",
+            "alt_text": "",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_gCYnay",
+        "slide_WHRm3c"
+      ],
+      "name": "digital_products_hero",
+      "settings": {
+        "digital-products-hero-tittle": "",
+        "digital-products-hero-description": "",
+        "digital-products-hero-btn-tittle": "Install Now",
+        "digital-products-hero-btn-link": "{{ product.metafields.custom.install_now.value }}"
+      }
+    },
+    "custom_digital_products_app_features_tzdJfm": {
+      "type": "custom-digital_products_app_features",
+      "blocks": {
+        "feature_3Yy6yU": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_c4T6ey": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_chknG8": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_6YTN4K": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_RAzCTH": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_N8zfWD": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_KCmAWA": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        },
+        "feature_CxThfV": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/custom-logo-1.svg",
+            "feature_heading": "lorem ipsyumdh fhf nnvhnf fbjsisn e",
+            "feature_description": "bhdyb bhduhb ncjkie bhkie nhfnf bvf ssckir judjn njcunffndj dndhfhnd jrur48fh"
+          }
+        }
+      },
+      "block_order": [
+        "feature_3Yy6yU",
+        "feature_c4T6ey",
+        "feature_chknG8",
+        "feature_6YTN4K",
+        "feature_RAzCTH",
+        "feature_N8zfWD",
+        "feature_KCmAWA",
+        "feature_CxThfV"
+      ],
+      "name": "Digi_Pro_App_Features",
+      "settings": {
+        "digi_products_app_features_head": "hello world",
+        "digi_products_app_features_btn": "hsjhbf",
+        "digi_products_app_features_url": "shopify://pages/contact",
+        "button_text": "View More Features",
+        "button_text_alternate": "View Less Features"
+      }
+    },
+    "custom_digital_products_horizontal_infinite_R3NMFX": {
+      "type": "custom-digital-products-horizontal-infinite",
+      "blocks": {
+        "logo_FdMH4L": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-1.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_bqAxR9": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-2.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_WYxHXW": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-3.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_kQBikg": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-4.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_bxFRUV": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-5.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_jRfrDj": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-1.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_TUawG4": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-2.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_eYT4aN": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-3.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_739NFd": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/custom-logo-4.svg",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_FgPQNn": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/shopify.png",
+            "logo_alt_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_FdMH4L",
+        "logo_bqAxR9",
+        "logo_WYxHXW",
+        "logo_kQBikg",
+        "logo_bxFRUV",
+        "logo_jRfrDj",
+        "logo_TUawG4",
+        "logo_eYT4aN",
+        "logo_739NFd",
+        "logo_FgPQNn"
+      ],
+      "name": "Brand Logo Slider",
+      "settings": {
+        "heading": "hello"
+      }
+    },
+    "custom_multi_column_R3recC": {
+      "type": "custom-multi-column",
+      "blocks": {
+        "column_YfNVHh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/logo_pagefly.svg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KmwMye": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gempages-logos-idRv9J-_eK.svg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JNx8Ny": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Zipify_logo.webp",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NLHN4n": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LAk8nB": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CwzKhx": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YfNVHh",
+        "column_KmwMye",
+        "column_JNx8Ny",
+        "column_NLHN4n",
+        "column_LAk8nB",
+        "column_CwzKhx"
+      ],
+      "custom_css": [
+        ".media {min-height: 60px; padding: 0 !important;}",
+        ".media > *:not(.zoom):not(.deferred-media__poster-button) {position: relative; max-width: 160px; max-height: 60px;}",
+        ".multicolumn-card:hover {box-shadow: 0 0 22px #0000001a;}",
+        ".button--primary {transition: all 0.3s linear;}",
+        ".button--primary:before,.button--primary:after {display: none;}"
+      ],
+      "name": "Custom Multi Column",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "section_heading_font": "helvetica_n4",
+        "section_heading_font_color": "#444444",
+        "section_background": "#f7fcfc",
+        "is_scrolable": true,
+        "is_column_clickable": false,
+        "is_column_clickable_link": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "section_button_font": "urbanist_n4",
+        "section_button_font_color": "#000000",
+        "section_button_hover_font_color": "#ffffff",
+        "button_back_ground": "#00a9a2",
+        "button_hover_back_ground": "#33bab5",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "card_heading_font": "urbanist_n6",
+        "card_heading_font_color": "#000000",
+        "card_paragraph_font": "urbanist_n4",
+        "card_paragraph_font_color": "#444444",
+        "card_background": "#f7fcfc",
+        "card_hover_background": "#ffffff"
+      }
+    },
+    "custom_image_tab_7MxKgz": {
+      "type": "custom-image-tab",
+      "blocks": {
+        "image_tab_BCEGJp": {
+          "type": "image_tab",
+          "settings": {
+            "background_image": "shopify://shop_images/agriculture-healthy-food.webp",
+            "rounded_image": "shopify://shop_images/agriculture-healthy-food_1.webp",
+            "category_text": "Agriculture",
+            "heading_text": "Agriculture",
+            "description": "Our advanced agricultural solutions are designed to optimize performance in the field — whether it's through smart engineering, rugged design, or cutting-edge machinery integration. From seeding to storage, we deliver reliability where it matters most.",
+            "button_label": "Explore All Products",
+            "button_link": "https://www.amwhiz.com",
+            "button_redirect": true
+          }
+        },
+        "image_tab_yxaCbz": {
+          "type": "image_tab",
+          "settings": {
+            "background_image": "shopify://shop_images/automotive.webp",
+            "rounded_image": "shopify://shop_images/automotive.webp",
+            "category_text": "Automotive",
+            "heading_text": "Automotive",
+            "description": "Expert automotive tools and diagnostics to keep your vehicle running at peak performance. Our solutions help mechanics and enthusiasts work smarter and faster.",
+            "button_label": "Explore All Products",
+            "button_link": "https://www.amwhiz.com",
+            "button_redirect": false
+          }
+        },
+        "image_tab_TjF7Ub": {
+          "type": "image_tab",
+          "settings": {
+            "background_image": "shopify://shop_images/transport.webp",
+            "rounded_image": "shopify://shop_images/transport.webp",
+            "category_text": "Transport",
+            "heading_text": "Transport",
+            "description": "Reliable and efficient transport services ensuring your goods arrive safely and on time. Our logistics solutions are tailored for modern supply chains.",
+            "button_label": "Explore All Products",
+            "button_link": "",
+            "button_redirect": false
+          }
+        },
+        "image_tab_WjhLhc": {
+          "type": "image_tab",
+          "disabled": true,
+          "settings": {
+            "background_image": "shopify://shop_images/automotive_1.webp",
+            "rounded_image": "shopify://shop_images/automotive_1.webp",
+            "category_text": "Construction",
+            "heading_text": "Construction",
+            "description": "Innovative construction solutions, tools, and machinery for modern infrastructure projects. Safety, efficiency, and durability in every solution.",
+            "button_label": "Explore All Products",
+            "button_link": "",
+            "button_redirect": false
+          }
+        }
+      },
+      "block_order": [
+        "image_tab_BCEGJp",
+        "image_tab_yxaCbz",
+        "image_tab_TjF7Ub",
+        "image_tab_WjhLhc"
+      ],
+      "disabled": true,
+      "name": "Custom Image Tab",
+      "settings": {
+        "placeholder_background_image": "shopify://shop_images/agriculture-healthy-food.webp",
+        "placeholder_heading_text": "Header",
+        "placeholder_description": "Welcome to My Shop",
+        "placeholder_button_label": "Explore All Products"
+      }
+    },
+    "custom_review_courasal_dQCEkR": {
+      "type": "custom_review_courasal",
+      "blocks": {
+        "review_card_Atnqjp": {
+          "type": "review_card",
+          "settings": {
+            "review_rating_star": 5,
+            "review": "Write Your Review",
+            "customer_name": "Customer Name"
+          }
+        },
+        "review_card_iRHkbG": {
+          "type": "review_card",
+          "settings": {
+            "review_rating_star": 3,
+            "review": "Write Your Review",
+            "customer_name": "Customer Name"
+          }
+        },
+        "review_card_rwnfaW": {
+          "type": "review_card",
+          "settings": {
+            "review_rating_star": 5,
+            "review": "Write Your Review",
+            "customer_name": "Customer Name"
+          }
+        },
+        "review_card_VL4Rk3": {
+          "type": "review_card",
+          "settings": {
+            "review_rating_star": 0,
+            "review": "Write Your Review",
+            "customer_name": "Customer Name"
+          }
+        }
+      },
+      "block_order": [
+        "review_card_Atnqjp",
+        "review_card_iRHkbG",
+        "review_card_rwnfaW",
+        "review_card_VL4Rk3"
+      ],
+      "name": "Review Corousal",
+      "settings": {
+        "review_corousal_title": "Customer Reviews",
+        "is_default_image": false
+      }
+    },
+    "custom_price_multicolumn_mRbRGL": {
+      "type": "custom-price-multicolumn",
+      "blocks": {
+        "price_column_CibjgE": {
+          "type": "price_column",
+          "settings": {
+            "block_section_font": "helvetica_n4",
+            "block_section_background": "#ffffff",
+            "header": "Header",
+            "header_font": "helvetica_n4",
+            "header_font_color": "",
+            "price_description": "Welcome to my Shop",
+            "description_font": "helvetica_n4",
+            "description_font_color": "",
+            "price_plan": "0.00",
+            "plan_font": "helvetica_n4",
+            "plan_font_color": "",
+            "price_plan_features": "",
+            "plan_features_font": "helvetica_n4",
+            "plan_features_font_color": "",
+            "price_button": "Get Started",
+            "price_button_link": "",
+            "price_button_font": "helvetica_n4",
+            "price_button_font_color": ""
+          }
+        },
+        "price_column_HTnhNm": {
+          "type": "price_column",
+          "settings": {
+            "block_section_font": "helvetica_n4",
+            "block_section_background": "#ffffff",
+            "header": "Header",
+            "header_font": "helvetica_n4",
+            "header_font_color": "",
+            "price_description": "Welcome to my Shop",
+            "description_font": "helvetica_n4",
+            "description_font_color": "",
+            "price_plan": "0.00",
+            "plan_font": "helvetica_n4",
+            "plan_font_color": "",
+            "price_plan_features": "",
+            "plan_features_font": "helvetica_n4",
+            "plan_features_font_color": "",
+            "price_button": "Get Started",
+            "price_button_link": "",
+            "price_button_font": "helvetica_n4",
+            "price_button_font_color": ""
+          }
+        },
+        "price_column_dhzUzM": {
+          "type": "price_column",
+          "settings": {
+            "block_section_font": "helvetica_n4",
+            "block_section_background": "#ffffff",
+            "header": "Header",
+            "header_font": "helvetica_n4",
+            "header_font_color": "",
+            "price_description": "Welcome to my Shop",
+            "description_font": "helvetica_n4",
+            "description_font_color": "",
+            "price_plan": "0.00",
+            "plan_font": "helvetica_n4",
+            "plan_font_color": "",
+            "price_plan_features": "",
+            "plan_features_font": "helvetica_n4",
+            "plan_features_font_color": "",
+            "price_button": "Get Started",
+            "price_button_link": "",
+            "price_button_font": "helvetica_n4",
+            "price_button_font_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "price_column_CibjgE",
+        "price_column_HTnhNm",
+        "price_column_dhzUzM"
+      ],
+      "name": "Custom Price Column",
+      "settings": {
+        "title": "Price Plan",
+        "heading_size": "h1",
+        "section_heading_font": "helvetica_n4",
+        "section_heading_font_color": "#000000",
+        "section_background": "",
+        "is_column_clickable": true,
+        "is_column_clickable_link": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "section_button_font": "helvetica_n4",
+        "section_button_font_color": "#000000",
+        "section_button_hover_font_color": "#000000",
+        "button_back_ground": "",
+        "button_hover_back_ground": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "card_heading_font": "helvetica_n4",
+        "card_heading_font_color": "#000000",
+        "card_paragraph_font": "helvetica_n4",
+        "card_paragraph_font_color": "#000000",
+        "card_background": "",
+        "card_hover_background": ""
+      }
+    },
+    "custom_infinite_slider2_WPDPj6": {
+      "type": "custom_infinite_slider2",
+      "blocks": {
+        "image_G4LPgg": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_fQaEFR": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_L648ij": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_qmFVin": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_QKHJ66": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        },
+        "image_MUgM8d": {
+          "type": "image",
+          "settings": {
+            "is_clickable": false,
+            "link": "",
+            "target": false
+          }
+        }
+      },
+      "block_order": [
+        "image_G4LPgg",
+        "image_fQaEFR",
+        "image_L648ij",
+        "image_qmFVin",
+        "image_QKHJ66",
+        "image_MUgM8d"
+      ],
+      "name": "Infinite Scroll Slider",
+      "settings": {
+        "title": "Tools",
+        "speed_of_moving": 10
+      }
+    },
+    "custom_suto_card_Am3hdx": {
+      "type": "custom-suto-card",
+      "blocks": {
+        "content_block_bqDJRr": {
+          "type": "content_block",
+          "settings": {
+            "content_icon": "shopify://shop_images/agriculture-healthy-food_1.webp",
+            "title": "Title Text",
+            "description": "Description Goes Here."
+          }
+        }
+      },
+      "block_order": [
+        "content_block_bqDJRr"
+      ],
+      "name": "Custom Auto Card",
+      "settings": {
+        "title": "Key Applications",
+        "padding_top": 100,
+        "padding_bottom": 74,
+        "background": "#ffffff"
+      }
+    },
+    "custom_timeline_W346aq": {
+      "type": "custom-timeline",
+      "blocks": {
+        "year_Q3wt47": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_XNV9ci": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_xbQyMa": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_hV8JU6": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_XrTMXP": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_L6xHLG": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_CBejJK": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        }
+      },
+      "block_order": [
+        "year_Q3wt47",
+        "year_XNV9ci",
+        "year_xbQyMa",
+        "year_hV8JU6",
+        "year_XrTMXP",
+        "year_L6xHLG",
+        "year_CBejJK"
+      ],
+      "name": "Company Timeline",
+      "settings": {
+        "timeline_title": "Company Timeline",
+        "padding_top": 73,
+        "padding_bottom": 64,
+        "color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "custom_digital_product_hero_xiMiPi",
+    "custom_digital_products_app_features_tzdJfm",
+    "custom_digital_products_horizontal_infinite_R3NMFX",
+    "custom_multi_column_R3recC",
+    "custom_image_tab_7MxKgz",
+    "custom_review_courasal_dQCEkR",
+    "custom_price_multicolumn_mRbRGL",
+    "custom_infinite_slider2_WPDPj6",
+    "custom_suto_card_Am3hdx",
+    "custom_timeline_W346aq"
+  ]
+}

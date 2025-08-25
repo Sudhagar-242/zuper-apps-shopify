@@ -1,0 +1,203 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_hero_section_U3t6EG": {
+      "type": "custom-hero-section",
+      "name": "Custom Hero Section",
+      "settings": {
+        "heading_text": "Run Your Shopify Store with",
+        "title": "Zuper Apps",
+        "paragraph": "High-performing Shopify modules and apps to supercharge your e-commerce business. Trusted by 4.9-star rated merchants worldwide.",
+        "input": "Subscribe to notify",
+        "button": "Sign Up",
+        "RoutesOfButton": "/account/register"
+      }
+    },
+    "featured_apps_FhqYNY": {
+      "type": "custom_featured_apps",
+      "blocks": {
+        "app_card_zRBkXH": {
+          "type": "app_card",
+          "settings": {
+            "icon": "shopify://shop_images/shopify.png",
+            "width": 200,
+            "height": 100,
+            "title": "Advanced Product Options",
+            "description": "Add unlimited product options and variants to enhance your store offerings.",
+            "tag": "Paid",
+            "button_label": "Add Apps",
+            "button_link": "shopify://collections"
+          }
+        },
+        "app_card_mRfMY6": {
+          "type": "app_card",
+          "settings": {
+            "icon": "shopify://shop_images/Capa_1.svg",
+            "width": 250,
+            "height": 100,
+            "title": "Mailchimp newsletter Integration",
+            "description": "Connect HubSpot with ShipX to align sales, marketing, and inventory insights for better decision-making",
+            "tag": "Free",
+            "button_label": "Add Apps",
+            "button_link": "shopify://collections"
+          }
+        },
+        "app_card_HgGFgd": {
+          "type": "app_card",
+          "settings": {
+            "icon": "shopify://shop_images/Frame.svg",
+            "width": 250,
+            "height": 100,
+            "title": "HubSpot Integration",
+            "description": "Sync your warehouse data with Mailchimp to automate order updates, customer engagement, and campaigns.",
+            "tag": "Paid",
+            "button_label": "Add Apps",
+            "button_link": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "app_card_zRBkXH",
+        "app_card_mRfMY6",
+        "app_card_HgGFgd"
+      ],
+      "name": "Featured Apps",
+      "settings": {
+        "badge_text": "Modules and integration",
+        "module_title": "Featured apps",
+        "module_para": "We collaborate with top platforms and services to enhance functionality, ensure seamless operations, and deliver unmatched user experiences.",
+        "module_button": "See all",
+        "button_link": "shopify://collections",
+        "column_size": 3
+      }
+    },
+    "custom_faq_section_edrtQ8": {
+      "type": "custom_faq_section",
+      "blocks": {
+        "collapsible_row_CjcNwB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is ZuperApps?",
+            "icon": "none",
+            "row_content": "<p>ZuperApps is a collection of Shopify modules and apps designed to extend your store’s functionality, improve user experience, and increase sales.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HiEfC8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is ZuperApps different from HulkApps?",
+            "icon": "none",
+            "row_content": "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8F9qAa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need coding knowledge to use ZuperApps modules?",
+            "icon": "none",
+            "row_content": "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xP4mGb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are your modules compatible with all Shopify themes?",
+            "icon": "none",
+            "row_content": "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_CjcNwB",
+        "collapsible_row_HiEfC8",
+        "collapsible_row_8F9qAa",
+        "collapsible_row_xP4mGb"
+      ],
+      "name": "Custom FAQs section",
+      "settings": {
+        "open_first_collapsible_row": true
+      }
+    },
+    "custom_counter_column_wh9g3a": {
+      "type": "custom_counter_column",
+      "blocks": {
+        "counter_column_jeRpFR": {
+          "type": "counter_column",
+          "settings": {
+            "value_appender": "M+",
+            "content": "Monthly Visitors",
+            "count_value": 45,
+            "speed_value": 80,
+            "increment": 1
+          }
+        },
+        "counter_column_4nqeyf": {
+          "type": "counter_column",
+          "settings": {
+            "value_appender": "",
+            "content": "Products",
+            "count_value": 50,
+            "speed_value": 100,
+            "increment": 1
+          }
+        },
+        "counter_column_cghzgC": {
+          "type": "counter_column",
+          "settings": {
+            "value_appender": "",
+            "content": "Reviews",
+            "count_value": 4.9,
+            "speed_value": 100,
+            "increment": 0.1
+          }
+        }
+      },
+      "block_order": [
+        "counter_column_jeRpFR",
+        "counter_column_4nqeyf",
+        "counter_column_cghzgC"
+      ],
+      "name": "Custom Counter Column",
+      "settings": {}
+    },
+    "custom_info_box_TKFpJ7": {
+      "type": "custom-grow-with-box",
+      "name": "Start Growing With Us",
+      "settings": {
+        "badge_text": "Start Growing",
+        "heading": "Start Growing<br> With us",
+        "subheading": "Unlock new opportunities, scale faster, and simplify your store with ZuperApps by your side.",
+        "primary_button_label": "Contact us",
+        "primary_button_link": "shopify://pages/contact",
+        "secondary_button_label": "Get Started",
+        "secondary_button_link": "",
+        "logo_1": "shopify://shop_images/custom-logo-1.svg",
+        "logo_2": "shopify://shop_images/custom-logo-2.svg",
+        "logo_3": "shopify://shop_images/custom-logo-3.svg",
+        "logo_4": "shopify://shop_images/custom-logo-4.svg",
+        "logo_5": "shopify://shop_images/custom-logo-5.svg",
+        "padding_top": 100,
+        "padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "custom_hero_section_U3t6EG",
+    "featured_apps_FhqYNY",
+    "custom_faq_section_edrtQ8",
+    "custom_counter_column_wh9g3a",
+    "custom_info_box_TKFpJ7"
+  ]
+}

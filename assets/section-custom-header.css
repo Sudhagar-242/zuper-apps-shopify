@@ -1,0 +1,302 @@
+  .header-wrapper {
+      margin: auto;
+      background: white;
+  }
+
+  header-drawer {
+      justify-self: start;
+      margin-left: -1.2rem;
+  }
+
+  header .header__icon {
+      background: 1px solid grey;
+  }
+
+  header-drawer .list-menu {
+      flex-direction: column;
+      height: min-content;
+  }
+
+  header-drawer .list-menu li:hover {
+      background: gray;
+      border-radius: 32px;
+  }
+
+  .menu-drawer-container {
+      display: flex;
+  }
+
+  .list-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .list-menu--inline {
+      display: inline-flex;
+      flex-wrap: wrap;
+  }
+
+  summary.list-menu__item {
+      padding-right: 2.7rem;
+  }
+
+  .list-menu__item {
+      display: flex;
+      align-items: center;
+      line-height: calc(1 + 0.3 / var(--font-body-scale));
+
+  }
+
+  header-drawer .list-social__item {
+      padding: 0px !important;
+      margin-right: .6rem !important;
+  }
+
+  .list-menu__item--link {
+      text-decoration: none;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      line-height: calc(1 + 0.8 / var(--font-body-scale));
+  }
+
+
+  .header {
+      margin: auto;
+      max-width: 1200px;
+      padding: 40px 20px !important;
+      background: transparent;
+      transition: all .3s cubic-bezier(.52, 0, .61, .99);
+      will-change: transform;
+  }
+
+  .header .list-menu {
+      height: 74px;
+      display: flex;
+      justify-content: space-evenly;
+      column-gap: 4px;
+      align-items: center;
+      background: white;
+      color: black;
+      border-radius: 154px;
+  }
+
+  .header .btn-container {
+      display: flex;
+      gap: 12px;
+  }
+
+  .header .log_in_button {
+      border: 1px solid #0000001A;
+      background: transparent;
+      color: black;
+
+  }
+
+  .header .sign_up_button {
+      width: max-content;
+      border: 1px solid #FFFFFF1A;
+      color: white;
+      background: #0CD7BA;
+  }
+
+  .header .for_log_sign {
+      padding: 13.5px 24px;
+      font-weight: 500;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 32px;
+      font-family: 'Inter Tight';
+      line-height: 24px;
+  }
+
+  .header .header__icon span {
+      height: 100%;
+      color: black !important;
+  }
+
+  header-drawer .link--text {
+      color: white !important;
+  }
+
+  .header .list-menu {
+      padding: 0 20px;
+      box-shadow: 0px 0px 40px 0px #00000014 !important;
+  }
+
+  #menu-drawer .list-menu{
+      padding: 20px;
+  }
+
+  header-drawer .list-social__item {
+      border: 1px solid #0000001A;
+      padding: 0px;
+      border-radius: 50%;
+      margin-right: 12px;
+  }
+
+  .header ul.list-menu.list-menu--inline li {
+      height: min-content;
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+      .header {
+          padding: 12px 0px !important;
+          display: flex !important;
+          height: max-content !important;
+      }
+
+      .for_log_sign {
+          display: none;
+      }
+
+      .list-menu {
+          flex-direction: column;
+          height: min-content;
+          background: black;
+          color: white;
+          border-radius: 10px;
+          margin: 0 8px;
+      }
+
+      .list-menu li:hover {
+          background: gray;
+          border-radius: 32px;
+      }
+
+      header-drawer details summary {
+          margin-left: 24px;
+      }
+
+      .header__icons,
+      .menu-drawer__account {
+          display: none;
+      }
+
+  }
+
+
+  @media screen and (min-width: 601px) and (max-width: 768px) {
+      .list-menu__item--link {
+          padding-bottom: 0.5rem;
+          padding-top: 0.5rem;
+      }
+
+      .header {
+          height: 88px !important;
+          padding: 0 0 0 12px !important;
+      }
+
+      .for_log_sign {
+          padding: 4.5px 13px;
+          font-weight: 500;
+          font-size: 12px;
+          text-decoration: none;
+          border-radius: 24px;
+      }
+
+      header-drawer .list-menu {
+        flex-direction: column;
+        height: min-content;
+        background: #000;
+        margin: 0 32px;
+        padding: 20px 20px !important;
+    }
+
+      .header__heading {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+
+      .scrolled-past-header .header {
+          height: 66px !important;
+      }
+
+      header-drawer details summary {
+          margin-left: 24px;
+      }
+
+      .menu-drawer__account {
+          display: none;
+      }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+      .list-menu__item--link {
+          padding-bottom: 0.5rem;
+          padding-top: 0.5rem;
+      }
+
+      .header {
+          height: 88px !important;
+          padding: 0 0 0 74px !important;
+      }
+
+      .header__menu-item span {
+          padding: 0 24px !important;
+          transition: text-decoration var(--duration-short) ease;
+      }
+
+      .for_log_sign {
+          padding: 4.5px 13px;
+          font-weight: 500;
+          font-size: 12px;
+          text-decoration: none;
+          border-radius: 24px;
+      }
+
+      .header__inline-menu {
+          display: none !important;
+      }
+
+      header-drawer details summary {
+          margin-left: 24px;
+      }
+
+      header-drawer .list-menu {
+        flex-direction: column;
+        height: min-content;
+        background: #000;
+        margin: 0 32px;
+        padding: 20px 20px !important;
+    }
+
+      .scrolled-past-header .header {
+          height: 72px !important;
+      }
+
+      .header__heading {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+
+  }
+
+
+  @media (min-width: 1024px) and (max-width: 1175px) {
+      .header__menu-item span {
+          padding: 12px 14px;
+          transition: text-decoration var(--duration-short) ease;
+      }
+
+      .for_log_sign {
+          padding: 4.5px 13px;
+          font-weight: 500;
+          font-size: 16px;
+          text-decoration: none;
+          border-radius: 24px;
+      }
+
+      .header .header__menu-item span:hover:not(.header__active-menu-item) {
+          padding: 12px 14px;
+      }
+
+      .list-menu__item--link {
+          padding-bottom: 0.5rem;
+          padding-top: 0.5rem;
+      }
+  }

@@ -1,0 +1,174 @@
+<link
+  rel="stylesheet"
+  href="{{ 'section-custom-grow-with-us.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'"
+>
+
+{% style %}
+    .grow-section {
+      background-image: url({{ "grow-with-us-arc.png" | asset_url }});
+      background-position: top;
+      background-position-y: 120px;
+      background-size: cover;
+  }
+{% endstyle %}
+
+{% comment %} Section: Start Growing With Us (Image 2) {% endcomment %}
+<section class="grow-section">
+  <div class="grow-arc-wrapper">
+    <div class="grow-logos">
+      {% if section.settings.logo_1 != blank %}
+        <div class="grow-logo logo-1">
+          <img src="{{ section.settings.logo_1 | image_url: width: 100 }}" alt="Brand logo 1">
+        </div>
+      {% endif %}
+      {% if section.settings.logo_2 != blank %}
+        <div class="grow-logo logo-2">
+          <img src="{{ section.settings.logo_2 | image_url: width: 100 }}" alt="Brand logo 2">
+        </div>
+      {% endif %}
+      {% if section.settings.logo_3 != blank %}
+        <div class="grow-logo logo-3">
+          <img src="{{ section.settings.logo_3 | image_url: width: 100 }}" alt="Brand logo 3">
+        </div>
+      {% endif %}
+      {% if section.settings.logo_4 != blank %}
+        <div class="grow-logo logo-4">
+          <img src="{{ section.settings.logo_4 | image_url: width: 100 }}" alt="Brand logo 4">
+        </div>
+      {% endif %}
+      {% if section.settings.logo_5 != blank %}
+        <div class="grow-logo logo-5">
+          <img src="{{ section.settings.logo_5 | image_url: width: 100 }}" alt="Brand logo 5">
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="grow-content">
+    {% if section.settings.badge_text != blank %}
+      <div class="grow-badge">{{ section.settings.badge_text }}</div>
+    {% endif %}
+    <h2 class="grow-title">{{ section.settings.heading | newline_to_br }}</h2>
+    <p class="grow-desc">{{ section.settings.subheading }}</p>
+    <div class="grow-actions">
+      {% if section.settings.primary_button_label != blank %}
+        <a href="{{ section.settings.primary_button_link }}" class="grow-btn grow-btn-primary">
+          {{ section.settings.primary_button_label }}
+        </a>
+      {% endif %}
+      {% if section.settings.secondary_button_label != blank %}
+        <a href="{{ section.settings.secondary_button_link }}" class="grow-btn grow-btn-secondary">
+          {{ section.settings.secondary_button_label }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Start Growing With Us",
+  "tag": "section",
+  "class": "section_container_for_info",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Start Growing"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Start Growing<br>With us"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Unlock new opportunities, scale faster, and simplify your store with ZuperApps by your side."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "Primary Button Label",
+      "default": "Contact us"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "Secondary Button Label",
+      "default": "Get Started"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_1",
+      "label": "Logo 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_2",
+      "label": "Logo 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_3",
+      "label": "Logo 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_4",
+      "label": "Logo 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_5",
+      "label": "Logo 5"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Start Growing With Us",
+      "settings": {
+        "badge_text": "Start Growing",
+        "heading": "Start Growing<br>With us",
+        "subheading": "Unlock new opportunities, scale faster, and simplify your store with ZuperApps by your side.",
+        "primary_button_label": "Contact us",
+        "secondary_button_label": "Get Started"
+      }
+    }
+  ]
+}
+{% endschema %}
