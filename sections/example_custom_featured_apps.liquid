@@ -128,6 +128,7 @@
       <div class="feature-details">
         <div class="label">{{ section.settings.label_text }}</div>
         <div class="heading">{{ section.settings.title_text }}</div>
+        {%- assign  lines = section.settings.features_list | strip: "\n" -%}
         <ul class="features">
           {% comment %}
             <li>- Add unlimited team members to manage your Shopify store</li>
@@ -135,7 +136,6 @@
             <li>- Streamline order fulfillment and reduce errors</li>
             <li>- Perfect for stores on Shopify’s Basic plan</li>
           {% endcomment %}
-           {% assign  lines = section.settings.features_list | strip: "\n" %}
           {%- for line in lines -%}
             <li>- {{ lines }}</li>
           {%- endfor -%}
