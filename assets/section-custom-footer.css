@@ -247,7 +247,6 @@ mobile-input-box{
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         padding-top: 0px !important;
     }
 
@@ -326,7 +325,7 @@ mobile-input-box{
         margin-top: 1rem;
     }
     .mobile-input-box{
-        display: block;
+        display: block !important;
     }
 }
 
