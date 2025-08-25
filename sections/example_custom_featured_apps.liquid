@@ -135,7 +135,7 @@
             <li>- Streamline order fulfillment and reduce errors</li>
             <li>- Perfect for stores on Shopify’s Basic plan</li>
           {% endcomment %}
-           {%- assign  lines = section.settings.features_list | strip: "\n" -%}
+           {% assign  lines = section.settings.features_list | strip: "\n" %}
           {%- for line in lines -%}
             <li>- {{ line | strip }}</li>
           {%- endfor -%}
