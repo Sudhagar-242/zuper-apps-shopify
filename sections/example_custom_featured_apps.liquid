@@ -99,7 +99,12 @@
   <div class="featured-card">
     <!-- Left Side (Image) -->
     <div class="card-left">
-      {{ "featured-app-demo.png" | asset_url | image_tag }}
+        {% if section.settings.left_image %}
+            {{ section.settings.left_image | image_url | image_tag }}
+            {% else %}
+           {{ "featured-app-demo.png" | asset_url | image_tag }}
+           {% endif %}
+      
     </div>
 
     <!-- Right Side -->
