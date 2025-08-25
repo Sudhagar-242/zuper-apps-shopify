@@ -129,11 +129,7 @@
         <div class="label">{{ section.settings.label_text }}</div>
         <div class="heading">{{ section.settings.title_text }}</div>
         {%- assign lines = section.settings.features_list | split: '\n' -%}
-        <ul class="features">
-          {%- for line in lines -%}
-            <li>- {{ line }}</li>
-          {%- endfor -%}
-        </ul>
+                {{ lines }}
       </div>
       <div class="rating-and-explore">
         <div class="rating">
