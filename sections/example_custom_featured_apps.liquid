@@ -27,6 +27,11 @@
       flex: 1;
       padding-left: 40px;
     }
+    .status-container {
+    display: flex
+;
+    justify-content: space-between;
+}
     .card-right .custom_badge{
         position: relative;
     }
@@ -90,7 +95,7 @@
 
       <!-- Right Side -->
       <div class="card-right">
-        <div>
+        <div class="status-container">
           
           {% if section.settings.icon %}
             {{
