@@ -120,6 +120,15 @@ padding-left: 10px;
 }
     </style>
 
+
+    {% style %}
+      .timeline-section{
+        padding-top: {{ section.settings.padding_top | append: "px" }};
+        padding-bottom: {{ section.settings.padding_bottom | append: "px" }}
+        background: {{ section.settings.color }}
+      }
+    {% endstyle %}
+
     <div class="timeline-container">
       <div class="timeline-header">
         <h1 class="timeline-title">{{ section.settings.timeline_title }}</h1>
@@ -140,6 +149,12 @@ padding-left: 10px;
       <div class="timeline-wrapper">
         <div class="timeline-scroll" id="timelineScroll">
           <div class="timeline-items" id="timelineItems">
+            {% for block in section.blocks %}
+              <div class="timeline-item" data-index="{{ forloop.index0 }}" hidden>
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">{{ block.settings.year }}</div>
+              </div>
+            {% endfor %}
             <!-- timeline-line will be injected by JS -->
           </div>
         </div>
@@ -160,6 +175,7 @@ padding-left: 10px;
       }
 
       function initTimeline() {
+        const timelineData = [...document.querySelectorAll(".timeline-item")];
         const timelineItems = document.getElementById("timelineItems");
 
         // Clear timelineItems and insert timeline-line first
@@ -244,6 +260,8 @@ padding-left: 10px;
 {% schema %}
 {
   "name": "Company Timeline",
+  "tag": "section",
+  "class": "timeline-section",
   "settings": [
     {
       "type": "text",
@@ -292,8 +310,7 @@ padding-left: 10px;
   ],
   "presets": [
     {
-      "name": "Company Timeline",
-      "category": "Custom"
+      "name": "Company Timeline"
     }
   ]
 }
