@@ -129,7 +129,7 @@ padding-left: 10px;
       }
     {% endstyle %}
 
-    <div class="timeline-container">
+    <div class="timeline-container {{ section.id }}">
       <div class="timeline-header">
         <h1 class="timeline-title">{{ section.settings.timeline_title }}</h1>
         <div class="navigation-arrows">
@@ -168,9 +168,16 @@ padding-left: 10px;
   ]
 </script>
 
+<script>
+  var sectionId = "{{ section.id }}"
+</script>
+
 {% javascript %}
       const timelineData = JSON.parse(document.querySelector(".timeline-data").textContent);
       let activeIndex = window.innerWidth <= 750 ? 0 : 2; // Mobile: start at 0, Desktop: start at 2
+
+      console.log(sectionId);
+      
 
       function updateTimelineLineWidth() {
         const timelineItems = document.getElementById("timelineItems");
