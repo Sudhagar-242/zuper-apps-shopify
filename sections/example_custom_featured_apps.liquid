@@ -1,126 +1,125 @@
-  <style>
-    .featured-card {
-    max-width: 1160px;
-    margin: 0 auto;
-      display: flex;
+<style>
+      .featured-card {
+      max-width: 1160px;
+      margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        background: #fff;
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+
+      /* Left section (image) */
+      .card-left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card-left img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 24px;
+      }
+
+      /* Right section */
+      .card-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .status-container {
+      display: flex
+  ;
       justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      background: #fff;
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
+  }
+      .card-right .custom_badge{
+          position: relative;
+      }
+      .label {
+        display: inline-block;
+        background: #d1fae5;
+        color: #065f46;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 6px 14px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+      .heading {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+      .features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        color: #555;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .stars {
+        color: gold;
+        font-size: 20px;
+      }
+      .explore-btn {
+        display: inline-block;
+        margin-top: 20px;
+        background: #10b981;
+        color: #fff;
+        font-weight: bold;
+        padding: 12px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .explore-btn:hover {
+        background: #059669;
+      }
+</style>
 
-    /* Left section (image) */
-    .card-left {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .card-left img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 24px;
-    }
+<div class="card-container">
+  <div class="featured-card">
+    <!-- Left Side (Image) -->
+    <div class="card-left">
+      <img src="https://picsum.photos/id/237" alt="Case Study Illustration">
+    </div>
 
-    /* Right section */
-    .card-right {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .status-container {
-    display: flex
-;
-    justify-content: space-between;
-}
-    .card-right .custom_badge{
-        position: relative;
-    }
-    .label {
-      display: inline-block;
-      background: #d1fae5;
-      color: #065f46;
-      font-size: 13px;
-      font-weight: bold;
-      padding: 6px 14px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    .heading {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-    .features {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 20px 0;
-      color: #555;
-      font-size: 15px;
-      line-height: 1.7;
-    }
-    .rating {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .stars {
-      color: gold;
-      font-size: 20px;
-    }
-    .explore-btn {
-      display: inline-block;
-      margin-top: 20px;
-      background: #10b981;
-      color: #fff;
-      font-weight: bold;
-      padding: 12px 24px;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .explore-btn:hover {
-      background: #059669;
-    }
-  </style>
-
-
-
-  <div class="card-container">
-    <div class="featured-card">
-      
-      <!-- Left Side (Image) -->
-      <div class="card-left">
-        <img src="https://picsum.photos/id/237" alt="Case Study Illustration" />
+    <!-- Right Side -->
+    <div class="card-right">
+      <div class="status-container">
+        {% if section.settings.icon %}
+          {{
+            section.settings.icon
+            | image_url: width: section.settings.width, height: section.settings.height
+            | image_tag
+          }}
+        {% else %}
+          <div>No Image</div>
+        {% endif %}
+        <span class="custom_badge">{{ section.settings.tag }}</span>
       </div>
-
-      <!-- Right Side -->
-      <div class="card-right">
-        <div class="status-container">
-          
-          {% if section.settings.icon %}
-            {{
-              section.settings.icon
-              | image_url: width: section.settings.width, height: section.settings.height
-              | image_tag
-            }}
-          {% else %}
-            <div>No Image</div>
-          {% endif %}
-          <span class="custom_badge">{{ section.settings.tag }}</span>
-        </div>
+      <div class="feature-details">
         <div class="label">Shopify Custom App</div>
-        <div class="heading">Zuper Inventory Manager – Multi-User & Fulfillment Made Easy</div>
-        <ul class="features">
-          <li>- Add unlimited team members to manage your Shopify store</li>
-          <li>- Track inventory in real-time across locations</li>
-          <li>- Streamline order fulfillment and reduce errors</li>
-          <li>- Perfect for stores on Shopify’s Basic plan</li>
-        </ul>
+      <div class="heading">Zuper Inventory Manager – Multi-User & Fulfillment Made Easy</div>
+      <ul class="features">
+        <li>- Add unlimited team members to manage your Shopify store</li>
+        <li>- Track inventory in real-time across locations</li>
+        <li>- Streamline order fulfillment and reduce errors</li>
+        <li>- Perfect for stores on Shopify’s Basic plan</li>
+      </ul>
+      </div>
+      <div class="rating-and-explore">
         <div class="rating">
           <div class="stars">★★★★☆</div>
           <div><strong>4.5 Ratings</strong></div>
@@ -129,6 +128,7 @@
       </div>
     </div>
   </div>
+</div>
 
 {% schema %}
 {
