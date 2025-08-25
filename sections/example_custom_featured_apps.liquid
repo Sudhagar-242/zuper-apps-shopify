@@ -113,7 +113,11 @@
           }}
         {% else %}
           {% comment %} <div>No Image</div> {% endcomment %}
+           {% if section.settings.left_image %}
+            {{ section.settings.icon | image_url | img_tag }}
+            {% else %}
            {{ "featured-app-demo-status.png" | asset_url | img_tag }}
+           {% endif %}
         {% endif %}
         <span class="custom_badge">{{ section.settings.tag }}</span>
       </div>
