@@ -34,7 +34,9 @@
             "description": "Add unlimited product options and variants to enhance your store offerings.",
             "tag": "Paid",
             "button_label": "Add Apps",
-            "button_link": "shopify://collections"
+            "button_link": "shopify://collections",
+            "explore_button_label": "Explore Apps",
+            "explore_button_link": ""
           }
         },
         "app_card_mRfMY6": {
@@ -47,7 +49,9 @@
             "description": "Connect HubSpot with ShipX to align sales, marketing, and inventory insights for better decision-making",
             "tag": "Free",
             "button_label": "Add Apps",
-            "button_link": "shopify://collections"
+            "button_link": "shopify://collections",
+            "explore_button_label": "Explore Apps",
+            "explore_button_link": ""
           }
         },
         "app_card_HgGFgd": {
@@ -60,7 +64,9 @@
             "description": "Sync your warehouse data with Mailchimp to automate order updates, customer engagement, and campaigns.",
             "tag": "Paid",
             "button_label": "Add Apps",
-            "button_link": "shopify://collections"
+            "button_link": "shopify://collections",
+            "explore_button_label": "Explore Apps",
+            "explore_button_link": ""
           }
         }
       },
@@ -191,6 +197,11 @@
         "padding_top": 100,
         "padding_bottom": 32
       }
+    },
+    "example_custom_featured_apps_k3CnpQ": {
+      "type": "example_custom_featured_apps",
+      "name": "Example Block",
+      "settings": {}
     }
   },
   "order": [
@@ -198,6 +209,7 @@
     "featured_apps_FhqYNY",
     "custom_faq_section_edrtQ8",
     "custom_counter_column_wh9g3a",
-    "custom_info_box_TKFpJ7"
+    "custom_info_box_TKFpJ7",
+    "example_custom_featured_apps_k3CnpQ"
   ]
 }
