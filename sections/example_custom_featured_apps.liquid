@@ -99,7 +99,7 @@
   <div class="featured-card">
     <!-- Left Side (Image) -->
     <div class="card-left">
-      <img src="featured-app-demo.png" alt="Case Study Illustration">
+      {{ "featured-app-demo.png" | asset_url | img_tag }}
     </div>
 
     <!-- Right Side -->
@@ -113,7 +113,7 @@
           }}
         {% else %}
           {% comment %} <div>No Image</div> {% endcomment %}
-           {{featured-app-demo-status.png | image_tag | image_url }}
+           {{ "featured-app-demo-status.png" | asset_url | img_tag }}
         {% endif %}
         <span class="custom_badge">{{ section.settings.tag }}</span>
       </div>
