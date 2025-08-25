@@ -182,9 +182,7 @@
 }
 
 
-mobile-footer-input-box{
-    display: none !important;
-}
+
 @media (max-width: 320px) {
     .footer__newsletter {
         min-width: 250px !important;
