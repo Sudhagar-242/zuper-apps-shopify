@@ -137,7 +137,7 @@
           {% endcomment %}
            {% assign  lines = section.settings.features_list | strip: "\n" %}
           {%- for line in lines -%}
-            <li>- {{ line | strip }}</li>
+            <li>- {{ line }}</li>
           {%- endfor -%}
         </ul>
       </div>
