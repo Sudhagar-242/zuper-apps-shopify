@@ -168,7 +168,7 @@ padding-left: 10px;
 </script>
 
 {% javascript %}
-      const timelineData = JSON.parse(document.getElementByClassName("timeline-data").textContent);
+      const timelineData = JSON.parse(document.getElementsByClassName("timeline-data").textContent);
       console.log(timelineData);
       
       let activeIndex = window.innerWidth <= 750 ? 0 : 2; // Mobile: start at 0, Desktop: start at 2
