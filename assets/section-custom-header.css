@@ -283,6 +283,11 @@
           transition: text-decoration var(--duration-short) ease;
       }
 
+      .header .list-menu {
+    padding: 0 !important;
+    box-shadow: 0 0 40px #00000014 !important;
+}
+
       .for_log_sign {
           padding: 4.5px 13px;
           font-weight: 500;
