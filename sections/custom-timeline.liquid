@@ -168,9 +168,7 @@ padding-left: 10px;
 </script>
 
 {% javascript %}
-      const timelineData = JSON.parse(document.getElementsByClassName("timeline-data"));
-      console.log(timelineData);
-      
+      const timelineData = JSON.parse(document.querySelector(".timeline-data").textContent);
       let activeIndex = window.innerWidth <= 750 ? 0 : 2; // Mobile: start at 0, Desktop: start at 2
 
       function updateTimelineLineWidth() {
@@ -189,7 +187,6 @@ padding-left: 10px;
         timelineItems.innerHTML = '<div class="timeline-line"></div>';
 
         timelineData.forEach((item, index) => {
-          const timeline_item = item.textContent.forEach((item,index) => {
             const timelineItem = document.createElement("div");
           timelineItem.className = "timeline-item";
           timelineItem.innerHTML = `
@@ -198,7 +195,6 @@ padding-left: 10px;
           `;
           timelineItem.addEventListener("click", () => setActive(index, true));
           timelineItems.appendChild(timelineItem);
-          })
           console.log(item)
         });
 
