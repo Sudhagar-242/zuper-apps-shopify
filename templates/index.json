@@ -201,7 +201,15 @@
     "example_custom_featured_apps_k3CnpQ": {
       "type": "example_custom_featured_apps",
       "name": "Example Block",
-      "settings": {}
+      "settings": {
+        "tag": "Free",
+        "label_text": "Shopify Custom App",
+        "title_text": "Zuper Inventory Manager – Multi-User & Fulfillment Made Easy",
+        "features_list": "Add unlimited team \nmembers to manage your \nShopify store\njhdb fhu9er hur9\nherujerkj bebe",
+        "ratings": 4.5,
+        "button_label": "Explore App",
+        "button_link": ""
+      }
     }
   },
   "order": [
