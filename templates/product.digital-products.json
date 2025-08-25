@@ -765,12 +765,40 @@
           "settings": {
             "year": "2025"
           }
+        },
+        "year_hV8JU6": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_XrTMXP": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_L6xHLG": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_CBejJK": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
         }
       },
       "block_order": [
         "year_Q3wt47",
         "year_XNV9ci",
-        "year_xbQyMa"
+        "year_xbQyMa",
+        "year_hV8JU6",
+        "year_XrTMXP",
+        "year_L6xHLG",
+        "year_CBejJK"
       ],
       "name": "Company Timeline",
       "settings": {
