@@ -1,3 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Timeline</title>
+    <style>
+      .timeline-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1369px;
+        margin-bottom: 43px;
+padding: 0 20px;
+      }
+      .timeline-title {
+        font-size: 42px;
+        font-weight: bold;
+margin: 0;
+      }
+      .navigation-arrows {
+        display: flex;
+        gap: 15px;
+      }
+      .nav-button {
+        width: 49px;
+        height: 49px;
+        border-radius: 50%;
+        border: 0.8px solid #7d7d7d;
+        background: white;
+        cursor: pointer;
+        font-size: 20px;
+        color: #666;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+      }
+#prevBtn:hover,#nextBtn:hover {
+transform: scale(1.1);
+transition: 0.5s;
+}
+   
+
+      /* Timeline wrapper and scroll */
+      .timeline-wrapper {
+        position: relative;
+        overflow-x: hidden;
+      }
+      .timeline-scroll {
+        scroll-behavior: smooth;
+        white-space: nowrap;
+        position: relative;
+padding-top: 4px;
+      }
+      .timeline-items {
+        display: flex;
+        gap: 160px;
+        position: relative;
+        padding-bottom: 10px;
+        align-items: center; /* align items so dots are in middle */
+      }
+      .timeline-line {
+        position: absolute;
+        top: 7px; /* adjust to center with dots */
+        left: 0;
+        height: 1px; /* thicker line for visibility */
+        background-color: #e2e2e2;
+        z-index: 1;
+display: block !important;
+      }
+      .timeline-item {
+        flex: 0 0 auto;
+        min-width: 120px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        position: relative;
+        z-index: 2;
+      }
+      .timeline-item:hover {
+        transform: scale(1.05);
+      }
+      .timeline-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #b6b6b6;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 3;
+display: block !important;
+      }
+      .timeline-item.active .timeline-dot {
+        background-color: #ED1C24;
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+      }
+      .timeline-year {
+        font-size: 79px;
+        font-weight: 400;
+        color: #dfdfdf;
+      }
+      .timeline-item.active .timeline-year {
+        color: #ed1c24;
+      }
+  .nav-button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+@media screen and (max-width: 989px) {
+.timeline-title {
+    font-size: 30px;
+}
+
+.timeline-items {
+padding-left: 10px;
+}
+}
+    </style>
+
+    <div class="timeline-container">
+      <div class="timeline-header">
+        <h1 class="timeline-title">{{ section.settings.timeline_title }}</h1>
+        <div class="navigation-arrows">
+          <button class="nav-button" id="prevBtn">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645"
+            />
+          </button>
+          <button class="nav-button next-button" id="nextBtn">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"
+            />
+          </button>
+        </div>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-scroll" id="timelineScroll">
+          <div class="timeline-items" id="timelineItems">
+            <!-- timeline-line will be injected by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    {% javascript %}
+      let activeIndex = window.innerWidth <= 750 ? 0 : 2; // Mobile: start at 0, Desktop: start at 2
+
+      function updateTimelineLineWidth() {
+        const timelineItems = document.getElementById("timelineItems");
+        const timelineLine = document.querySelector(".timeline-line");
+        if (timelineItems && timelineLine) {
+          // Set the timeline line width to the scroll width of timeline items container
+          timelineLine.style.width = timelineItems.scrollWidth + "px";
+        }
+      }
+
+      function initTimeline() {
+        const timelineItems = document.getElementById("timelineItems");
+
+        // Clear timelineItems and insert timeline-line first
+        timelineItems.innerHTML = '<div class="timeline-line"></div>';
+
+        timelineData.forEach((item, index) => {
+          const timelineItem = document.createElement("div");
+          timelineItem.className = "timeline-item";
+          timelineItem.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">${item.year}</div>
+          `;
+          timelineItem.addEventListener("click", () => setActive(index, true));
+          timelineItems.appendChild(timelineItem);
+        });
+
+        updateTimelineLineWidth();
+        setActive(activeIndex, false);
+      }
+
+      function updateButtons() {
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        prevBtn.disabled = activeIndex === 0;
+        nextBtn.disabled = activeIndex === timelineData.length - 1;
+      }
+
+      function setActive(index, smoothScroll = false) {
+        if (index < 0 || index >= timelineData.length) return;
+
+        const items = document.querySelectorAll(".timeline-item");
+        items.forEach((item) => item.classList.remove("active"));
+        items[index].classList.add("active");
+
+        if (smoothScroll) {
+          items[index].scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest",
+          });
+        }
+
+        activeIndex = index;
+
+        // Update the state of Prev and Next buttons
+        updateButtons();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initTimeline();
+
+        // Set initial buttons state
+        updateButtons();
+
+        document.getElementById("prevBtn").addEventListener("click", () => {
+          if (activeIndex > 0) {
+            setActive(activeIndex - 1, true);
+          }
+        });
+
+        document.getElementById("nextBtn").addEventListener("click", () => {
+          if (activeIndex < timelineData.length - 1) {
+            setActive(activeIndex + 1, true);
+          }
+        });
+
+        window.addEventListener("resize", () => {
+          updateTimelineLineWidth();
+
+          // Optional: change starting point if screen size changes
+          const newStartIndex = window.innerWidth <= 750 ? 0 : 2;
+          if (activeIndex !== newStartIndex) {
+            setActive(newStartIndex, true);
+          }
+        });
+      });
+    {% endjavascript %}
+
+
+
 {% schema %}
 {
   "name": "Company Timeline",
@@ -7,6 +250,30 @@
       "id": "timeline_title",
       "label": "Heading",
       "default": "Company Timeline"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Color",
+      "default": "#fff"
     }
   ],
   "blocks": [
@@ -31,113 +298,3 @@
   ]
 }
 {% endschema %}
-
-<div class="timeline-container">
-  <div class="timeline-header">
-    <h1 class="timeline-title">{{ section.settings.timeline_title }}</h1>
-    <div class="navigation-arrows">
-      <button class="nav-button" id="prevBtn">
-        <img src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645" alt="Previous">
-      </button>
-      <button class="nav-button next-button" id="nextBtn">
-        <img src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108" alt="Next">
-      </button>
-    </div>
-  </div>
-
-  <div class="timeline-wrapper">
-    <div class="timeline-scroll" id="timelineScroll">
-      <div class="timeline-items" id="timelineItems">
-        <div class="timeline-line"></div>
-        {% for block in section.blocks %}
-          <div class="timeline-item" data-index="{{ forloop.index0 }}">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">{{ block.settings.year }}</div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  .timeline-header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin:0 auto 43px;
-    max-width:1369px;
-    padding:0 20px
-  }
-  .timeline-title {font-size:42px;font-weight:bold;margin:0}
-  .navigation-arrows {display:flex;gap:15px}
-  .nav-button {
-    width:49px;height:49px;border-radius:50%;
-    border:.8px solid #7d7d7d;background:#fff;
-    cursor:pointer;font-size:20px;color:#666;
-    display:flex;align-items:center;justify-content:center;
-    transition:.5s
-  }
-  #prevBtn:hover,#nextBtn:hover {transform:scale(1.1);transition:.5s}
-  .timeline-wrapper {position:relative;overflow-x:hidden}
-  .timeline-scroll {scroll-behavior:smooth;white-space:nowrap;position:relative;padding-top:4px}
-  .timeline-items {display:flex;gap:160px;position:relative;padding-bottom:10px;align-items:center}
-  .timeline-line {position:absolute;top:7px;left:0;height:1px;background:#e2e2e2;z-index:1;display:block!important}
-  .timeline-item {flex:0 0 auto;min-width:120px;text-align:center;cursor:pointer;position:relative;z-index:2;transition:transform .3s ease}
-  .timeline-item:hover {transform:scale(1.05)}
-  .timeline-dot {width:14px;height:14px;border-radius:50%;background:#b6b6b6;margin:0 auto;position:relative;z-index:3;display:block!important}
-  .timeline-item.active .timeline-dot {background:#ED1C24;box-shadow:0 0 10px rgba(239,68,68,.4)}
-  .timeline-year {font-size:79px;font-weight:400;color:#dfdfdf}
-  .timeline-item.active .timeline-year {color:#ed1c24}
-  .nav-button:disabled {opacity:.5;cursor:not-allowed}
-  @media(max-width:989px){.timeline-title{font-size:30px}.timeline-items{padding-left:10px}}
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const timelineData = [...document.querySelectorAll('.timeline-item')];
-    let activeIndex = window.innerWidth <= 750 ? 0 : 2;
-
-    function updateTimelineLineWidth() {
-      const timelineItems = document.getElementById('timelineItems');
-      const timelineLine = document.querySelector('.timeline-line');
-      if (timelineItems && timelineLine) {
-        timelineLine.style.width = timelineItems.scrollWidth + 'px';
-      }
-    }
-
-    function updateButtons() {
-      document.getElementById('prevBtn').disabled = activeIndex === 0;
-      document.getElementById('nextBtn').disabled = activeIndex === timelineData.length - 1;
-    }
-
-    function setActive(index, smoothScroll = false) {
-      if (index < 0 || index >= timelineData.length) return;
-      timelineData.forEach((item) => item.classList.remove('active'));
-      timelineData[index].classList.add('active');
-      if (smoothScroll) {
-        timelineData[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      }
-      activeIndex = index;
-      updateButtons();
-    }
-
-    document.getElementById('prevBtn').addEventListener('click', () => {
-      if (activeIndex > 0) setActive(activeIndex - 1, true);
-    });
-
-    document.getElementById('nextBtn').addEventListener('click', () => {
-      if (activeIndex < timelineData.length - 1) setActive(activeIndex + 1, true);
-    });
-
-    window.addEventListener('resize', () => {
-      updateTimelineLineWidth();
-      const newStart = window.innerWidth <= 750 ? 0 : 2;
-      if (activeIndex !== newStart) setActive(newStart, true);
-    });
-
-    updateTimelineLineWidth();
-    setActive(activeIndex, false);
-    updateButtons();
-  });
-</script>
