@@ -1,0 +1,276 @@
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 40px auto;
+    gap: 40px;
+    background-color: #fff;
+  }
+
+  /* Case Study Box */
+  .case-study {
+    flex: 1 1 400px;
+    background: #eaf1f1;
+    border-radius: 20px;
+    padding: 30px 25px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .case-study .label {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 14px;
+    padding: 6px 20px;
+    border-radius: 10px 0 10px 0;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-weight: 600;
+  }
+
+  .case-study h2 {
+    margin-top: 60px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .case-study h2 b,
+  .case-study h2 strong {
+    font-weight: 700;
+  }
+
+  .case-study h2 .hubspot {
+    color: #ff6f61;
+  }
+
+  .case-study h2 .twilio {
+    color: #db1f36;
+  }
+
+  /* Illustration styling */
+  .illustration {
+    margin-top: 30px;
+  }
+
+  /* Icons container */
+  .icons-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .icon-circle {
+    border-radius: 50%;
+    border: 2px solid #db1f36;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-plus {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Shopify App Panel */
+  .shopify-app {
+    flex: 1 1 400px;
+    position: relative;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  .shopify-app .badge {
+    background-color: #bc7a00;
+    padding: 10px;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .shopify-app .custom-app {
+    background-color: #c6f6f1;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #007c70;
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: 600;
+  }
+
+  .shopify-app h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+  }
+
+  .shopify-app ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+  }
+
+  .shopify-app ul li {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 16px;
+  }
+
+  /* Ratings */
+  .ratings {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .ratings .star {
+    color: #ffcc00;
+    font-size: 20px;
+  }
+
+  .ratings .star.half::after {
+    content: "⭐";
+    color: #e5a500;
+    position: absolute;
+    margin-left: -20px;
+    width: 10px;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .shopify-app .rating-text {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  /* Free badge */
+  .free-badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: #dceae8;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* Explore button */
+  .explore-btn {
+    text-align: center;
+  }
+
+  .explore-btn button {
+    background: #19d5bb;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 24px;
+    padding: 11px 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .explore-btn button:hover {
+    background: #16a79e;
+  }
+
+  /* Responsive */
+  @media (max-width: 830px) {
+    body {
+      flex-direction: column;
+      margin: 20px;
+    }
+    .case-study, .shopify-app {
+      flex: auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="case-study">
+  <div class="label">CASE STUDY</div>
+  <h2>
+    How to Send <br />
+    Automated SMS from <br />
+    <span class="hubspot">HubSpot</span> Using <span class="twilio">Twilio</span>
+  </h2>
+
+  <div class="illustration">
+    <!-- Illustration of hand holding phone and paper planes -->
+    <svg width="200" height="200" viewBox="0 0 200 200" aria-hidden="true">
+      <g fill="none" stroke="#398191" stroke-width="2" stroke-linejoin="round">
+        <path d="M100 30 L120 10 L170 40 L150 70 Z" fill="#398191"/>
+        <path d="M130 100 L170 60" stroke="#398191" stroke-width="3" marker-end="url(#arrow)"/>
+        <path d="M40 120 L80 90" stroke="#398191" stroke-width="3" marker-end="url(#arrow)"/>
+      </g>
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth">
+          <path d="M0 0 L8 4 L0 8 Z" fill="#398191" />
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="icons-container" aria-label="Integration icons">
+    <div class="icon-circle">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Twilio_logo_red_2021.svg" alt="Twilio" style="width:20px; height:20px" />
+    </div>
+    <div class="icon-circle" style="border-color:#ff6f61">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HubSpot_Logo.svg/1024px-HubSpot_Logo.svg.png" alt="HubSpot" style="width:20px; height:20px" />
+    </div>
+  </div>
+</div>
+
+<div class="shopify-app">
+  <div class="badge" aria-label="Shopify app badge">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="#BC7A00" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 18L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+    </svg>
+  </div>
+  <div class="custom-app">Shopify Custom App</div>
+  <h3>Zuper Inventory Manager – Multi-User &amp; Fulfillment Made Easy</h3>
+  <ul>
+    <li>Add unlimited team members to manage your Shopify store</li>
+    <li>Track inventory in real-time across locations</li>
+    <li>Streamline order fulfillment and reduce errors</li>
+    <li>Perfect for stores on Shopify's Basic plan</li>
+  </ul>
+
+  <div class="ratings" aria-label="4.5 star rating">
+    <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star" style="color:#e5a500;">⭐</span>
+    <span class="rating-text">4.5 Ratings</span>
+  </div>
+
+  <div class="free-badge" aria-label="Free badge">Free</div>
+
+  <div class="explore-btn">
+    <button type="button" aria-label="Explore app">Explore App</button>
+  </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Example Block",
+    "presets":[
+        {
+            "name": "Example Block"
+        }
+    ]
+}
+{% endschema %}
