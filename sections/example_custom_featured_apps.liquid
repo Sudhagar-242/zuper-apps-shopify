@@ -118,8 +118,8 @@
         <span class="custom_badge">{{ section.settings.tag }}</span>
       </div>
       <div class="feature-details">
-        <div class="label">Shopify Custom App</div>
-      <div class="heading">Zuper Inventory Manager – Multi-User & Fulfillment Made Easy</div>
+        <div class="label">{{ section.settings.label_text }}</div>
+      <div class="heading">{{ section.settings.title_text }}</div>
       <ul class="features">
         <li>- Add unlimited team members to manage your Shopify store</li>
         <li>- Track inventory in real-time across locations</li>
@@ -130,86 +130,79 @@
       <div class="rating-and-explore">
         <div class="rating">
           <div class="stars">★★★★☆</div>
-          <div><strong>4.5 Ratings</strong></div>
+          <div><strong>{{ section.settings.ratings }} Ratings</strong></div>
         </div>
-        <a href="#" class="explore-btn">Explore App</a>
+        <a href="{{ section.settings.button_link }}" class="explore-btn">{{ section.settings.button_label }}</a>
       </div>
     </div>
   </div>
 </div>
 
 {% schema %}
-{
-  "name": "Example section",
-  "tag": "section",
-  "class": "block-section",
+  {
+  "name": "Feature App Card",
   "settings": [
     {
       "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image"
+    },
+    {
+      "type": "image_picker",
       "id": "icon",
-      "label": "App Icon"
-    },
-    {
-      "type": "range",
-      "id": "width",
-      "label": "Title",
-      "min": 0,
-      "max": 1000,
-      "step": 50,
-      "default": 250
-    },
-    {
-      "type": "range",
-      "id": "height",
-      "label": "Title",
-      "min": 0,
-      "max": 1000,
-      "step": 50,
-      "default": 100
+      "label": "Icon"
     },
     {
       "type": "text",
-      "id": "title",
-      "label": "Title"
+      "id": "status",
+      "label": "Status",
+      "default": "Free",
+      "placeholder": "Free or Paid",
+      "info": "Enter Free or Paid"
+    },
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label Text",
+      "default": "Shopify Custom App"
+    },
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Title Text",
+      "default": "Zuper Inventory Manager – Multi-User & Fulfillment Made Easy"
     },
     {
       "type": "textarea",
-      "id": "description",
-      "label": "Description"
+      "id": "features_list",
+      "label": "Features List",
+      "info": "Enter to Create new Points"
     },
     {
-      "type": "text",
-      "id": "tag",
-      "label": "Tag (Free or Paid)",
-      "default": "Paid"
+      "type": "range",
+      "id": "ratings",
+      "label": "Ratings",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "default": 4
     },
     {
       "type": "text",
       "id": "button_label",
       "label": "Button Label",
-      "default": "Add Apps"
+      "default": "Explore App"
     },
     {
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
-    },
-    {
-      "type": "text",
-      "id": "explore_button_label",
-      "label": "Explore Button Label",
-      "default": "Explore Apps"
-    },
-    {
-      "type": "url",
-      "id": "explore_button_link",
-      "label": "Explore Button Link"
     }
   ],
   "presets": [
     {
-      "name": "Example section"
+      "name": "Feature App Card"
     }
   ]
-}
+}  
 {% endschema %}
