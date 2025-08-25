@@ -176,6 +176,10 @@
     height: 50%;
 }
 
+.mobile-footer-input-box{
+    display: none !important;
+}
+
 .footer .field__label,
 .customer .field label {
     top: calc(2rem + var(--inputs-border-width));
