@@ -94,43 +94,43 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const timelineData = [...document.querySelectorAll(".timeline-item")];
+  document.addEventListener('DOMContentLoaded', () => {
+    const timelineData = [...document.querySelectorAll('.timeline-item')];
     let activeIndex = window.innerWidth <= 750 ? 0 : 2;
 
     function updateTimelineLineWidth() {
-      const timelineItems = document.getElementById("timelineItems");
-      const timelineLine = document.querySelector(".timeline-line");
+      const timelineItems = document.getElementById('timelineItems');
+      const timelineLine = document.querySelector('.timeline-line');
       if (timelineItems && timelineLine) {
-        timelineLine.style.width = timelineItems.scrollWidth + "px";
+        timelineLine.style.width = timelineItems.scrollWidth + 'px';
       }
     }
 
     function updateButtons() {
-      document.getElementById("prevBtn").disabled = activeIndex === 0;
-      document.getElementById("nextBtn").disabled = activeIndex === timelineData.length - 1;
+      document.getElementById('prevBtn').disabled = activeIndex === 0;
+      document.getElementById('nextBtn').disabled = activeIndex === timelineData.length - 1;
     }
 
     function setActive(index, smoothScroll = false) {
       if (index < 0 || index >= timelineData.length) return;
-      timelineData.forEach((item) => item.classList.remove("active"));
-      timelineData[index].classList.add("active");
+      timelineData.forEach((item) => item.classList.remove('active'));
+      timelineData[index].classList.add('active');
       if (smoothScroll) {
-        timelineData[index].scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+        timelineData[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
       }
       activeIndex = index;
       updateButtons();
     }
 
-    document.getElementById("prevBtn").addEventListener("click", () => {
+    document.getElementById('prevBtn').addEventListener('click', () => {
       if (activeIndex > 0) setActive(activeIndex - 1, true);
     });
 
-    document.getElementById("nextBtn").addEventListener("click", () => {
+    document.getElementById('nextBtn').addEventListener('click', () => {
       if (activeIndex < timelineData.length - 1) setActive(activeIndex + 1, true);
     });
 
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       updateTimelineLineWidth();
       const newStart = window.innerWidth <= 750 ? 0 : 2;
       if (activeIndex !== newStart) setActive(newStart, true);
