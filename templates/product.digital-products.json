@@ -807,6 +807,69 @@
         "padding_bottom": 64,
         "color": "#ffffff"
       }
+    },
+    "custom_timeline_LETwBM": {
+      "type": "custom-timeline",
+      "blocks": {
+        "year_Bk6m69": {
+          "type": "year",
+          "settings": {
+            "year": "1900"
+          }
+        },
+        "year_MEdHpJ": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_tfQWwd": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_keGxtN": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_xVeyxK": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_GA6MJa": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        },
+        "year_cenMJ9": {
+          "type": "year",
+          "settings": {
+            "year": "2025"
+          }
+        }
+      },
+      "block_order": [
+        "year_Bk6m69",
+        "year_MEdHpJ",
+        "year_tfQWwd",
+        "year_keGxtN",
+        "year_xVeyxK",
+        "year_GA6MJa",
+        "year_cenMJ9"
+      ],
+      "name": "Company Timeline",
+      "settings": {
+        "timeline_title": "Company Timeline",
+        "padding_top": 73,
+        "padding_bottom": 64,
+        "color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -821,6 +884,7 @@
     "custom_price_multicolumn_mRbRGL",
     "custom_infinite_slider2_WPDPj6",
     "custom_suto_card_Am3hdx",
-    "custom_timeline_W346aq"
+    "custom_timeline_W346aq",
+    "custom_timeline_LETwBM"
   ]
 }
