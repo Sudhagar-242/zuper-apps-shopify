@@ -27,6 +27,9 @@
       flex: 1;
       padding-left: 40px;
     }
+    .card-right .custom_badge{
+        position: relative;
+    }
     .label {
       display: inline-block;
       background: #d1fae5;
@@ -88,7 +91,7 @@
       <!-- Right Side -->
       <div class="card-right">
         <div>
-          <span class="custom_badge">{{ section.settings.tag }}</span>
+          
           {% if section.settings.icon %}
             {{
               section.settings.icon
@@ -98,6 +101,7 @@
           {% else %}
             <div>No Image</div>
           {% endif %}
+          <span class="custom_badge">{{ section.settings.tag }}</span>
         </div>
         <div class="label">Shopify Custom App</div>
         <div class="heading">Zuper Inventory Manager – Multi-User & Fulfillment Made Easy</div>
