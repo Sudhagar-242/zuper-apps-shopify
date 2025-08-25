@@ -183,7 +183,7 @@
 
 
 mobile-input-box{
-    display: none;
+    display: none !important;
 }
 @media (max-width: 320px) {
     .footer__newsletter {
