@@ -99,12 +99,11 @@
   <div class="featured-card">
     <!-- Left Side (Image) -->
     <div class="card-left">
-        {% if section.settings.left_image %}
-            {{ section.settings.left_image | image_url | image_tag }}
-            {% else %}
-           {{ "featured-app-demo.png" | asset_url | image_tag }}
-           {% endif %}
-      
+      {% if section.settings.left_image %}
+        {{ section.settings.left_image | image_url | image_tag }}
+      {% else %}
+        {{ 'featured-app-demo.png' | asset_url | image_tag }}
+      {% endif %}
     </div>
 
     <!-- Right Side -->
@@ -118,28 +117,30 @@
           }}
         {% else %}
           {% comment %} <div>No Image</div> {% endcomment %}
-           {% if section.settings.left_image %}
+          {% if section.settings.left_image %}
             {{ section.settings.icon | image_url | image_tag }}
-            {% else %}
-           {{ "featured-app-demo-status.png" | asset_url | image_tag }}
-           {% endif %}
+          {% else %}
+            {{ 'featured-app-demo-status.png' | asset_url | image_tag }}
+          {% endif %}
         {% endif %}
         <span class="custom_badge">{{ section.settings.tag }}</span>
       </div>
       <div class="feature-details">
         <div class="label">{{ section.settings.label_text }}</div>
-      <div class="heading">{{ section.settings.title_text }}</div>
-      <ul class="features">
-        <li>- Add unlimited team members to manage your Shopify store</li>
-        <li>- Track inventory in real-time across locations</li>
-        <li>- Streamline order fulfillment and reduce errors</li>
-        <li>- Perfect for stores on Shopify’s Basic plan</li>
-      </ul>
+        <div class="heading">{{ section.settings.title_text }}</div>
+        <ul class="features">
+          <li>- Add unlimited team members to manage your Shopify store</li>
+          <li>- Track inventory in real-time across locations</li>
+          <li>- Streamline order fulfillment and reduce errors</li>
+          <li>- Perfect for stores on Shopify’s Basic plan</li>
+        </ul>
       </div>
       <div class="rating-and-explore">
         <div class="rating">
           <div class="stars">★★★★☆</div>
-          <div><strong>{{ section.settings.ratings }} Ratings</strong></div>
+          <div>
+            <strong>{{ section.settings.ratings }} Ratings</strong>
+          </div>
         </div>
         <a href="{{ section.settings.button_link }}" class="explore-btn">{{ section.settings.button_label }}</a>
       </div>
@@ -148,7 +149,7 @@
 </div>
 
 {% schema %}
-  {
+{
   "name": "Feature App Card",
   "settings": [
     {
@@ -213,5 +214,5 @@
       "name": "Feature App Card"
     }
   ]
-}  
+}
 {% endschema %}
