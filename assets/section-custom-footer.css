@@ -182,7 +182,7 @@
 }
 
 
-mobile-input-box{
+mobile-footer-input-box{
     display: none !important;
 }
 @media (max-width: 320px) {
@@ -325,7 +325,7 @@ mobile-input-box{
         margin: 0 auto;
         margin-top: 1rem;
     }
-    .mobile-input-box{
+    .mobile-footer-input-box{
         display: block !important;
         padding: 0 0 0 24px;
     }
