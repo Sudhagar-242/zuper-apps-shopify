@@ -156,7 +156,7 @@ padding-left: 10px;
     </div>
 
     <!-- 👇 Hidden JSON data from blocks -->
-<script id="timeline-data" type="application/json">
+<script class="timeline-data" type="application/json">
   [
     {% for block in section.blocks %}
       {
@@ -168,7 +168,7 @@ padding-left: 10px;
 </script>
 
 {% javascript %}
-      const timelineData = JSON.parse(document.getElementById("timeline-data").textContent);
+      const timelineData = JSON.parse(document.getElementByClassName("timeline-data").textContent);
       let activeIndex = window.innerWidth <= 750 ? 0 : 2; // Mobile: start at 0, Desktop: start at 2
 
       function updateTimelineLineWidth() {
