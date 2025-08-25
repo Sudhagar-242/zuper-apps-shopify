@@ -120,7 +120,7 @@
           {% if section.settings.left_image %}
             {{ section.settings.icon | image_url: width: 48, height: 48 | image_tag }}
           {% else %}
-            {{ 'featured-app-demo-icon.png' | asset_url | img_tag }}
+            <img src="{{ 'featured-app-demo-icon.png' | asset_url }}" alt="Demo Icon">
           {% endif %}
         {% endif %}
         <span class="custom_badge">{{ section.settings.tag }}</span>
