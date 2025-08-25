@@ -203,6 +203,7 @@
       "name": "Example Block",
       "settings": {
         "left_image": "shopify://shop_images/comfortable-living-room-cat_925x_280339b4-72ca-420e-bc91-8bf89f1c7653.jpg",
+        "icon": "shopify://shop_images/agriculture-healthy-food_1.webp",
         "tag": "Free",
         "label_text": "Shopify Custom App",
         "title_text": "Zuper Inventory Manager – Multi-User & Fulfillment Made Easy",
