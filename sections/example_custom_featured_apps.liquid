@@ -133,7 +133,7 @@
       </div>
       <div class="rating-and-explore">
         <div class="rating">
-          {% assign rating = section.settings.ratings | plus: 0 %} {# ensure numeric #}
+          {% assign rating = section.settings.ratings | plus: 0 %}
           <div class="stars">
             {% for index in (1..5) %}
               {% assign star_value = index | minus: 1 | plus: 1 %}
