@@ -98,7 +98,18 @@
 
       <!-- Right Side -->
       <div class="card-right">
-        <div class="free-tag">Free</div>
+        <div>
+          <span class="custom_badge">{{ section.settings.tag }}</span>
+          {% if section.settings.icon %}
+            {{
+              section.settings.icon
+              | image_url: width: section.settings.width, height: section.settings.height
+              | image_tag
+            }}
+          {% else %}
+            <div>No Image</div>
+          {% endif %}
+        </div>
         <div class="label">Shopify Custom App</div>
         <div class="heading">Zuper Inventory Manager – Multi-User & Fulfillment Made Easy</div>
         <ul class="features">
