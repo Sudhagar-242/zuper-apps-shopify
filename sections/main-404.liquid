@@ -10,14 +10,21 @@
   }
 </style>
 
-<div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
+<div class=" page-width page-margin center">
+  <p></p>
+  <h1 class="title"></h1>
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
   </a>
 </div>
+
+<section class="404-primary-container">
+  <div class="404-sec-container template-404">
+    <h1>{{ 'templates.404.subtext' | t }}</h1>
+    <div>
+      <h2 class="title">{{ 'templates.404.subtext' | t }} – {{ 'templates.404.title' | t }}</h2>
+      <p>This destination doesn’t exist, but we can help you find the perfect stay!</p>
+    </div>
+    <a href="{{ routes.root_url }}" class="btn">Go Back Home</a>
+  </div>
+</section>
