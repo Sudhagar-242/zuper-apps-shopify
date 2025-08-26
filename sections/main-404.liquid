@@ -1,4 +1,4 @@
-<style type="text/css">
+{% comment %} <style type="text/css">
   .template-404 .title + * {
     margin-top: 1rem;
   }
@@ -90,6 +90,80 @@
       <h2 class="title">{{ 'templates.404.subtext' | t }} – {{ 'templates.404.title' | t }}</h2>
       <p>This destination doesn’t exist, but we can help you find the perfect stay!</p>
     </div>
+    <a href="{{ routes.root_url }}" class="btn">Go Back Home</a>
+  </div>
+</section> {% endcomment %}
+
+
+
+<style>
+  .error-primary-container {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  .error-sec-container {
+    position: relative;
+    max-width: 600px;
+    padding: 40px 20px;
+    border-radius: 12px;
+  }
+
+  .error-sec-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://images.pexels.com/photos/31559056/pexels-photo-31559056.jpeg") no-repeat center;
+    background-size: contain; /* or cover */
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  .error-sec-container h1 {
+    font-size: 100px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .error-sec-container h2 {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+
+  .error-sec-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .error-sec-container .btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+</style>
+
+<section class="error-primary-container">
+  <div class="error-sec-container">
+    <h1>404</h1>
+    <h2>{{ 'templates.404.title' | t: default: "Page Not Found" }}</h2>
+    <p>{{ 'templates.404.subtext' | t: default: "This destination doesn’t exist, but we can help you find the perfect stay!" }}</p>
     <a href="{{ routes.root_url }}" class="btn">Go Back Home</a>
   </div>
 </section>
