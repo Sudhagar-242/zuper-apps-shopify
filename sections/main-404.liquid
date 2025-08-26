@@ -10,12 +10,12 @@
   }
 
   .error-primary-container {
-    height: calc(100vh - 155px);
+    {% comment %} height: calc(100vh - 155px); {% endcomment %}
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background: url("{{ '404-error-bg.svg' | asset_url }}") no-repeat center;
-    background-size: contain; /* or cover if you prefer */
+    background-size: cover; /* or cover if you prefer */
     background-color: #fff;
     display: flex;
     justify-content: center;
