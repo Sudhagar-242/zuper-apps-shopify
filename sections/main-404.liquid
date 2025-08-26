@@ -9,8 +9,13 @@
     }
   }
 
+  .error-404-section{
+    height: 100vh;
+  }
+
   .error-primary-container {
     {% comment %} height: calc(100vh - 155px); {% endcomment %}
+     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -73,3 +78,12 @@
     <a href="{{ routes.root_url }}" class="btn">Go Back Home</a>
   </div>
 </section>
+
+
+{% schema %}
+{
+  "name": "main404",
+  "tag": "section",
+  "class": "error-404-section"
+}
+{% endschema %}
