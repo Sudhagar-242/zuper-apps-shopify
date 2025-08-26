@@ -31,7 +31,7 @@
     }
 
     /* Set your planes background here */
-    .error-primary-container::before {
+    .error-primary-container img {
       content: "";
       position: absolute;
       top: 0;
@@ -76,6 +76,7 @@
   </style>
 
 <section class="error-primary-container">
+  {{'404-error-bg.svg' | image_tag | image_url: width: auto, height: auto }}
   <div class="error-sec-container template-404">
     <h1>{{ 'templates.404.subtext' | t }}</h1>
     <div>
