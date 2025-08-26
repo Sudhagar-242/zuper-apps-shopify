@@ -30,7 +30,7 @@
     }
 
     /* Set your planes background here */
-    .error-sec-container::before {
+    {% comment %} .error-sec-container::before {
       content: "";
       position: absolute;
       top: 0;
@@ -41,7 +41,7 @@
       background-size: contain; /* or cover */
       opacity: 0.2; /* faded background */
       z-index: -1;
-    }
+    } {% endcomment %}
 
     .error-sec-container h1 {
       font-size: 100px;
@@ -73,15 +73,6 @@
     }
 
   </style>
-
-
-{% comment %} <div class=" page-width page-margin center">
-  <p></p>
-  <h1 class="title"></h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
-</div> {% endcomment %}
 
 <section class="error-primary-container">
   <div class="error-sec-container template-404">
