@@ -1,12 +1,14 @@
-<style>
+/* General spacing between title and next element */
 .template-404 .title + * {
-  margin-top: 16px; /* default */
+  margin-top: 16px;
 }
 
+/* Section wrapper */
 .error-404-section {
   height: 100vh;
 }
 
+/* Main container with background image and layout */
 .error-primary-container {
   height: 100%;
   margin: 0;
@@ -20,14 +22,19 @@
   align-items: center;
   text-align: center;
   position: relative;
+  flex-direction: column;
 }
 
+/* Content block */
 .error-sec-container {
   position: relative;
   max-width: 477px;
+  width: 90%; /* allows responsiveness */
   display: flex;
   flex-direction: column;
   z-index: 1;
+  padding: 20px; /* improves spacing on smaller screens */
+  box-sizing: border-box;
 }
 
 .error-sec-container h1 {
@@ -60,33 +67,41 @@
   margin: auto;
 }
 
-/* Media Queries */
+/* ---------- Media Queries ---------- */
 
-/* Up to 600px - smaller phones */
+/* Small Phones */
 @media screen and (max-width: 600px) {
   .template-404 .title + * {
     margin-top: 10px;
   }
-  .error-primary-container{
-    background: url("{{ '404-error-mobile.svg' | asset_url }}") no-repeat white center;
+
+  .error-primary-container {
+    background: url("{{ '404-error-mobile.svg' | asset_url }}") no-repeat center white;
     background-size: contain;
+    justify-content: flex-start;
+    padding-top: 80px;
   }
-  .error-sec-container{
-    margin-top: 35%;
+
+  .error-sec-container {
+    margin-top: 0;
   }
+
   .error-sec-container h1 {
     font-size: 60px;
-    margin: 28px auto;
+    margin: 20px auto;
   }
+
   .error-sec-container h2 {
     font-size: 18px;
     margin: 8px 0;
   }
+
   .error-sec-container p {
-    width: 297px;
     font-size: 14px;
     margin-bottom: 15px;
+    width: 100%;
   }
+
   .error-sec-container .btn {
     padding: 10px 20px;
     font-size: 14px;
@@ -94,22 +109,26 @@
   }
 }
 
-/* Between 601px and 740px - larger phones, small tablets */
+/* 601px to 740px: Larger Phones / Small Tablets */
 @media screen and (min-width: 601px) and (max-width: 740px) {
   .template-404 .title + * {
     margin-top: 12px;
   }
+
   .error-sec-container h1 {
     font-size: 70px;
   }
+
   .error-sec-container h2 {
     font-size: 22px;
     margin: 9px 0;
   }
+
   .error-sec-container p {
     font-size: 15px;
     margin-bottom: 18px;
   }
+
   .error-sec-container .btn {
     padding: 11px 22px;
     font-size: 15px;
@@ -117,22 +136,26 @@
   }
 }
 
-/* Between 741px and 1024px - tablets and small desktops */
+/* 741px to 1024px: Tablets */
 @media screen and (min-width: 741px) and (max-width: 1024px) {
   .template-404 .title + * {
     margin-top: 20px;
   }
+
   .error-sec-container h1 {
     font-size: 85px;
   }
+
   .error-sec-container h2 {
     font-size: 25px;
     margin: 10px 0;
   }
+
   .error-sec-container p {
     font-size: 16px;
     margin-bottom: 20px;
   }
+
   .error-sec-container .btn {
     padding: 12px 24px;
     font-size: 16px;
@@ -140,22 +163,26 @@
   }
 }
 
-/* Between 1025px and 1440px - desktops */
+/* 1025px to 1440px: Desktops */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
   .template-404 .title + * {
     margin-top: 28px;
   }
+
   .error-sec-container h1 {
     font-size: 95px;
   }
+
   .error-sec-container h2 {
     font-size: 27px;
     margin: 10px 0;
   }
+
   .error-sec-container p {
     font-size: 16px;
     margin-bottom: 22px;
   }
+
   .error-sec-container .btn {
     padding: 12px 24px;
     font-size: 16px;
@@ -163,47 +190,29 @@
   }
 }
 
-/* 1441px and above - large desktops */
+/* 1441px and above: Large Screens */
 @media screen and (min-width: 1441px) {
   .template-404 .title + * {
     margin-top: 32px;
   }
+
   .error-sec-container h1 {
     font-size: 100px;
   }
+
   .error-sec-container h2 {
     font-size: 28px;
     margin: 10px 0;
   }
+
   .error-sec-container p {
     font-size: 16px;
     margin-bottom: 20px;
   }
+
   .error-sec-container .btn {
     padding: 12px 24px;
     font-size: 16px;
     border-radius: 25px;
   }
 }
-
-</style>
-
-<section class="error-primary-container">
-  <div class="error-sec-container template-404">
-    <h1>{{ 'templates.404.subtext' | t }}</h1>
-    <div>
-      <h2 class="title">{{ 'templates.404.subtext' | t }} – {{ 'templates.404.title' | t }}</h2>
-      <p>This destination doesn’t exist, but we can help you find the perfect stay!</p>
-    </div>
-    <a href="{{ routes.root_url }}" class="btn">Go Back Home</a>
-  </div>
-</section>
-
-
-{% schema %}
-{
-  "name": "main404",
-  "tag": "section",
-  "class": "error-404-section"
-}
-{% endschema %}
