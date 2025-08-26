@@ -88,8 +88,7 @@
 
 <section class="error-primary-container">
   {% comment %} <div class="error-background"></div> {% endcomment %}
-
-  {{ '404-error-bg.svg' | asset_img_url | image_tag }}
+  <img src="{{ '404-error-bg.svg' | asset_url }}" alt="error Image" height="" width="" />
   <div class="error-sec-container template-404">
     <h1>{{ 'templates.404.subtext' | t }}</h1>
     <div>
