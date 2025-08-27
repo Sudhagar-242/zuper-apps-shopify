@@ -205,6 +205,17 @@
           "secondary_button_label": "#ffffff",
           "shadow": "#001128"
         }
+      },
+      "scheme-f924b42a-4907-48c5-8b10-2c07305ab5cd": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#2b2c2d",
+          "button": "#b7aca2",
+          "button_label": "#262626",
+          "secondary_button_label": "#001128",
+          "shadow": "#001128"
+        }
       }
     }
   },
@@ -400,5 +411,10 @@
       },
       "content_for_index": []
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "main{background: white;}"
+    ]
   }
 }
