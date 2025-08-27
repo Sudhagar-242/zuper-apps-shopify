@@ -1,0 +1,85 @@
+<style>
+    .contact-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.contact-header__button {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #dcdcdc;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-header__button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.contact-header__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111233;
+  margin: 10px 0;
+}
+
+.contact-header__subtitle {
+  font-size: 16px;
+  color: #6e6e80;
+}
+
+</style>
+
+
+
+<section class="contact-header">
+  <div class="contact-header__container">
+    <a href="/pages/contact" class="contact-header__button">Contact Us</a>
+    <h2 class="contact-header__title">Get in touch</h2>
+    <p class="contact-header__subtitle">
+      We’d love to hear from you. Please fill out this form.
+    </p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact Header",
+  "settings": [
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Contact Us"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Get in touch"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "We’d love to hear from you. Please fill out this form."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Header"
+    }
+  ]
+}
+{% endschema %}
