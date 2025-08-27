@@ -47,7 +47,6 @@
     },
     "custom_info_box_zFDrt7": {
       "type": "custom-grow-with-box",
-      "disabled": true,
       "name": "Start Growing With Us",
       "settings": {
         "badge_text": "Start Growing",
