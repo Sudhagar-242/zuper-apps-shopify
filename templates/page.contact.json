@@ -17,26 +17,6 @@
         "padding_bottom": 36
       }
     },
-    "custom_info_box_zFDrt7": {
-      "type": "custom-grow-with-box",
-      "name": "Start Growing With Us",
-      "settings": {
-        "badge_text": "Start Growing",
-        "heading": "Start Growing<br>With us",
-        "subheading": "Unlock new opportunities, scale faster, and simplify your store with ZuperApps by your side.",
-        "primary_button_label": "Contact us",
-        "primary_button_link": "",
-        "secondary_button_label": "Get Started",
-        "secondary_button_link": "",
-        "logo_1": "shopify://shop_images/custom-logo-1.svg",
-        "logo_2": "shopify://shop_images/custom-logo-2.svg",
-        "logo_3": "shopify://shop_images/custom-logo-3.svg",
-        "logo_4": "shopify://shop_images/custom-logo-4.svg",
-        "logo_5": "shopify://shop_images/custom-logo-5.svg",
-        "padding_top": 32,
-        "padding_bottom": 100
-      }
-    },
     "1756213130d2349efd": {
       "type": "apps",
       "blocks": {
@@ -63,6 +43,27 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "custom_info_box_zFDrt7": {
+      "type": "custom-grow-with-box",
+      "disabled": true,
+      "name": "Start Growing With Us",
+      "settings": {
+        "badge_text": "Start Growing",
+        "heading": "Start Growing<br>With us",
+        "subheading": "Unlock new opportunities, scale faster, and simplify your store with ZuperApps by your side.",
+        "primary_button_label": "Contact us",
+        "primary_button_link": "",
+        "secondary_button_label": "Get Started",
+        "secondary_button_link": "",
+        "logo_1": "shopify://shop_images/custom-logo-1.svg",
+        "logo_2": "shopify://shop_images/custom-logo-2.svg",
+        "logo_3": "shopify://shop_images/custom-logo-3.svg",
+        "logo_4": "shopify://shop_images/custom-logo-4.svg",
+        "logo_5": "shopify://shop_images/custom-logo-5.svg",
+        "padding_top": 32,
+        "padding_bottom": 100
       }
     },
     "example_section_training_ghWLGc": {
