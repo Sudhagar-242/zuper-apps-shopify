@@ -70,10 +70,21 @@
       "type": "example_section_training",
       "name": "example_liquid_section",
       "settings": {}
+    },
+    "get_in_touch_QnpLEc": {
+      "type": "get-in-touch",
+      "name": "Contact Header",
+      "settings": {
+        "button_link": "",
+        "button_text": "Contact Us",
+        "title": "Get in touch",
+        "subtitle": "We’d love to hear from you. Please fill out this form."
+      }
     }
   },
   "order": [
     "main",
+    "get_in_touch_QnpLEc",
     "1756213130d2349efd",
     "custom_info_box_zFDrt7",
     "example_section_training_ghWLGc"
