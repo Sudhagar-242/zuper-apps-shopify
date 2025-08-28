@@ -249,7 +249,7 @@
             </div>
           {% endif %}
 
-          {% if block.type == 'review_card' %}
+          {% if block.type == 'customer_rating_card' %}
             <div class="customer-card" role="region" aria-label="Testimonial from A Happy Merchant">
               <div class="customer-card-header">
                 <div class="customer-profile">
@@ -364,12 +364,60 @@
           "default": "Customer Name"
         }
       ]
+    },
+    {
+      "name": "Customer Rating Card",
+      "type": "customer_rating_card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image Picker 0",
+          "id": "image_picker_0"
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer Name",
+          "default": "Name"
+        },
+        {
+          "type": "text",
+          "id": "customer_profession",
+          "label": "Customer Profession",
+          "default": "CEO, XYZ"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 0,
+          "max": 5,
+          "step": 0.5,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "content_title",
+          "label": "Content Title",
+          "default": "Review Of XYZ"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Content",
+          "default": "Content Goes Here."
+        }
+      ]
     }
   ],
   "presets": [
     {
       "name": "Minimal Review Card",
-      "blocks": [{ "type": "minimal-review_card" }, { "type": "minimal-review_card" }, { "type": "minimal-review_card" }]
+      "blocks": [
+        { "type": "minimal-review_card" },
+        { "type": "minimal-review_card" },
+        { "type": "minimal-review_card" }
+      ]
     }
   ]
 }
