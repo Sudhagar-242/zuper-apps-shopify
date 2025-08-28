@@ -1,135 +1,203 @@
 <style>
-        .customer-setion {
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-color: #00000033;
-          padding-bottom: 52px;
-        }
-        .customer-revi {
-          max-width: 1369px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-        .customer-review {
-          display: flex;
-          align-items: center;
-          padding-top: 61px;
-          padding-bottom: 52px;
-        }
-        .slider-wrapper {
-          position: relative;
-          max-width: 100%;
-          margin: auto;
-        }
-        .quotation {
-          width: 38px;
-        }
-        .slider-container {
-          display: flex;
-          overflow-x: auto;
-          scroll-behavior: smooth;
-          gap: 14px;
-          scrollbar-width: none; /* Firefox */
-          -ms-overflow-style: none; /* IE 10+ */
-        }
+  .customer-setion {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #00000033;
+    padding-bottom: 52px;
+  }
+  .customer-revi {
+    max-width: 1369px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .customer-review {
+    display: flex;
+    align-items: center;
+    padding-top: 61px;
+    padding-bottom: 52px;
+  }
+  .slider-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+  .quotation {
+    width: 38px;
+  }
+  .slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 14px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
 
-        .slider-container::-webkit-scrollbar {
-          display: none; /* Chrome, Safari */
-        }
+  .slider-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
 
-        .review-card {
-          min-width: 381px;
-          max-width: 381px;
-          background-color: rgb(0 0 0 / 67%);
-          padding: 30px;
-          border-radius: 11px;
-          flex-shrink: 0;
-        }
-        .card-img {
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-        }
-        .card-text p {
-          color: white;
-          font-size: 16px;
-          line-height: 143%;
-          padding-top: 24px;
-          padding-bottom: 42px;
-          font-weight: 400;
-          margin: 0;
-        }
-        .card-text h2 {
-          color: white;
-          font-size: 16px;
-          line-height: 143%;
-          margin: 0;
-          font-weight: 700;
-        }
-        .customer-review h2 {
-          color: #fff;
-          font-size: 42px;
-          font-weight: 700;
-          line-height: 140%;
-          margin: 0;
-        }
-        .icon-star {
-          display: flex;
-          align-items: center;
-        }
-        .slider-buttons {
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          margin-left: auto;
-        }
-
-        .slider-buttons button {
-          border: 0.8px solid #ffffff;
-          color: white;
-          border-radius: 30px;
-          cursor: pointer;
-          font-size: 18px;
-          background: transparent;
-          width: 49px;
-          height: 49px;
-        display: flex;
-      align-items: center;
-      justify-content: center;
-  transition: 0.5s;
-        }
-    .slider-buttons button:hover {
-          transform: scale(1.1);
-  transition: 0.5s;
-        }
-        @media (max-width: 989px) {
-          .slider-buttons {
-            position: static;
-            justify-content: center;
-            flex-direction: row;
-          }
-
-          .slider-wrapper {
-            padding-bottom: 20px;
-          }
+  .review-card {
+    min-width: 381px;
+    max-width: 381px;
+    background-color: rgb(0 0 0 / 67%);
+    padding: 30px;
+    border-radius: 11px;
+    flex-shrink: 0;
+  }
+  .card-img {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .card-text p {
+    color: white;
+    font-size: 16px;
+    line-height: 143%;
+    padding-top: 24px;
+    padding-bottom: 42px;
+    font-weight: 400;
+    margin: 0;
+  }
+  .card-text h2 {
+    color: white;
+    font-size: 16px;
+    line-height: 143%;
+    margin: 0;
+    font-weight: 700;
+  }
   .customer-review h2 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 140%;
+    margin: 0;
+  }
+  .icon-star {
+    display: flex;
+    align-items: center;
+  }
+  .slider-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .slider-buttons button {
+    border: 0.8px solid #ffffff;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    background: transparent;
+    width: 49px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .slider-buttons button:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  @media (max-width: 989px) {
+    .slider-buttons {
+      position: static;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .slider-wrapper {
+      padding-bottom: 20px;
+    }
+    .customer-review h2 {
       font-size: 30px;
       line-height: 130%;
+    }
   }
-        }
+
+
+
+  {% comment %} block review card {% endcomment %}
+  .customer-card {
+    max-width: 480px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    color: #484848;
+  }
+  .customer-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+  .customer-profile {
+    display: flex;
+    align-items: center;
+  }
+  .customer-profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 16px;
+    object-fit: cover;
+  }
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-info .name {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    margin: 0;
+  }
+  .customer-profile-info .customer-title {
+    font-weight: 400;
+    font-size: 16px;
+    color: #808080;
+    margin-top: 2px;
+  }
+  .customer-rating {
+    display: flex;
+    align-items: center;
+    color: #00bfa5;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 6px;
+  }
+  .customer-rating svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  .customer-content {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000;
+  }
+  .customer-content-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6f6f6f;
+  }
 </style>
 
 {% if section.settings.background_image %}
-    {% assign backgroundImage = section.settings.background_image | image_url  %}
+  {% assign backgroundImage = section.settings.background_image | image_url %}
 {% else %}
-    {% if section.settings.is_default_image %}
-        {% assign backgroundImage = "https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Rectangle_40243.png?v=1753244382" %}
-    {% else %}
-        {% assign backgroundImage = "" %}
-    {% endif %}
+  {% if section.settings.is_default_image %}
+    {% assign backgroundImage = 'https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Rectangle_40243.png?v=1753244382' %}
+  {% else %}
+    {% assign backgroundImage = '' %}
+  {% endif %}
 {% endif %}
-
-
 
 <div class="customer-setion" style="background-image: url({{backgroundImage}})">
   <div class="customer-revi">
@@ -151,33 +219,60 @@
     <div class="slider-wrapper">
       <div class="slider-container reviewSlider">
         {%- for block in section.blocks -%}
-          <div class="review-card">
-            <div class="card-img">
-              <img
-                alt="icon"
-                class="quotation"
-                src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/1f49151004c207fcd82c8bfdbdffddf1.svg?v=1753246419"
-                width="auto"
-                height="auto"
-              >
-              <div class="icon-star">
-                {% for num in (1..5) %}
-                  {% if num <= block.settings.review_rating_star %}
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Star_5.svg?v=1753246420"
-                      alt="star"
-                      width="auto"
-                      height="auto"
-                    >
-                  {% endif %}
-                {% endfor %}
+          {% if block.type == 'minimal-review_card' %}
+            <div class="review-card">
+              <div class="card-img">
+                <img
+                  alt="icon"
+                  class="quotation"
+                  src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/1f49151004c207fcd82c8bfdbdffddf1.svg?v=1753246419"
+                  width="auto"
+                  height="auto"
+                >
+                <div class="icon-star">
+                  {% for num in (1..5) %}
+                    {% if num <= block.settings.review_rating_star %}
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Star_5.svg?v=1753246420"
+                        alt="star"
+                        width="auto"
+                        height="auto"
+                      >
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="card-text">
+                <p>{{- block.settings.review -}}</p>
+                <h2>{{- block.settings.customer_name -}}</h2>
               </div>
             </div>
-            <div class="card-text">
-              <p>{{- block.settings.review -}}</p>
-              <h2>{{- block.settings.customer_name -}}</h2>
+          {% endif %}
+
+          {% if block.type == 'review_card' %}
+            <div class="customer-card" role="region" aria-label="Testimonial from A Happy Merchant">
+              <div class="customer-card-header">
+                <div class="customer-profile">
+                  <img src="image.jpg" alt="Profile picture of A Happy Merchant">
+                  <div class="customer-profile-info">
+                    <p class="customer-name">A Happy Merchant</p>
+                    <p class="customer-title">CFO, Stratland</p>
+                  </div>
+                </div>
+                <div class="customer-rating" aria-label="5 out of 5 stars">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                  </svg>
+                  5/5
+                </div>
+              </div>
+              <p class="customer-content">Outstanding Experience</p>
+              <p class="customer-content-text">
+                Zuper Inventory Manager allowed us to onboard 5 staff members without upgrading our Shopify plan.
+                Inventory tracking is now effortless!
+              </p>
             </div>
-          </div>
+          {% endif %}
         {%- endfor -%}
       </div>
     </div>
@@ -210,7 +305,8 @@
       "id": "review_corousal_title",
       "label": "Review Corousal Title",
       "default": "hello world"
-    },{
+    },
+    {
       "type": "header",
       "content": "Background Image"
     },
@@ -218,19 +314,19 @@
       "type": "image_picker",
       "id": "background_image",
       "label": "Background Image",
-      "info": "Background of this Section",
+      "info": "Background of this Section"
     },
     {
-        "type": "checkbox",
-        "id": "is_default_image",
-        "label": "Enables Default Image Background",
-        "default": true
+      "type": "checkbox",
+      "id": "is_default_image",
+      "label": "Enables Default Image Background",
+      "default": true
     }
   ],
   "blocks": [
     {
       "name": "Minimal Review Card",
-      "type": "review_card",
+      "type": "minimal-review_card",
       "settings": [
         {
           "type": "header",
@@ -273,7 +369,7 @@
   "presets": [
     {
       "name": "Minimal Review Card",
-      "blocks": [{ "type": "review_card" }, { "type": "review_card" }, { "type": "review_card" }]
+      "blocks": [{ "type": "minimal-review_card" }, { "type": "minimal-review_card" }, { "type": "minimal-review_card" }]
     }
   ]
 }
