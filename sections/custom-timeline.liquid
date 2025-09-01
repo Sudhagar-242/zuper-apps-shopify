@@ -151,21 +151,23 @@
     </div>
   </div>
 
-  <!-- Template element (invisible by default) -->
-  <template id="item-template">
-    <div class="item">
-      <div class="text-content">
-        <h3 class="title"></h3>
-        <p class="description"></p>
-      </div>
+
+
+  
+<template id="item-template">
+  <div class="item">
+    <div class="text-content">
+      <h3 class="title"></h3>
+      <p class="description"></p>
     </div>
     <div class="image-content">
-      <img src="" alt="" width="" height="">
+      <img src="" alt="">
     </div>
-  </template>
+  </div>
+</template>
 
-  <!-- Container to hold the generated elements -->
-  <div id="item-container"></div>
+<div id="item-container"></div>
+
 </div>
 
 <!-- 👇 Hidden JSON data from blocks -->
@@ -191,7 +193,6 @@
     const timelineItems = document.getElementById('timelineItems');
     const timelineLine = document.querySelector('.timeline-line');
 
-    const template = document.getElementById('item-template');
     const container = document.getElementById('item-container');
 
     if (timelineItems && timelineLine) {
