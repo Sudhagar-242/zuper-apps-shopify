@@ -204,6 +204,7 @@
     timelineItems.innerHTML = '<div class="timeline-line"></div>';
 
     timelineData.forEach((item, index) => {
+      console.log(item);
       const timelineItem = document.createElement('div');
       timelineItem.className = 'timeline-item';
       timelineItem.innerHTML = `
@@ -226,7 +227,7 @@
     <img src="" alt="" width="" height="">
   </div>
   `;
-      contentContainer.appendChild(timelineItem);
+      contentContainer.appendChild(ContentItem);
 
     });
 
