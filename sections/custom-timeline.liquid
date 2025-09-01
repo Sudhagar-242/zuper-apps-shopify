@@ -159,7 +159,6 @@
     <div>
       <img id="image-content" src="" alt="" width="" height="">
     </div>
-  </div>
 </div>
 
 <!-- 👇 Hidden JSON data from blocks -->
@@ -170,7 +169,7 @@
         "year": "{{ block.settings.year | escape }}",
         "title": "{{ block.settings.heading }}",
         "text": "{{ block.settings.text }}",
-        "image": "{{ block.settings.image | image_url: 'master' | escape }}",
+        "image": "{{ block.settings.image | asset_img_url | escape }}",
         "index": {{ forloop.index0 }}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
