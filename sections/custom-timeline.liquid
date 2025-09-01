@@ -216,7 +216,7 @@
   const clone = template.content.cloneNode(true);
   
   const img = clone.querySelector('.image-content img');
-  img.src = item.imageUrl;
+  img.src = item.image;
   img.alt = item.title;
 
   clone.querySelector('.title').textContent = item.title;
@@ -224,7 +224,7 @@
 
 
   container.appendChild(clone);
-  
+
     });
 
     updateTimelineLineWidth();
