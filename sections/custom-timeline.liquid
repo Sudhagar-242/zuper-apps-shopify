@@ -216,9 +216,7 @@
       timelineItem.addEventListener('click', () => setActive(index, true));
       timelineItems.appendChild(timelineItem);
 
-      const timelineItem = document.createElement('div');
-      timelineItem.className = 'timeline-item';
-      timelineItem.innerHTML = `
+      container.innerHTML = `
               <div class="item">
     <div class="text-content">
     <h3 class="title">${item.year}</h3>
