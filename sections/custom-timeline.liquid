@@ -214,9 +214,9 @@
       timelineItem.addEventListener('click', () => setActive(index, true));
       timelineItems.appendChild(timelineItem);
       const clone = template.content.cloneNode(true);
-      const img = clone.querySelector('.image-content img');
-  img.src = item.image;
-  img.alt = item.title;
+  //     const img = clone.querySelector('.image-content img');
+  // img.src = item.image;
+  // img.alt = item.title;
 
   clone.querySelector('.title').textContent = item.title;
   clone.querySelector('.description').textContent = item.text;
