@@ -171,14 +171,15 @@
     {% for block in section.blocks %}
       {
         "year": "{{ block.settings.year | escape }}",
-        "title": "{{ block.settings.heading }}",
-        "text": "{{ block.settings.text }}",
-        "image": {{ block.settings.image }}
+        "title": "{{ block.settings.heading | escape }}",
+        "text": "{{ block.settings.text | escape }}",
+        "image": "{{ block.settings.image | img_url: 'master' | escape }}",
         "index": {{ forloop.index0 }}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
 </script>
+
 
 {% javascript %}
   const timelineData = JSON.parse(document.getElementById('timeline-data').textContent);
@@ -212,10 +213,8 @@
           `;
       timelineItem.addEventListener('click', () => setActive(index, true));
       timelineItems.appendChild(timelineItem);
-
-  const clone = template.content.cloneNode(true);
-  
-  const img = clone.querySelector('.image-content img');
+      const clone = template.content.cloneNode(true);
+      const img = clone.querySelector('.image-content img');
   img.src = item.image;
   img.alt = item.title;
 
