@@ -146,6 +146,23 @@
       </div>
     </div>
   </div>
+
+  <!-- Template element (invisible by default) -->
+<template id="item-template">
+  <div class="item">
+    <div class="text-content">
+    <h3 class="title"></h3>
+    <p class="description"></p>
+    </div>
+  </div>
+  <div class="image-content">
+    <img src="image-url.jpg" alt="Descriptive Alt Text" width="" height="">
+  </div>
+</template>
+
+<!-- Container to hold the generated elements -->
+<div id="item-container"></div>
+
 </div>
 
 <!-- 👇 Hidden JSON data from blocks -->
@@ -154,6 +171,9 @@
     {% for block in section.blocks %}
       {
         "year": "{{ block.settings.year | escape }}",
+        "title": "{{ block.settings.heading }}",
+        "text": "{{ block.settings.text }}",
+        "image": {{ block.settings.image }}
         "index": {{ forloop.index0 }}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
