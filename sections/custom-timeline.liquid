@@ -237,7 +237,7 @@
     content.classList.remove('show');
     setTimeout(() => {
       title.textContent = timelineData[index].title;
-      description.textContent = timelineData[index].text;
+      description.innerHTML = timelineData[index].text;
       image.src = timelineData[index].image;
       image.alt = timelineData[index].title;
       content.classList.add('show');
