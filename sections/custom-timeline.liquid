@@ -128,16 +128,12 @@
     <div class="navigation-arrows">
       <button class="nav-button" id="prevBtn">
         <img
-          src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645"
-          width=""
-          height=""
+          src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645" width="" height=""
         >
       </button>
       <button class="nav-button next-button" id="nextBtn">
         <img
-          src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"
-          width=""
-          height=""
+          src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"  width="" height=""
         >
       </button>
     </div>
@@ -151,21 +147,20 @@
     </div>
   </div>
 
-
-
-  
+  <!-- Template element (invisible by default) -->
 <template id="item-template">
   <div class="item">
     <div class="text-content">
-      <h3 class="title"></h3>
-      <p class="description"></p>
+    <h3 class="title"></h3>
+    <p class="description"></p>
     </div>
-    <div class="image-content">
-      <img src="" alt="">
-    </div>
+  </div>
+  <div class="image-content">
+    <img src="" alt="" width="" height="">
   </div>
 </template>
 
+<!-- Container to hold the generated elements -->
 <div id="item-container"></div>
 
 </div>
@@ -176,9 +171,9 @@
     {% for block in section.blocks %}
       {
         "year": "{{ block.settings.year | escape }}",
-        "title": "{{ block.settings.heading | escape }}",
-        "text": "{{ block.settings.text | escape }}",
-        "image": "{{ block.settings.image | img_url: 'master' | escape }}",
+        "title": "{{ block.settings.heading }}",
+        "text": "{{ block.settings.text }}",
+        "image": {{ block.settings.image | image_url: 'master' | escape}}
         "index": {{ forloop.index0 }}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
@@ -192,6 +187,8 @@
   function updateTimelineLineWidth() {
     const timelineItems = document.getElementById('timelineItems');
     const timelineLine = document.querySelector('.timeline-line');
+
+    console.log(timelineData)
 
     const container = document.getElementById('item-container');
 
@@ -216,28 +213,17 @@
           `;
       timelineItem.addEventListener('click', () => setActive(index, true));
       timelineItems.appendChild(timelineItem);
+      const clone = template.content.cloneNode(true);
+      const img = clone.querySelector('.image-content img');
+  img.src = item.image;
+  img.alt = item.title;
 
-      container.innerHTML = `
-              <div class="item">
-    <div class="text-content">
-    <h3 class="title">${item.year}</h3>
-    <p class="description">${item.year}</p>
-    </div>
-  </div>
-  <div class="image-content">
-    <img src="" alt="" width="" height="">
-  </div>
-          `;
+  clone.querySelector('.title').textContent = item.title;
+  clone.querySelector('.description').textContent = item.text;
 
-      //     const clone = template.content.cloneNode(true);
-      // //     const img = clone.querySelector('.image-content img');
-      // // img.src = item.image;
-      // // img.alt = item.title;
 
-      // clone.querySelector('.title').textContent = item.title;
-      // clone.querySelector('.description').textContent = item.text;
+  container.appendChild(clone);
 
-      // container.appendChild(clone);
     });
 
     updateTimelineLineWidth();
