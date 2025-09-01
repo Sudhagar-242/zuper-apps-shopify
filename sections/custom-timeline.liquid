@@ -187,6 +187,10 @@
   function updateTimelineLineWidth() {
     const timelineItems = document.getElementById('timelineItems');
     const timelineLine = document.querySelector('.timeline-line');
+    
+    const template = document.getElementById('item-template');
+    const container = document.getElementById('item-container');
+
     if (timelineItems && timelineLine) {
       // Set the timeline line width to the scroll width of timeline items container
       timelineLine.style.width = timelineItems.scrollWidth + 'px';
@@ -208,6 +212,19 @@
           `;
       timelineItem.addEventListener('click', () => setActive(index, true));
       timelineItems.appendChild(timelineItem);
+
+  const clone = template.content.cloneNode(true);
+  
+  const img = clone.querySelector('.image-content img');
+  img.src = item.imageUrl;
+  img.alt = item.title;
+
+  clone.querySelector('.title').textContent = item.title;
+  clone.querySelector('.description').textContent = item.text;
+
+
+  container.appendChild(clone);
+  
     });
 
     updateTimelineLineWidth();
