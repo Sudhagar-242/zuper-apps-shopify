@@ -128,12 +128,16 @@
     <div class="navigation-arrows">
       <button class="nav-button" id="prevBtn">
         <img
-          src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645" width="" height=""
+          src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_1.svg?v=1753248645"
+          width=""
+          height=""
         >
       </button>
       <button class="nav-button next-button" id="nextBtn">
         <img
-          src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"  width="" height=""
+          src="https://cdn.shopify.com/s/files/1/0927/8583/6398/files/Arrow_14.svg?v=1754980108"
+          width=""
+          height=""
         >
       </button>
     </div>
@@ -147,22 +151,15 @@
     </div>
   </div>
 
-  <!-- Template element (invisible by default) -->
-<template id="item-template">
-  <div class="item">
+  <div class="timeline-content" id="timelineContent">
     <div class="text-content">
-    <h3 class="title"></h3>
-    <p class="description"></p>
+      <h3 id="contentTitle"></h3>
+      <p id="contentDescription"></p>
+    </div>
+    <div>
+      <img id="image-content" src="" alt="" width="" height="">
     </div>
   </div>
-  <div class="image-content">
-    <img src="" alt="" width="" height="">
-  </div>
-</template>
-
-<!-- Container to hold the generated elements -->
-<div id="item-container"></div>
-
 </div>
 
 <!-- 👇 Hidden JSON data from blocks -->
@@ -197,7 +194,6 @@
   function initTimeline() {
     const timelineItems = document.getElementById('timelineItems');
 
-
     const contentContainer = document.getElementById('item-container');
 
     // Clear timelineItems and insert timeline-line first
@@ -231,8 +227,22 @@
     if (index < 0 || index >= timelineData.length) return;
 
     const items = document.querySelectorAll('.timeline-item');
+    const content = document.getElementById('timelineContent');
+    const title = document.getElementById('contentTitle');
+    const description = document.getElementById('contentDescription');
+    const image = document.getElementById('image-content');
+
     items.forEach((item) => item.classList.remove('active'));
     items[index].classList.add('active');
+
+    content.classList.remove('show');
+    setTimeout(() => {
+      title.textContent = timelineData[index].title;
+      description.textContent = timelineData[index].text;
+      image.src = timelineData[index].image;
+      image.alt = timelineData[index].title;
+      content.classList.add('show');
+    }, 200);
 
     if (smoothScroll) {
       items[index].scrollIntoView({
