@@ -748,42 +748,64 @@
         "year_Q3wt47": {
           "type": "year",
           "settings": {
-            "year": "1900"
+            "year": "1900",
+            "heading": "Title",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+          }
+        },
+        "year_xghJpL": {
+          "type": "year",
+          "settings": {
+            "year": "2025",
+            "heading": "Titlekjb jkb bkj",
+            "text": "<p>kdnvlk vvk</p>",
+            "image": "shopify://shop_images/1cde26f4670ac497716323362fba1f34831b7d35.png"
           }
         },
         "year_XNV9ci": {
           "type": "year",
           "settings": {
-            "year": "2025"
+            "year": "2025",
+            "heading": "Title",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
           }
         },
         "year_xbQyMa": {
           "type": "year",
           "settings": {
-            "year": "2025"
+            "year": "2025",
+            "heading": "Title",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
           }
         },
         "year_hV8JU6": {
           "type": "year",
           "settings": {
-            "year": "2025"
+            "year": "2025",
+            "heading": "Title",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
           }
         },
         "year_XrTMXP": {
           "type": "year",
           "settings": {
-            "year": "2025"
+            "year": "2025",
+            "heading": "Title",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
           }
         },
         "year_CBejJK": {
           "type": "year",
           "settings": {
-            "year": "2025"
+            "year": "2025",
+            "heading": "Title",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
           }
         }
       },
       "block_order": [
         "year_Q3wt47",
+        "year_xghJpL",
         "year_XNV9ci",
         "year_xbQyMa",
         "year_hV8JU6",
