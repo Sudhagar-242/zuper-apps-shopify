@@ -188,10 +188,6 @@
     const timelineItems = document.getElementById('timelineItems');
     const timelineLine = document.querySelector('.timeline-line');
 
-    console.log(timelineData)
-
-    const container = document.getElementById('item-container');
-
     if (timelineItems && timelineLine) {
       // Set the timeline line width to the scroll width of timeline items container
       timelineLine.style.width = timelineItems.scrollWidth + 'px';
@@ -200,6 +196,9 @@
 
   function initTimeline() {
     const timelineItems = document.getElementById('timelineItems');
+
+
+    const contentContainer = document.getElementById('item-container');
 
     // Clear timelineItems and insert timeline-line first
     timelineItems.innerHTML = '<div class="timeline-line"></div>';
@@ -213,16 +212,21 @@
           `;
       timelineItem.addEventListener('click', () => setActive(index, true));
       timelineItems.appendChild(timelineItem);
-      const clone = template.content.cloneNode(true);
-      const img = clone.querySelector('.image-content img');
-  img.src = item.image;
-  img.alt = item.title;
 
-  clone.querySelector('.title').textContent = item.title;
-  clone.querySelector('.description').textContent = item.text;
-
-
-  container.appendChild(clone);
+      const ContentItem = document.createElement('div');
+      ContentItem.className = 'item-card';
+      ContentItem.innerHTML = `
+              <div class="item">
+    <div class="text-content">
+    <h3 class="title">${item.year}</h3>
+    <p class="description">${item.year}</p>
+    </div>
+  </div>
+  <div class="image-content">
+    <img src="" alt="" width="" height="">
+  </div>
+  `;
+      contentContainer.appendChild(timelineItem);
 
     });
 
