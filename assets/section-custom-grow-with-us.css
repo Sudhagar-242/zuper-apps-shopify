@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.section_container_for_info{
+  background: #f8f8f8;
+}
+.grow-section {
+  max-width: 1440px;
+  margin: auto;
+text-align: center;
+    border-radius: 0 0 14px 14px;
+    padding-top: 100px;
+    padding-bottom: 32px;
+}
+.grow-arc-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 943px;
+  margin: 0 auto 0 auto;
+  height: 140px;
+
+}
+
+.grow-logos {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  pointer-events: none;
+}
+.grow-logo {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 14px;
+  pointer-events: auto;
+}
+.logo-1 {     
+  left: -12%;
+    bottom: -54px; }
+.logo-2 { left: 12%; bottom: 32px; }
+.logo-3 { left: 50%; bottom: 70px; transform: translateX(-50%);}
+.logo-4 { right: 12%; bottom: 32px; }
+.logo-5 {     
+  right: -12%;
+    bottom: -54px; }
+.grow-logo img {
+  width: 100px;
+  height: 100px;
+  background: white;
+    border-radius: 50%;
+    object-fit: none;
+}
+.logo-3 img{
+  width: 120px;
+  height: 120px;  
+  background: white;
+    border-radius: 50%;
+    object-fit: none;
+}
+
+.grow-content {
+  margin-top: 38px;
+}
+.grow-badge {
+  display: inline-block;
+  background: #fff;
+  color: #181b37;
+  border-radius: 24px;
+  padding: 7px 22px;
+  border: 1px solid #0000001A;
+  box-shadow: 0 2px 8px #e5eaf3;
+  margin-bottom: 18px;
+
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+text-align: center;
+color: #131735;
+
+}
+.grow-title {
+  
+font-weight: 700;
+font-style: Bold;
+font-size: 64px;
+text-align: center;
+color: #131735;
+margin: 0px;
+
+  
+}
+.grow-desc {
+  
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+text-align: center;
+color: #13173599;
+}
+.grow-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+@media (max-width: 850px) {
+  .grow-section { padding-bottom: {{ section.settings.padding_bottom | default: 32 }}px; }
+  .grow-title { font-size: 2.1rem; }
+  .grow-logos { height: 100px; }
+  .grow-logo { width: 56px; height: 56px; }
+}
+
+    .grow-btn {
+      color: #fff;
+    padding: 6px 6px 6px 24px;
+    border-radius: 60px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    font-family: Urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    }
+
+    .grow-btn::after {
+      content: "\2192";
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-content: center;
+    background: #FFFFFF14;
+    border-radius: 50%;
+    }
+
+.grow-btn-primary {
+  background: #18e6d7;
+  color: #fff;
+}
+.grow-btn-primary:hover {
+  background: #13cdc0;
+}
+
+.grow-btn-secondary {
+  background: #fff;
+  color: #181b37;
+  border: 1.5px solid #e5eaf3;
+}
+.grow-btn-secondary:hover {
+  background: #f4f7fa;
+}
+
+.grow-btn-secondary::after {
+  background: #F3F3F3;
+  color: black;
+}
+
+@media (max-width: 600px){
+    .grow-arc-wrapper{
+        display: none;
+    }
+    .grow-section {
+        background: #d9dfda !important;
+        padding: 40px 10px;
+        border-radius: 20px;
+        margin: 0 10px;
+    }
+    .grow-content{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 0px;
+    }
+    .grow-badge{
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 0px 12px;
+        font-size: 12px;
+        margin: auto;
+    }
+    .grow-title{
+        font-size: 32px;
+    }
+    .grow-title br{
+        display: none;
+    }
+    .grow-desc{
+        font-size: 14px;
+        padding: 2px 6px;
+        margin: 0px;
+        line-height: 22px;
+    }
+    .grow-btn {
+        padding: 4px 4px 4px 12px;
+        gap: 8px;
+        font-size: 12px;
+    }
+    .grow-btn::after{
+        width: 26px;
+        height: 26px;
+    }
+    .logo-1,.logo-5{
+      display: none;
+    }
+    .logo-2{
+    left: 6%;
+    bottom: 12px;
+}
+.logo-4{
+   right: 6%;
+    bottom: 12px;
+}
+}
+
+@media (min-width: 601px) and (max-width: 768px){
+    .grow-section {
+        padding: 100px 70px 32px 70px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .grow-content{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 8px;
+        padding: 0 36px;
+    }
+    .grow-badge{
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 0px 12px;
+        font-size: 16px;
+        margin: auto;
+    }
+    .grow-title{
+        font-size: 48px;
+    }
+    .grow-title br{
+        display: none;
+    }
+    .grow-desc{
+        font-size: 18px;
+        padding: 2px 6px;
+        margin: 0px;
+        line-height: 22px;
+    }
+    .grow-btn{
+        padding: 4px 4px 4px 12px;
+        gap: 8px;
+        font-size: 16px;
+    }
+    .grow-btn::after{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1023px){
+    .grow-section {
+        padding: 100px 70px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .grow-content{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 8px;
+        padding: 0 36px;
+    }
+    .grow-badge{
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 0px 12px;
+        font-size: 16px;
+        margin: auto;
+    }
+    .grow-title{
+        font-size: 48px;
+    }
+    .grow-title br{
+        display: none;
+    }
+    .grow-desc{
+        font-size: 18px;
+        padding: 2px 6px;
+        margin: 0px;
+        line-height: 22px;
+    }
+    .grow-btn{
+        padding: 4px 4px 4px 12px;
+        gap: 8px;
+        font-size: 16px;
+    }
+    .grow-btn::after{
+        width: 32px;
+        height: 32px;
+    }
+        .logo-1,.logo-5{
+      display: none;
+    }
+    .logo-2{
+    left: 6%;
+    bottom: 6px;
+}
+.logo-4{
+   right: 6%;
+    bottom: 6px;
+}
+}
+
+@media (min-width: 1024px) and (max-width: 1375px){
+    .grow-section {
+        padding: 100px 76px 0 76px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .grow-content{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 8px;
+        padding: 0 36px;
+    }
+    .grow-badge{
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 0px 12px;
+        font-size: 16px;
+        margin: auto;
+    }
+    .grow-title{
+        font-size: 48px;
+    }
+    .grow-title br{
+        display: none;
+    }
+    .grow-desc{
+        font-size: 18px;
+        padding: 2px 6px;
+        margin: 0px;
+        line-height: 22px;
+    }
+    .grow-btn{
+        padding: 4px 4px 4px 12px;
+        gap: 8px;
+        font-size: 16px;
+    }
+    .grow-btn::after{
+        width: 32px;
+        height: 32px;
+    }
+        .logo-1,.logo-5{
+      display: none;
+    }
+    .logo-2{
+    left: 6%;
+    bottom: 6px;
+}
+.logo-4{
+   right: 6%;
+    bottom: 6px;
+}
+}

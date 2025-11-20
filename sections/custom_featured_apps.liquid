@@ -1,0 +1,163 @@
+<link
+  rel="stylesheet"
+  href="{{ 'section-custom-featured-app.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'"
+>
+
+<section class="featured_apps_section">
+  <div class="featured_apps_section-badge">{{ section.settings.badge_text }}</div>
+  <h2 class="featured_apps_section-title">{{ section.settings.module_title }}</h2>
+  <p class="featured_apps_section-subtext">{{ section.settings.module_para }}</p>
+
+  <div class="cards-container grid grid--{{ section.settings.column_size }}-col-tablet-down grid--{{ section.settings.column_size }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}">
+    {% for block in section.blocks %}
+      <div class="card">
+        <div>
+          <span class="custom_badge">{{ block.settings.tag }}</span>
+          {% if block.settings.icon %}
+            {{
+              block.settings.icon
+              | image_url: width: block.settings.width, height: block.settings.height
+              | image_tag
+            }}
+          {% else %}
+            <div>No Image</div>
+          {% endif %}
+        </div>
+        <h3>{{ block.settings.title }}</h3>
+        <p>{{ block.settings.description }}</p>
+        <div class="btn-container">
+          <a class="btn" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
+          <a
+            href="{{ block.settings.explore_button_link }}"
+            target="_blank"
+            class="demo-link"
+          >
+            <span class="demo-text"> {{ block.settings.explore_button_label }}</span>
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="see-all-button">
+    <a href="#">{{ section.settings.module_button }}</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Apps",
+  "tag": "section",
+  "class": "app_section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Title"
+    },
+    {
+      "type": "text",
+      "id": "module_title",
+      "label": "Module Title"
+    },
+    {
+      "type": "textarea",
+      "id": "module_para",
+      "label": "Module Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "module_button",
+      "label": "Module Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "range",
+      "id": "column_size",
+      "label": "Title",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    }
+  ],
+  "blocks": [
+    {
+      "type": "app_card",
+      "name": "App Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "App Icon"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "label": "Title",
+          "min": 0,
+          "max": 1000,
+          "step": 50,
+          "default": 250
+        },
+        {
+          "type": "range",
+          "id": "height",
+          "label": "Title",
+          "min": 0,
+          "max": 1000,
+          "step": 50,
+          "default": 100
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag (Free or Paid)"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Add Apps"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },{
+          "type": "text",
+          "id": "explore_button_label",
+          "label": "Explore Button Label",
+          "default": "Explore Apps"
+        },
+        {
+          "type": "url",
+          "id": "explore_button_link",
+          "label": "Explore Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Apps"
+    }
+  ]
+}
+{% endschema %}

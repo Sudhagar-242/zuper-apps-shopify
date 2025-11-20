@@ -1,0 +1,234 @@
+<style>
+      .featured-card {
+      max-width: 1160px;
+      margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        background: #fff;
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+
+      /* Left section (image) */
+      .card-left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card-left img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 24px;
+      }
+
+      /* Right section */
+      .card-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .icon-tag-container {
+      display: flex;
+      justify-content: space-between;
+  }
+      .card-right .custom_badge{
+          position: relative;
+          top: 0;
+          height: fit-content;
+      }
+      .label {
+        display: inline-block;
+        background: #d1fae5;
+        color: #065f46;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 6px 14px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+      .heading {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 12px;
+        text-align: start;
+      }
+      .features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        color: #555;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+      .rating-and-explore{
+        display: flex;
+        justify-content: space-between;
+    }
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+      }
+      .stars {
+        color: gold;
+        font-size: 20px;
+      }
+      .explore-btn {
+        display: inline-block;
+        margin: auto 0;
+        background: #10b981;
+        color: #fff;
+        font-weight: bold;
+        padding: 12px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .explore-btn:hover {
+        background: #059669;
+      }
+</style>
+
+<div class="card-container">
+  <div class="featured-card">
+    <!-- Left Side (Image) -->
+    <div class="card-left">
+      {% if section.settings.left_image %}
+        {{ section.settings.left_image | image_url: width: auto, height: auto | image_tag }}
+      {% else %}
+        {{ 'featured-app-demo.png' | asset_url | img_tag }}
+      {% endif %}
+    </div>
+
+    <!-- Right Side -->
+    <div class="card-right">
+      <div class="icon-tag-container">
+        {% if section.settings.icon %}
+          {{
+            section.settings.icon
+            | image_url: width: 40, height: 40
+            | image_tag
+          }}
+        {% else %}
+          {% comment %} <div>No Image</div> {% endcomment %}
+          {% if section.settings.left_image %}
+            {{ section.settings.icon | image_url: width: 48, height: 48 | image_tag }}
+          {% else %}
+            <img src="{{ 'featured-app-card-icon.svg' | asset_url }}" alt="Demo Icon" width="" height="">
+          {% endif %}
+        {% endif %}
+        <span class="custom_badge">{{ section.settings.tag }}</span>
+      </div>
+      <div class="feature-details">
+        <div class="label">{{ section.settings.label_text }}</div>
+        <div class="heading">{{ section.settings.title_text }}</div>
+        {%- assign lines = section.settings.features_list | split: '\n' -%}
+        {{ lines }}
+      </div>
+      <div class="rating-and-explore">
+        <div class="rating">
+          {% assign rating = section.settings.ratings | plus: 0 %}
+          <div class="stars">
+            {% for index in (1..5) %}
+              {% assign star_value = index | minus: 1 | plus: 1 %}
+              {% assign lower_bound = index | minus: 1 %}
+
+              {% if rating >= index %}
+                <!-- Full star -->
+                <img src="{{ 'featured-app-rating-full-star.svg' | asset_url }}" alt="★">
+              {% elsif rating > lower_bound and rating < index %}
+                <!-- Half star -->
+                <img src="{{ 'featured-app-rating-half-star.svg' | asset_url }}" alt="☆★">
+              {% else %}
+                <!-- Empty star -->
+                <img src="{{ 'featured-app-rating-empty-star.svg' | asset_url }}" alt="☆">
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <div>
+            <strong>{{ section.settings.ratings }} Ratings</strong>
+          </div>
+        </div>
+        <a href="{{ section.settings.button_link }}" class="explore-btn">{{ section.settings.button_label }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Feature App Card",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "tag",
+      "default": "Free",
+      "placeholder": "Free or Paid",
+      "info": "Enter Free or Paid"
+    },
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label Text",
+      "default": "Shopify Custom App"
+    },
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Title Text",
+      "default": "Zuper Inventory Manager – Multi-User & Fulfillment Made Easy"
+    },
+
+    {
+      "type": "richtext",
+      "id": "features_list",
+      "label": "Content",
+      "default": "<p>Add your text here.</p>"
+    },
+
+    {
+      "type": "range",
+      "id": "ratings",
+      "label": "Ratings",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "default": 4.5
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Explore App"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature App Card"
+    }
+  ]
+}
+{% endschema %}

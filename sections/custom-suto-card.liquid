@@ -1,0 +1,221 @@
+<style>
+    .key-applications {
+      display: flex;
+   background-color: #F6F8FF;
+      /* light blue background */
+
+    }
+
+    .key-applications-left {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+     gap: 42px;
+  max-width: 780px;
+      margin: 0 auto;
+  padding-bottom: 40px;
+    }
+
+    .key-applications-left h2 {
+      grid-column: 1 / -1;
+      font-weight: 700;
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .app-item {
+      display: flex;
+      gap: 16px;
+  flex-direction: column;
+    }
+
+    .app-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      fill: #dc3a2c; /* red color for icons */
+      margin-top: 4px;
+    }
+
+    .app-text h3 {
+      font-weight: 500;
+      font-size: 20px;
+      margin: 0 0 6px 0;
+  color: #000000;
+    }
+
+    .app-text p {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+  margin-top: 21
+  color: #000000;
+    }
+
+    .key-applications-right {
+      flex: 1;
+      max-width: 540px;
+    }
+
+    .key-applications-right img {
+      width: 100%;
+      box-sizing: border-box;
+  height: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .key-applications {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .key-applications-left {
+        grid-template-columns: 1fr;
+      }
+
+      .key-applications-left h2 {
+        margin-bottom: 20px;
+      }
+
+      .key-applications-right {
+        max-width: 100%;
+        margin-top: 30px;
+      }
+    }
+   @media (max-width: 989px) {
+  .key-applications-left h2 {
+  font-size: 30px;
+  }
+  }
+</style>
+
+
+{% style %}
+  .auto-card-section{
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  .key-applications{
+    background: {{ section.settings.background }}
+  }
+{% endstyle %}
+
+<div class="key-section">
+  <div class="key-applications">
+    <div class="key-applications-left">
+      <h2>{{ section.settings.title }}</h2>
+
+{% for block in section.blocks %}
+  <div class="app-item">
+    <img
+        src={{ block.settings.content_icon | image_url }} alt="Content Icon" width="auto" height="auto"
+      />
+        <div class="app-text">
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      </div>
+{% endfor %}
+    </div>
+
+    <div class="key-applications-right">
+        {% if section.settings.image %}
+          {% assign image = section.settings.image | image_url %}
+        {% else %}
+            {% assign image = "https://cdn.shopify.com/s/files/1/0927/8583/6398/files/young-car-repairman-talking-with-his-coworker-while-checking-engine-performance-with-diagnostic-tools-auto-repair-shop.png?v=1754647060" %}
+        {% endif %}
+      <img
+        src={{ image }} alt="Mechanics working on engine" width="auto" height="auto"
+      />
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+  "name": "Custom Auto Card",
+  "tag": "section",
+  "class": "auto-card-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Key Applications"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "This Image will Exist in The sectio"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Content Block",
+      "type": "content_block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "content_icon",
+          "label": "Content Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title",
+          "default": "Title Text"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Description Goes Here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Auto Card",
+      "blocks": [{"type": "content_block"},{"type": "content_block"},{"type": "content_block"},{"type": "content_block"},{"type": "content_block"},{"type": "content_block"}]
+    }
+  ]
+}  
+{% endschema %}

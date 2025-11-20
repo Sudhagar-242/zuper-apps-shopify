@@ -1,0 +1,241 @@
+
+{% stylesheet %}
+/* Optional: Add your custom styles here for layout and design */
+.digi_pro_app_features_parent_section{
+  background-color: rgb(248, 248, 248);
+}
+.digi-pro-features-section {
+  text-align: center;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.digi-pro-features-section-heading{
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+}
+.digi-pro-features{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.feature-container { 
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(68, 68, 68);
+  text-align: left;
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 4rem; /* vertical and horizontal gaps */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+.feature-icon {
+  background-color: #d6f9f9; /* light aqua*/
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  max-height: 100px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.feature-text h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: rgb(13, 75, 73);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.feature-text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(68, 68, 68);
+}
+
+.moreless-btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moreless-button {
+  display: inline-block;
+  background-color: #00a9a2;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moreless-button:hover,
+.moreless-button:focus {
+  background-color: #00837d;
+  box-shadow: 0 0 10px rgba(0, 131, 125, 0.7);
+  outline: none;
+}
+
+{% endstylesheet %}
+
+
+<section class="digi-pro-features-section">
+  {% if section.settings.digi_products_app_features_head != blank %}
+    <h2 class="digi-pro-features-section-heading">{{ section.settings.digi_products_app_features_head }}</h2>
+  {% endif %}
+
+  <section id="digi_pro_features" class="digi-pro-features">
+  {% for block in section.blocks %}
+    <div class="feature-container">
+      <div class="feature-item">
+        <div class="feature-icon" style="flex: 0 0 auto;">
+          {% if block.settings.feature_icon != blank %}
+            <img src="{{ block.settings.feature_icon | image_url }}" alt="{{ block.settings.feature_heading | escape }}" class="d-inline-block highlights-icon">
+          {% endif %}
+        </div>
+        <div class="feature-text">
+          <h3>{{ block.settings.feature_heading }}</h3>
+          <p>{{ block.settings.feature_description }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  {% if section.blocks.size > 4 %}
+    <div class="moreless-btn-container">
+      <a href="javascript:void(0);" class="moreless-button" onclick="toggleFeatures(this)" data-show-all="false">{{ section.settings.button_text }}</a>
+    </div>
+  {% endif %}
+</section>
+</section>
+
+
+<script>
+
+  function toggleFeatures(button) {
+    const section = document.getElementById("digi_pro_features")
+    const showAll = button.getAttribute('data-show-all') === 'true';
+    const medias = section.querySelectorAll('.feature-container');
+    console.log("showAll")
+    
+    medias.forEach((media, index) => {
+      if (index >= 4) {
+        media.style.display = showAll ? 'none' : 'flex';
+        console.log("flex")
+      }
+    });
+
+    button.textContent = showAll ? '{{ section.settings.button_text }}' : '{{ section.settings.button_text_alternate }}';
+    button.setAttribute('data-show-all', !showAll);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('#digi_pro_features');
+    if(!section) return;
+    const medias = document.querySelectorAll('.feature-container');
+    medias.forEach((media, index) => {
+      if (index >= 4) {
+        media.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Digi_Pro_App_Features",
+  "tag": "section",
+  "class": "digi_pro_app_features_parent_section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "digi_products_app_features_head",
+      "label": "Heading_Text"
+    },
+    {
+      "type": "text",
+      "id": "digi_products_app_features_btn",
+      "label": "Heading_Text"
+    },
+    {
+      "type": "url",
+      "id": "digi_products_app_features_url",
+      "label": "Heading_Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Show More Button Text",
+      "default": "View More Features"
+    },
+    {
+      "type": "text",
+      "id": "button_text_alternate",
+      "label": "Show Less Button Text",
+      "default": "View Less Features"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "feature_icon",
+          "label": "Feature Icon"
+        },
+        {
+          "type": "text",
+          "id": "feature_heading",
+          "label": "Feature Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_description",
+          "label": "Feature Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+        "name": "Digi_Pro_App_Features"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,326 @@
+<style>
+  .hero-section {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .text-section {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .text-section h1 {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 1280px) {
+    .text-section h1 {
+      font-size: 40px;
+    }
+  }
+
+  .text-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .input-icon {
+    position: relative;
+  }
+
+  .input-icon input {
+    width: 100%;
+    padding: 14px 14px 14px 40px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #555;
+  }
+
+  .search-button {
+    padding: 14px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-button:hover {
+    background-color: #4338ca;
+  }
+
+  .image-section {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+</style>
+
+<section class="hero-card-2">
+  <div class="hero-content">
+    <div class="text-section">
+      {% if section.settings.badge != blank %}
+        <span class="badge-tag">{{ section.settings.badge }}</span>
+      {% endif %}
+      <h1>Hire a Designer Near You</h1>
+      {% if section.settings.title != blank %}
+        <h1>{{ section.settings.title }}</h1>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        {{ section.settings.description }}
+      {% endif %}
+
+      {% if section.settings.rating != blank %}
+        <div class="rating">
+          {% assign rating = section.settings.rating | plus: 0 %}
+          <div class="stars">
+            {% for index in (1..5) %}
+              {% assign star_value = index | minus: 1 | plus: 1 %}
+              {% assign lower_bound = index | minus: 1 %}
+
+              {% if rating >= index %}
+                <!-- Full star -->
+                <img src="{{ 'featured-app-rating-full-star.svg' | asset_url }}" alt="★">
+              {% elsif rating > lower_bound and rating < index %}
+                <!-- Half star -->
+                <img src="{{ 'featured-app-rating-half-star.svg' | asset_url }}" alt="☆★">
+              {% else %}
+                <!-- Empty star -->
+                <img src="{{ 'featured-app-rating-empty-star.svg' | asset_url }}" alt="☆">
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <div>
+            <strong>{{ section.settings.rating }} Ratings</strong>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if section.settings.button_primary_label != blank
+        and section.settings.primary_url != blank
+        or section.settings.button_secondary_label != blank
+        and section.settings.secondary_url != blank
+      %}
+        <div class="buttons">
+          {% if section.settings.button_primary_label != blank and section.settings.primary_url != blank %}
+            <a href="{{ section.settings.primary_url }}" class="btn-with-arrow btn-with-arrow-primary">
+              {{- section.settings.button_primary_label -}}
+            </a>
+          {% endif %}
+          {% if section.settings.button_secondary_label != blank and section.settings.secondary_url != blank %}
+            <a href="{{ section.settings.secondary_url }}" class="btn-with-arrow btn-with-arrow-secondary">
+              {{- section.settings.button_secondary_label -}}
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% comment %}
+        <div class="input-group">
+          <div class="input-icon">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" placeholder="Type (e.g junior, senior)" />
+          </div>
+
+          <div class="input-icon">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <input type="text" placeholder="Mountain View, California" />
+          </div>
+
+          <button class="search-button">Find Designers</button>
+        </div>
+      {% endcomment %}
+    </div>
+
+    {% comment %}
+      <div class="image-section">
+        <img
+          src="https://images.unsplash.com/photo-1524749292158-7540c2494485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=85"
+          alt="Designer Workspace"
+        />
+      </div>
+    {% endcomment %}
+
+    {%- assign image = section.settings.image -%}
+    {% if image != blank %}
+      <div class="image-section">
+        {{ image | image_url: width: image.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
+      </div>
+    {% else %}
+      {{
+        'https://images.unsplash.com/photo-1524749292158-7540c2494485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=85'
+        | image_url: width: auto, height: auto
+        | image_tag: alt: "Designer Workspace"
+      }}
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Card 2",
+  "tag": "section",
+  "class": "hero-card-2-outer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "badge",
+      "default": "Text"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Hire a Designer Near You"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "description",
+      "default": "<p>This is <strong>rich text</strong> where you can add <em>formatted</em> content like <a href='#'>links</a>, lists, and more.</p>"
+    },
+    {
+      "type": "range",
+      "id": "rating",
+      "label": "rating",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "button_primary_label",
+      "label": "button Primary Label",
+      "default": "Primary"
+    },
+    {
+      "type": "url",
+      "id": "primary_url",
+      "label": "Primary URL"
+    },
+    {
+      "type": "text",
+      "id": "button_secondary_label",
+      "label": "Button Secondary Label",
+      "default": "Secondary"
+    },
+    {
+      "type": "url",
+      "id": "secondary_url",
+      "label": "Secondary URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Card 2"
+    }
+  ]
+}
+{% endschema %}

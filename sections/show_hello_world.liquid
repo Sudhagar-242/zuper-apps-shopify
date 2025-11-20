@@ -1,0 +1,84 @@
+<div class="example-hello-section">
+  
+  {% if section.settings.example-image %}
+    <div class="example-image">
+      <img 
+        src="{{ section.settings.example-image | image_url: width: 800 }}" 
+        alt="{{ section.settings.example-text | escape }}"
+    width="72px"
+height="34px" />
+    </div>
+    {% else %}
+        <div>
+            <h1>No Image</h1>
+        </div>
+  {% endif %}
+    <h2 class="example-title">
+      {{ section.settings.example-text }}
+    </h2>
+    <p class="example-paragraph">
+      {{ section.settings.example-paragraph }}
+    </p>
+    <a href="{{ section.settings.example-url }}" class="example-link">
+      {{ section.settings.example-url }}
+    </a>
+    <a href="{{ section.settings.example-button-url }}" class="example-button">
+      {{ section.settings.example-button-text }}
+    </a>
+  
+</div>
+
+{% schema %}
+{
+    "name": "t:sections.exhello.name",
+    "presets": [
+        {
+        "name": "t:sections.exhello.name"
+        }
+    ],
+    "settings": [
+        {
+            "type": "text",
+            "id": "example-text",
+            "label": "t:sections.exhello.settings.text.label",
+            "default": "t:sections.exhello.settings.text.label"
+        },
+        {
+            "type": "textarea",
+            "id": "example-paragraph",
+            "label": "t:sections.exhello.settings.paragraph.label",
+            "default": "t:sections.exhello.settings.paragraph.label"
+        },
+        {
+            "type": "url",
+            "id": "example-url",
+            "label": "t:sections.exhello.settings.url.label",
+            "default": "t:sections.exhello.settings.url.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "example-image",
+            "label": "t:sections.exhello.settings.image.label"
+        },
+        {
+            "type": "text",
+            "id": "example-button-text",
+            "label": "t:sections.exhello.settings.button.label",
+            "default": "t:sections.exhello.settings.button.label"
+        },
+                {
+            "type": "url",
+            "id": "example-button-url",
+            "label": "Button Url",
+            "default": "t:sections.exhello.settings.url.label"
+        }
+
+    ],
+    "blocks": [
+          { "type": "@theme" },
+  { "type": "button" },
+  { "type": "text" },
+  { "type": "_marquee" }
+    ]
+}
+{% endschema %}
